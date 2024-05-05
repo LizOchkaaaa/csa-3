@@ -1,8 +1,8 @@
 class Signals:
-    LATCH_TOS_NUMBER = "latch_tos_number"
-    LATCH_TOS_MEM_OUT = "latch_tos_mem_out"
-    LATCH_TOS_FROM_ALU = "latch_tos_alu_out"
-    LATCH_TOS_FROM_STACK = "latch_tos_from_stack"
+    LATCH_TOS_NUMBER = "latch tos number"
+    LATCH_TOS_MEM_OUT = "latch tos mem out"
+    LATCH_TOS_FROM_ALU = "latch tos alu out"
+    LATCH_TOS_FROM_STACK = "latch tos from stack"
 
     LATCH_ADDR_NUMBER = "latch addr number"
     LATCH_ADDR_FROM_ALU = "latch addr from alu"

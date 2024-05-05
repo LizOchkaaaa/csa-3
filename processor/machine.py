@@ -15,7 +15,6 @@ class DataPath:
         self.data_memory = [0] * size
         self.data_memory_out = 0
         self.alu_out = 0
-        self.bool = 0
         self.number_tos = 0
         self.number_address = 0
 
@@ -27,10 +26,9 @@ class DataPath:
             Signals.LATCH_TOS_NUMBER: self.number_tos,
             Signals.LATCH_TOS_MEM_OUT: self.data_memory_out,
             Signals.LATCH_TOS_FROM_ALU: self.alu_out,
-            Signals.LATCH_TOS_FROM_STACK: self.data_stack[-1]
+            Signals.LATCH_TOS_FROM_STACK: self.data_stack[-1] if self.data_stack != [] else 0
         }
         self.tos = buses[signal]
-        self.bool = True if self.tos != 0 else False
 
     def signal_latch_address(self, signal):
         self.address_reg = self.number_address if signal == Signals.LATCH_ADDR_NUMBER else self.alu_out
@@ -39,7 +37,7 @@ class DataPath:
         self.data_stack.append(self.tos)
 
     def signal_stack_pop(self):
-        self.data_stack.pop()
+        self.data_stack.pop() if self.data_stack != [] else None
 
     def memory_read(self):
         if self.address_reg == INPUT_ADDRESS:
@@ -54,24 +52,23 @@ class DataPath:
     def alu(self, operation=Opcode.ADD, left_operand=0):
         self.alu_out = self.tos
         if left_operand != 0:
-            oper = self.data_stack[-1]
+            oper = self.data_stack[-1] if self.data_stack != [] else 0
             operations = {
                 Opcode.ADD: self.alu_out + oper,
                 Opcode.SUB: self.alu_out - oper,
                 Opcode.MUL: self.alu_out * oper,
-                Opcode.DIV: self.alu_out / oper,
-                Opcode.INC: self.alu_out + 1,
-                Opcode.DEC: self.alu_out - 1,
+                Opcode.DIV: self.alu_out / oper if oper != 0 else float('inf'),
                 Opcode.GREATER: self.alu_out > self.data_stack[-1],
                 Opcode.LESS: self.alu_out < self.data_stack[-1],
-                Opcode.EQUAL: self.alu_out == self.data_stack[-1]
+                Opcode.EQUAL: self.alu_out == self.data_stack[-1],
+                Opcode.NOT_EQUAL: self.alu_out != self.data_stack[-1]
             }
-            self.alu_out = operations[operation]
+            self.alu_out = int(operations[operation])
 
 
 class ControlUnit:
 
-    def __init__(self, instructions, dp):
+    def __init__(self, instructions, dp: DataPath):
         self._tick = 0
         self.PC = 0
         self.mPC = 0
@@ -84,16 +81,11 @@ class ControlUnit:
 
     def tick(self):
         self._tick += 1
+        self.dp.number_tos = 0
+        self.dp.number_address = 0
 
     def translate_opcode_to_mc_address(self):
-        addresses = {
-            "dup": 1,
-            "drop": 3,
-            "top": 5,
-            "store": 7,
-            "stop": 10,
-        }
-        self.mPC_address = addresses[self.instr["opcode"]]
+        self.mPC_address = Microcode.addresses[self.instr["opcode"]]
 
     def set_stop(self):
         self.stop = True
@@ -112,11 +104,11 @@ class ControlUnit:
         }
         self.mPC = signals[signal]
 
-    def signal_latch_PC(self, signal):
-        if signal == Signals.PC_NEXT:
+    def signal_latch_PC(self, sel_pc):
+        if sel_pc == Signals.PC_NEXT:
             self.PC += 1
         else:
-            self.PC = self.instr["arg"]
+            self.PC = self.instr["arg"] if self.dp.tos == 1 else self.PC + 1
         self.instr = self.instructions[self.PC]
 
     def start(self):

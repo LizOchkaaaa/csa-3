@@ -6,30 +6,26 @@ from processor.isa import Opcode
 INPUT_ADDRESS = 0
 OUTPUT_ADDRESS = 1
 
-
 def parse_math(row):
     return {
         "+": Opcode.ADD,
         "-": Opcode.SUB,
         "*": Opcode.MUL,
         "/": Opcode.DIV,
-        "++": Opcode.INC,
-        "--": Opcode.DEC,
         ">": Opcode.GREATER,
         "<": Opcode.LESS,
         "=": Opcode.EQUAL,
+        "!=": Opcode.NOT_EQUAL
     }.get(row)
 
 
-def jumps(operator):
+def inverse_condition(opcode):
     return {
-        ">": Opcode.JLE,
-        "<": Opcode.JGE,
-        "=": Opcode.JNE
-    }.get(operator)
+        Opcode.EQUAL: Opcode.NOT_EQUAL,
+    }.get(opcode)
 
 
-def create_emit_machine(instructions, index, char):
+def store_char(instructions, index, char):
     instructions.append({"index": index, "opcode": Opcode.TOP, "arg": ord(char)})
     instructions.append({"index": index + 1, "opcode": Opcode.STORE, "arg": OUTPUT_ADDRESS})
     return index + 2
@@ -44,12 +40,12 @@ def parse_string(instructions, code, index, start):
         row = code[i]
         for char in row:
             if char != '"':
-                index = create_emit_machine(instructions, index, char)
+                index = store_char(instructions, index, char)
         if row[-1] == '"':
             stop = i
             break
         else:
-            index = create_emit_machine(instructions, index, " ")
+            index = store_char(instructions, index, " ")
     instructions.append({"index": index, "opcode": Opcode.DROP, "arg": None})
     return stop, index + 1
 
@@ -99,20 +95,23 @@ def translator(code):
             instr = {"index": index, "arg": None}
             if row == "if":
                 jump_buf.append(index)
-                instr["opcode"] = jumps(code[i-1])
+                instructions[index - 1]["opcode"] = inverse_condition(instructions[index - 1]["opcode"])
+                instr["opcode"] = Opcode.JIF
             elif row == "else":
                 instr["opcode"] = Opcode.JMP
                 label = jump_buf.pop()
                 jump_buf.append(index)
                 instructions[label]["arg"] = index + 1
             elif row == "until":
-                instr["opcode"] = jumps(code[i-1])
+                instr["opcode"] = Opcode.JIF
                 instr["arg"] = jump_buf.pop()
+
             elif re.search("-?[0-9]", row):
-                instr["opcode"] = "push"
+                instr["opcode"] = Opcode.PUSH
                 instr["arg"] = int(row)
             elif parse_math(row) is not None:
                 instr["opcode"] = parse_math(row)
+
             elif code[i+1] == "!":
                 if row not in variables:
                     variables[row] = variable_pointer
@@ -124,14 +123,23 @@ def translator(code):
                 instr["opcode"] = Opcode.STORE
                 instr["arg"] = variables[row]
                 i += 1
+
+            elif row == "key":
+                instr["opcode"] = "load"
+                instr["arg"] = INPUT_ADDRESS
+            elif row == "emit":
+                instr["opcode"] = "store"
+                instr["arg"] = OUTPUT_ADDRESS
             elif row in [Opcode.DUP, Opcode.DROP]:
                 instr["opcode"] = row
-
+            else:
+                i += 1
+                continue
             instructions.append(instr)
 
             index += 1
         i += 1
-    instructions.append({"index": index, "opcode": Opcode.STOP})
+    instructions.append({"index": index, "arg": None, "opcode": Opcode.STOP})
     return instructions
 
 

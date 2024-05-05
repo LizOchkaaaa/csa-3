@@ -1,3 +1,4 @@
+import itertools
 import json
 import sys
 from processor.machine import DataPath, ControlUnit
@@ -8,6 +9,7 @@ def main(code_file, input_file):
         instructions = json.load(file)
     with open(input_file) as file:
         input_tokens = file.readline()
+        input_tokens = list(input_tokens)
 
     data_path = DataPath(30, input_tokens)
     control_unit = ControlUnit(instructions, data_path)
