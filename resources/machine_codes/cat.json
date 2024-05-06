@@ -1,0 +1,7 @@
+[{"index": 0, "arg": null, "opcode": "drop"},
+ {"index": 1, "arg": 0, "opcode": "load"},
+ {"index": 2, "arg": 1, "opcode": "store"},
+ {"index": 3, "arg": 0, "opcode": "push"},
+ {"index": 4, "arg": null, "opcode": "n_equal"},
+ {"index": 5, "arg": 0, "opcode": "jif"},
+ {"index": 6, "arg": null, "opcode": "stop"}]

@@ -6,7 +6,9 @@ class Opcode:
     TOP = "top"
 
     LOAD = "load"
+    IND_LOAD = "ind_load"
     STORE = "store"
+    IND_STORE = "ind_store"
 
     ADD = "add"
     SUB = "sub"

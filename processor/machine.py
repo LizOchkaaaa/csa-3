@@ -51,7 +51,9 @@ class DataPath:
 
     def alu(self, operation=Opcode.ADD, left_operand=0):
         self.alu_out = self.tos
-        if left_operand != 0:
+        if operation in [Opcode.INC, Opcode.DEC]:
+            self.alu_out = self.alu_out + 1 if operation == Opcode.INC else self.alu_out - 1
+        elif left_operand != 0:
             oper = self.data_stack[-1] if self.data_stack != [] else 0
             operations = {
                 Opcode.ADD: self.alu_out + oper,

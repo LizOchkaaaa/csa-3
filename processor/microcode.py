@@ -23,6 +23,10 @@ class Microcode:
                [(self.dp.signal_latch_tos, Signals.LATCH_TOS_FROM_ALU), mPC_next],\
                instr_end
 
+    def inc_dec(self, opcode, mPC_next, instr_end):
+        return [(self.dp.alu, opcode), (self.dp.signal_latch_tos, Signals.LATCH_TOS_FROM_ALU), mPC_next], \
+               [instr_end]
+
     def __init__(self, cu, dp):
         self.cu = cu
         self.dp = dp
@@ -66,6 +70,10 @@ class Microcode:
             # math operations
             *self.math_operation(Opcode.EQUAL, mPC_next, instr_end),
             *self.math_operation(Opcode.NOT_EQUAL, mPC_next, instr_end),
+
+            # increment/decrement
+            *self.inc_dec(Opcode.INC, mPC_next, instr_end),
+            *self.inc_dec(Opcode.DEC, mPC_next, instr_end),
 
             # jne
             [(cu.signal_latch_PC, Signals.PC_JUMP), (cu.signal_latch_mPC, Signals.mPC_ZERO)],

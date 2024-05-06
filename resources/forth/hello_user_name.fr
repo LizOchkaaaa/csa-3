@@ -1,0 +1,23 @@
+."What is your name?" cr
+
+4 input ! index !
+begin
+    drop
+    key
+    index !*
+    index @
+    ++
+    index !
+0 != until
+
+."Hello, "
+begin
+    index @*
+    emit
+
+    index @
+    ++
+    index !
+    drop
+0 != until
+."!"

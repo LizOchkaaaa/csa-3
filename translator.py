@@ -6,17 +6,27 @@ from processor.isa import Opcode
 INPUT_ADDRESS = 0
 OUTPUT_ADDRESS = 1
 
+
 def parse_math(row):
     return {
         "+": Opcode.ADD,
         "-": Opcode.SUB,
         "*": Opcode.MUL,
         "/": Opcode.DIV,
+        "++": Opcode.INC,
+        "--": Opcode.DEC,
         ">": Opcode.GREATER,
         "<": Opcode.LESS,
         "=": Opcode.EQUAL,
         "!=": Opcode.NOT_EQUAL
     }.get(row)
+
+
+def create_instruction(index, term, opcode, arg=None):
+    instr = {"index": index, "term": term, "opcode": opcode}
+    if arg is not None:
+        instr["arg"] = arg
+    return instr
 
 
 def inverse_condition(opcode):
@@ -26,13 +36,13 @@ def inverse_condition(opcode):
 
 
 def store_char(instructions, index, char):
-    instructions.append({"index": index, "opcode": Opcode.TOP, "arg": ord(char)})
-    instructions.append({"index": index + 1, "opcode": Opcode.STORE, "arg": OUTPUT_ADDRESS})
+    instructions.append(create_instruction(index, char, Opcode.TOP, ord(char)))
+    instructions.append(create_instruction(index + 1, char, Opcode.STORE, OUTPUT_ADDRESS))
     return index + 2
 
 
 def parse_string(instructions, code, index, start):
-    instructions.append({"index": index, "opcode": Opcode.DUP, "arg": None})
+    instructions.append(create_instruction(index, ".", Opcode.DUP))
     index += 1
     stop = 0
     code[start] = code[start].replace(".", "", 1)
@@ -46,7 +56,7 @@ def parse_string(instructions, code, index, start):
             break
         else:
             index = store_char(instructions, index, " ")
-    instructions.append({"index": index, "opcode": Opcode.DROP, "arg": None})
+    instructions.append(create_instruction(index, None, Opcode.DROP))
     return stop, index + 1
 
 
@@ -56,6 +66,27 @@ def insert_procedure(instructions, procedures, index):
         new_instr["index"] = index + i
         instructions.append(new_instr)
     return instructions[-1]["index"] + 1
+
+
+def cr_machine(index, instructions):
+    instructions.extend((create_instruction(index, "cr", Opcode.PUSH, 10),
+                        create_instruction(index + 1, "cr", Opcode.STORE, OUTPUT_ADDRESS),
+                        create_instruction(index + 2, "cr", Opcode.DROP)))
+    return index + 2
+
+
+def check_variable(row, variables, variable_pointer):
+    if row not in variables:
+        variables[row] = variable_pointer
+        variable_pointer += 1
+    return variable_pointer
+
+
+def indirect(index, addr, opcode):
+    term = "!*" if opcode == Opcode.IND_STORE else "@*"
+    return index + 3, (create_instruction(index, term, Opcode.DUP),
+                       create_instruction(index + 1, term, opcode, addr),
+                       create_instruction(index + 2, term, Opcode.DROP))
 
 
 def translator(code):
@@ -79,8 +110,8 @@ def translator(code):
             jump_buf.append(index)
         elif row == ":":
             if cur_procedure is None:
-                cur_procedure = code[i+1]
-                procedures[code[i+1]] = []
+                cur_procedure = code[i + 1]
+                procedures[code[i + 1]] = []
                 i += 1
                 proc_declare_start = index
             else:
@@ -88,58 +119,52 @@ def translator(code):
                 instructions = instructions[:proc_declare_start]
                 index = proc_declare_start
                 cur_procedure = None
+        elif re.search("(!|@)\\*", code[i+1]):
+            variable_pointer = check_variable(row, variables, variable_pointer)
+            index, insert = indirect(index, variables[row], Opcode.IND_STORE if code[i+1] == "!*" else Opcode.IND_LOAD)
+            instructions.extend(insert)
+            i += 1
         elif row in procedures:
             index = insert_procedure(instructions, procedures[row], index)
 
         else:
-            instr = {"index": index, "arg": None}
             if row == "if":
                 jump_buf.append(index)
                 instructions[index - 1]["opcode"] = inverse_condition(instructions[index - 1]["opcode"])
-                instr["opcode"] = Opcode.JIF
+                instructions.append(create_instruction(index, "if", Opcode.JIF))
             elif row == "else":
-                instr["opcode"] = Opcode.JMP
                 label = jump_buf.pop()
                 jump_buf.append(index)
+                instructions.append(create_instruction(index, "else", Opcode.JMP))
                 instructions[label]["arg"] = index + 1
             elif row == "until":
-                instr["opcode"] = Opcode.JIF
-                instr["arg"] = jump_buf.pop()
+                instructions.append(create_instruction(index, "until", Opcode.JMP, jump_buf.pop()))
 
             elif re.search("-?[0-9]", row):
-                instr["opcode"] = Opcode.PUSH
-                instr["arg"] = int(row)
+                instructions.append(create_instruction(index, row, Opcode.PUSH, int(row)))
             elif parse_math(row) is not None:
-                instr["opcode"] = parse_math(row)
-
-            elif code[i+1] == "!":
-                if row not in variables:
-                    variables[row] = variable_pointer
-                    variable_pointer += 1
-                instr["opcode"] = Opcode.LOAD
-                instr["arg"] = variables[row]
-                i += 1
-            elif code[i+1] == "@":
-                instr["opcode"] = Opcode.STORE
-                instr["arg"] = variables[row]
+                instructions.append(create_instruction(index, row, parse_math(row)))
+            elif re.search("!|@", code[i+1]):
+                variable_pointer = check_variable(row, variables, variable_pointer)
+                opcode = Opcode.STORE if code[i+1] == "!" else Opcode.LOAD
+                instructions.append(create_instruction(index, code[i+1], opcode, variables[row]))
                 i += 1
 
             elif row == "key":
-                instr["opcode"] = "load"
-                instr["arg"] = INPUT_ADDRESS
+                instructions.append(create_instruction(index, "key", Opcode.LOAD, INPUT_ADDRESS))
             elif row == "emit":
-                instr["opcode"] = "store"
-                instr["arg"] = OUTPUT_ADDRESS
+                instructions.append(create_instruction(index, "emit", Opcode.STORE, OUTPUT_ADDRESS))
+            elif row == "cr":
+                index = cr_machine(index, instructions)
             elif row in [Opcode.DUP, Opcode.DROP]:
-                instr["opcode"] = row
+                instructions.append(create_instruction(index, row, row))
             else:
                 i += 1
                 continue
-            instructions.append(instr)
 
             index += 1
         i += 1
-    instructions.append({"index": index, "arg": None, "opcode": Opcode.STOP})
+    instructions.append(create_instruction(index, None, Opcode.STOP))
     return instructions
 
 

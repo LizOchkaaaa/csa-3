@@ -1,0 +1,5 @@
+begin
+    drop
+    key
+    index !
+0 != until
