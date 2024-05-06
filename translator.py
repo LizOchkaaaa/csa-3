@@ -82,11 +82,11 @@ def check_variable(row, variables, variable_pointer):
     return variable_pointer
 
 
-def indirect(index, addr, opcode):
-    term = "!*" if opcode == Opcode.IND_STORE else "@*"
-    return index + 3, (create_instruction(index, term, Opcode.DUP),
-                       create_instruction(index + 1, term, opcode, addr),
-                       create_instruction(index + 2, term, Opcode.DROP))
+def next(i, code):
+    try:
+        return code[i+1]
+    except IndexError:
+        return ""
 
 
 def translator(code):
@@ -119,11 +119,6 @@ def translator(code):
                 instructions = instructions[:proc_declare_start]
                 index = proc_declare_start
                 cur_procedure = None
-        elif re.search("(!|@)\\*", code[i+1]):
-            variable_pointer = check_variable(row, variables, variable_pointer)
-            index, insert = indirect(index, variables[row], Opcode.IND_STORE if code[i+1] == "!*" else Opcode.IND_LOAD)
-            instructions.extend(insert)
-            i += 1
         elif row in procedures:
             index = insert_procedure(instructions, procedures[row], index)
 
@@ -138,16 +133,19 @@ def translator(code):
                 instructions.append(create_instruction(index, "else", Opcode.JMP))
                 instructions[label]["arg"] = index + 1
             elif row == "until":
-                instructions.append(create_instruction(index, "until", Opcode.JMP, jump_buf.pop()))
+                instructions.append(create_instruction(index, "until", Opcode.JIF, jump_buf.pop()))
 
             elif re.search("-?[0-9]", row):
                 instructions.append(create_instruction(index, row, Opcode.PUSH, int(row)))
             elif parse_math(row) is not None:
                 instructions.append(create_instruction(index, row, parse_math(row)))
-            elif re.search("!|@", code[i+1]):
+            elif re.search("(!|@)\\*?", next(i, code)):
                 variable_pointer = check_variable(row, variables, variable_pointer)
-                opcode = Opcode.STORE if code[i+1] == "!" else Opcode.LOAD
-                instructions.append(create_instruction(index, code[i+1], opcode, variables[row]))
+                if re.search(".\\*", next(i, code)):
+                    opcode = Opcode.IND_STORE if next(i, code) == "!*" else Opcode.IND_LOAD
+                else:
+                    opcode = Opcode.STORE if next(i, code) == "!" else Opcode.LOAD
+                instructions.append(create_instruction(index, next(i, code), opcode, variables[row]))
                 i += 1
 
             elif row == "key":
@@ -156,7 +154,7 @@ def translator(code):
                 instructions.append(create_instruction(index, "emit", Opcode.STORE, OUTPUT_ADDRESS))
             elif row == "cr":
                 index = cr_machine(index, instructions)
-            elif row in [Opcode.DUP, Opcode.DROP]:
+            elif row in [Opcode.DUP, Opcode.DROP, Opcode.CLEAR]:
                 instructions.append(create_instruction(index, row, row))
             else:
                 i += 1
@@ -171,6 +169,7 @@ def translator(code):
 def main(code, target):
     code = code.strip()
     code = re.split("\\s+|\n", code)
+    code.append(" ")
     machine = translator(code)
     buf = []
     for instr in machine:

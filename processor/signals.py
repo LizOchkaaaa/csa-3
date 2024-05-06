@@ -5,7 +5,7 @@ class Signals:
     LATCH_TOS_FROM_STACK = "latch tos from stack"
 
     LATCH_ADDR_NUMBER = "latch addr number"
-    LATCH_ADDR_FROM_ALU = "latch addr from alu"
+    LATCH_ADDR_FROM_MEM = "latch addr from mem"
 
     OPERAND_STACK = "operand stack"
 

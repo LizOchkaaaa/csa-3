@@ -4,6 +4,7 @@ class Opcode:
     DROP = "drop"
     PUSH = "push"
     TOP = "top"
+    CLEAR = "clear"
 
     LOAD = "load"
     IND_LOAD = "ind_load"

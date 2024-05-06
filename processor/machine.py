@@ -31,13 +31,16 @@ class DataPath:
         self.tos = buses[signal]
 
     def signal_latch_address(self, signal):
-        self.address_reg = self.number_address if signal == Signals.LATCH_ADDR_NUMBER else self.alu_out
+        self.address_reg = self.number_address if signal == Signals.LATCH_ADDR_NUMBER else self.data_memory_out
 
     def signal_stack_push(self):
         self.data_stack.append(self.tos)
 
     def signal_stack_pop(self):
         self.data_stack.pop() if self.data_stack != [] else None
+
+    def signal_stack_clear(self):
+        self.data_stack.clear()
 
     def memory_read(self):
         if self.address_reg == INPUT_ADDRESS:
@@ -62,6 +65,8 @@ class DataPath:
                 Opcode.DIV: self.alu_out / oper if oper != 0 else float('inf'),
                 Opcode.GREATER: self.alu_out > self.data_stack[-1],
                 Opcode.LESS: self.alu_out < self.data_stack[-1],
+                Opcode.INC: self.alu_out + 1,
+                Opcode.DEC: self.alu_out - 1,
                 Opcode.EQUAL: self.alu_out == self.data_stack[-1],
                 Opcode.NOT_EQUAL: self.alu_out != self.data_stack[-1]
             }
@@ -112,6 +117,8 @@ class ControlUnit:
         else:
             self.PC = self.instr["arg"] if self.dp.tos == 1 else self.PC + 1
         self.instr = self.instructions[self.PC]
+        if self.instr["opcode"] == Opcode.IND_LOAD:
+            pass
 
     def start(self):
         while not self.stop:
