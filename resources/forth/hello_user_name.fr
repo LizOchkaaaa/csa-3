@@ -16,8 +16,8 @@ begin
     ++
     input !
     input @*
-    emit
+    0 != if drop drop emit
+    else drop ;
 0 != until
 clear
-
 ."!"

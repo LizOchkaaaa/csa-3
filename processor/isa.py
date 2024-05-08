@@ -26,3 +26,28 @@ class Opcode:
     JIF = "jif"
 
     STOP = "stop"
+
+
+class Term:
+    DUP = "dup"
+    DROP = "drop"
+    CLEAR = "clear"
+
+    EMIT = "emit"
+    CR = "cr"
+    KEY = "key"
+
+    LOAD = "@"
+    IND_LOAD = "@*"
+    STORE = "!"
+    IND_STORE = "!*"
+
+    STRING = '"'
+    IF = "if"
+    ELSE = "else"
+    END_IF = ";"
+    PROCEDURE = ":"
+
+    BEGIN = "begin"
+    UNTIL = "until"
+

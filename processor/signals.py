@@ -14,6 +14,7 @@ class Signals:
 
     PC_NEXT = "pc next"
     PC_JUMP = "pc jump"
+    PC_JUMP_IF = "pc jump if"
 
     mPC_NEXT = "mPC next"
     mPC_ZERO = "mPC zero"

@@ -9,16 +9,20 @@ class Microcode:
         Opcode.PUSH: 6,
         Opcode.TOP: 8,
         Opcode.CLEAR: 10,
+
         Opcode.LOAD: 12,
         Opcode.IND_LOAD: 15,
         Opcode.STORE: 20,
         Opcode.IND_STORE: 23,
+
         Opcode.EQUAL: 28,
         Opcode.NOT_EQUAL: 32,
         Opcode.INC: 36,
         Opcode.DEC: 38,
-        Opcode.JIF: 40,
-        Opcode.STOP: 41
+
+        Opcode.JMP: 40,
+        Opcode.JIF: 41,
+        Opcode.STOP: 42
     }
 
     def math_operation(self, opcode, mPC_next, instr_end):
@@ -96,8 +100,10 @@ class Microcode:
             *self.inc_dec(Opcode.INC, mPC_next, instr_end),
             *self.inc_dec(Opcode.DEC, mPC_next, instr_end),
 
-            # jif
+            # jmp
             [(cu.signal_latch_PC, Signals.PC_JUMP), (cu.signal_latch_mPC, Signals.mPC_ZERO)],
+            # jif
+            [(cu.signal_latch_PC, Signals.PC_JUMP_IF), (cu.signal_latch_mPC, Signals.mPC_ZERO)],
 
             # stop
             [cu.set_stop]

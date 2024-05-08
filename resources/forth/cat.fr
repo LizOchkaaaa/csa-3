@@ -1,5 +1,5 @@
 begin
-    drop
     key
-    index !
+    0 != if drop drop emit
+    else drop ;
 0 != until

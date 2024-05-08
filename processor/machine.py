@@ -103,21 +103,21 @@ class ControlUnit:
     def set_number_in_address(self):
         self.dp.number_address = self.instr["arg"]
 
-    def signal_latch_mPC(self, signal):
+    def signal_latch_mPC(self, sel_mPC):
         signals = {
             Signals.mPC_NEXT: self.mPC + 1,
             Signals.mPC_ZERO: 0,
             Signals.mPC_INSTR_JUMP: self.mPC_address
         }
-        self.mPC = signals[signal]
+        self.mPC = signals[sel_mPC]
 
     def signal_latch_PC(self, sel_pc):
         if sel_pc == Signals.PC_NEXT:
             self.PC += 1
         else:
-            self.PC = self.instr["arg"] if self.dp.tos == 1 else self.PC + 1
+            self.PC = self.instr["arg"] if self.dp.tos == 1 or sel_pc == Signals.PC_JUMP else self.PC + 1
         self.instr = self.instructions[self.PC]
-        if self.instr["opcode"] == Opcode.IND_LOAD:
+        if self.instr["index"] == 8:
             pass
 
     def start(self):
