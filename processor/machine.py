@@ -22,7 +22,7 @@ class DataPath:
         self.input_tokens = input_tokens
         self.output_buffer = []
 
-        self.log = None
+        self.term = None
 
     def signal_latch_tos(self, signal):
         buses = {
@@ -55,9 +55,14 @@ class DataPath:
     def memory_write(self):
         self.data_memory[self.address_reg] = self.tos
         if self.address_reg == OUTPUT_ADDRESS:
-            char = chr(self.data_memory[self.address_reg])
-            logging.info(f"add char '{char}' to output buffer")
-            self.output_buffer.append(char)
+            if self.term == ".":
+                num = self.data_memory[self.address_reg]
+                logging.info(f"add number '{num}' to output buffer")
+                self.output_buffer.append(str(num))
+            else:
+                char = chr(self.data_memory[self.address_reg])
+                logging.info(f"add char '{char}' to output buffer")
+                self.output_buffer.append(char)
 
     def alu(self, operation=Opcode.ADD, left_operand=0):
         self.alu_out = self.tos
@@ -127,6 +132,7 @@ class ControlUnit:
         else:
             self.PC = self.instr["arg"] if self.dp.tos == 1 or sel_pc == Signals.PC_JUMP else self.PC + 1
         self.instr = self.instructions[self.PC]
+        self.dp.term = self.instr["term"]
 
     def start(self):
         while not self.stop:

@@ -42,6 +42,7 @@ class Term:
     IND_LOAD = "@*"
     STORE = "!"
     IND_STORE = "!*"
+    DOT = "."
 
     STRING = '"'
     IF = "if"

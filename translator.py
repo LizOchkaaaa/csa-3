@@ -105,8 +105,6 @@ def translator(code):
     variable_pointer = 2
 
     while i < len(code):
-        if code[i] == Term.CLEAR:
-            pass
         row = code[i]
         if Term.STRING in row:
             i, index = parse_string(instructions, code, index, i)
@@ -156,8 +154,8 @@ def translator(code):
 
             elif row == Term.KEY:
                 instructions.append(create_instruction(index, Term.KEY, Opcode.LOAD, INPUT_ADDRESS))
-            elif row == Term.EMIT:
-                instructions.append(create_instruction(index, Term.EMIT, Opcode.STORE, OUTPUT_ADDRESS))
+            elif row in [Term.EMIT, Term.DOT]:
+                instructions.append(create_instruction(index, row, Opcode.STORE, OUTPUT_ADDRESS))
             elif row == Term.CR:
                 index = cr_machine(index, instructions)
             elif row in [Opcode.DUP, Opcode.DROP, Opcode.CLEAR]:
