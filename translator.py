@@ -172,11 +172,12 @@ def translator(code):
     return instructions
 
 
-def main(code, target):
-    code = code.strip()
-    code = re.split("\\s+|\n", code)
-    code.append(" ")
-    machine = translator(code)
+def main(source, target):
+    with open(source, "r", encoding="utf-8") as file:
+        code = file.read()
+        code = code.strip()
+        code = re.split("\\s+|\n", code)
+        machine = translator(code)
     buf = []
     for instr in machine:
         buf.append(json.dumps(instr))
@@ -187,7 +188,4 @@ def main(code, target):
 if __name__ == '__main__':
     assert len(sys.argv) == 3, "Wrong arguments: translator.py <input_file> <target_file>"
     _, source, target = sys.argv
-
-    with open(source, "r", encoding="utf-8") as file:
-        code = file.read()
-        main(code, target)
+    main(source, target)

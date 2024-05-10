@@ -1,18 +1,17 @@
 import json
-import sys
 import logging
+import sys
 from processor.machine import DataPath, ControlUnit
 
 
 def main(code_file, input_file):
-    logging.basicConfig(level=logging.DEBUG, filename="log.txt", filemode="w",
-                        format="%(levelname)s: %(message)s")
-
-    with open(code_file) as file:
+    logging.basicConfig(level=logging.DEBUG, format="%(levelname)s: %(message)s")
+    with open(code_file, "r") as file:
         instructions = json.load(file)
-    with open(input_file) as file:
+    with open(input_file, "r") as file:
         input_tokens = file.readline()
         input_tokens = list(input_tokens)
+        input_tokens.append("\x00")
 
     data_path = DataPath(30, input_tokens)
     control_unit = ControlUnit(instructions, data_path)

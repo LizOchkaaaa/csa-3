@@ -22,6 +22,8 @@ class DataPath:
         self.input_tokens = input_tokens
         self.output_buffer = []
 
+        self.log = None
+
     def signal_latch_tos(self, signal):
         buses = {
             Signals.LATCH_TOS_NUMBER: self.number_tos,
@@ -91,7 +93,10 @@ class ControlUnit:
         self.microcode = Microcode(self, dp)
 
     def tick(self):
-        logging.debug(self)
+        if self._tick < 700 or self._tick == 4591:
+            logging.debug(self)
+            if self._tick == 699:
+                logging.info("Cut log due to its size")
         self._tick += 1
         self.dp.number_tos = 0
         self.dp.number_address = 0
@@ -139,10 +144,6 @@ class ControlUnit:
         dp = self.dp
         return f"({self.instr['index']}: {self.instr['term']} -> {self.instr['opcode']} " \
                f"{self.instr['arg'] if 'arg' in self.instr else ''}) - " \
-               f"TICK: {self._tick} - " \
-               f"TOS: {dp.tos} - " \
-               f"data stack: {dp.data_stack} - " \
-               f"alu out: {dp.alu_out} - " \
-               f"memory out: {dp.data_memory_out} - " \
-               f"address reg: {dp.address_reg}"
-
+               f"TICK: {self._tick} - TOS: {dp.tos} - data stack: {dp.data_stack} - " \
+               f"alu out: {dp.alu_out} - memory out: {dp.data_memory_out} - address reg: {dp.address_reg} - " \
+               f"PC: {self.PC} - mPC: {self.mPC}"
