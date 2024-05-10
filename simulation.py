@@ -1,9 +1,13 @@
 import json
 import sys
+import logging
 from processor.machine import DataPath, ControlUnit
 
 
 def main(code_file, input_file):
+    logging.basicConfig(level=logging.DEBUG, filename="log.txt", filemode="w",
+                        format="%(levelname)s: %(message)s")
+
     with open(code_file) as file:
         instructions = json.load(file)
     with open(input_file) as file:

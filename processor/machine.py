@@ -1,6 +1,7 @@
 from processor.isa import Opcode
 from processor.microcode import Microcode
 from processor.signals import Signals
+import logging
 
 INPUT_ADDRESS = 0
 OUTPUT_ADDRESS = 1
@@ -44,13 +45,17 @@ class DataPath:
 
     def memory_read(self):
         if self.address_reg == INPUT_ADDRESS:
-            self.data_memory[self.address_reg] = ord(self.input_tokens.pop(0))
+            char = self.input_tokens.pop(0)
+            self.data_memory[self.address_reg] = ord(char)
+            logging.info(f"add char '{char}' from input buffer")
         self.data_memory_out = self.data_memory[self.address_reg]
 
     def memory_write(self):
         self.data_memory[self.address_reg] = self.tos
         if self.address_reg == OUTPUT_ADDRESS:
-            self.output_buffer.append(chr(self.data_memory[self.address_reg]))
+            char = chr(self.data_memory[self.address_reg])
+            logging.info(f"add char '{char}' to output buffer")
+            self.output_buffer.append(char)
 
     def alu(self, operation=Opcode.ADD, left_operand=0):
         self.alu_out = self.tos
@@ -86,6 +91,7 @@ class ControlUnit:
         self.microcode = Microcode(self, dp)
 
     def tick(self):
+        logging.debug(self)
         self._tick += 1
         self.dp.number_tos = 0
         self.dp.number_address = 0
@@ -128,3 +134,15 @@ class ControlUnit:
             self.tick()
 
         return "".join(self.dp.output_buffer), self._tick
+
+    def __repr__(self):
+        dp = self.dp
+        return f"({self.instr['index']}: {self.instr['term']} -> {self.instr['opcode']} " \
+               f"{self.instr['arg'] if 'arg' in self.instr else ''}) - " \
+               f"TICK: {self._tick} - " \
+               f"TOS: {dp.tos} - " \
+               f"data stack: {dp.data_stack} - " \
+               f"alu out: {dp.alu_out} - " \
+               f"memory out: {dp.data_memory_out} - " \
+               f"address reg: {dp.address_reg}"
+
