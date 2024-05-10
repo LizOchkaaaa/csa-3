@@ -15,14 +15,21 @@ class Microcode:
         Opcode.STORE: 20,
         Opcode.IND_STORE: 23,
 
-        Opcode.EQUAL: 28,
-        Opcode.NOT_EQUAL: 32,
-        Opcode.INC: 36,
-        Opcode.DEC: 38,
+        Opcode.ADD: 28,
+        Opcode.SUB: 32,
+        Opcode.MUL: 36,
+        Opcode.DIV: 40,
+        Opcode.MOD: 44,
+        Opcode.LESS_EQ: 48,
+        Opcode.GREATER: 52,
+        Opcode.EQUAL: 56,
+        Opcode.NOT_EQUAL: 60,
+        Opcode.INC: 64,
+        Opcode.DEC: 66,
 
-        Opcode.JMP: 40,
-        Opcode.JIF: 41,
-        Opcode.STOP: 42
+        Opcode.JMP: 68,
+        Opcode.JIF: 69,
+        Opcode.STOP: 70
     }
 
     def math_operation(self, opcode, mPC_next, instr_end):
@@ -93,6 +100,13 @@ class Microcode:
             instr_end,
 
             # math operations
+            *self.math_operation(Opcode.ADD, mPC_next, instr_end),
+            *self.math_operation(Opcode.SUB, mPC_next, instr_end),
+            *self.math_operation(Opcode.MUL, mPC_next, instr_end),
+            *self.math_operation(Opcode.DIV, mPC_next, instr_end),
+            *self.math_operation(Opcode.MOD, mPC_next, instr_end),
+            *self.math_operation(Opcode.LESS_EQ, mPC_next, instr_end),
+            *self.math_operation(Opcode.GREATER, mPC_next, instr_end),
             *self.math_operation(Opcode.EQUAL, mPC_next, instr_end),
             *self.math_operation(Opcode.NOT_EQUAL, mPC_next, instr_end),
 

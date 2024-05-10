@@ -1,4 +1,3 @@
-import itertools
 import json
 import sys
 from processor.machine import DataPath, ControlUnit

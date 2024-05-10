@@ -15,10 +15,11 @@ class Opcode:
     SUB = "sub"
     MUL = "mul"
     DIV = "div"
+    MOD = "mod"
     INC = "inc"
     DEC = "dec"
+    LESS_EQ = "less_eq"
     GREATER = "greater"
-    LESS = "less"
     EQUAL = "equal"
     NOT_EQUAL = "n_equal"
 
@@ -50,4 +51,3 @@ class Term:
 
     BEGIN = "begin"
     UNTIL = "until"
-

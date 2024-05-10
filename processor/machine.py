@@ -59,16 +59,15 @@ class DataPath:
         elif left_operand != 0:
             oper = self.data_stack[-1] if self.data_stack != [] else 0
             operations = {
-                Opcode.ADD: self.alu_out + oper,
-                Opcode.SUB: self.alu_out - oper,
-                Opcode.MUL: self.alu_out * oper,
-                Opcode.DIV: self.alu_out / oper if oper != 0 else float('inf'),
-                Opcode.GREATER: self.alu_out > self.data_stack[-1],
-                Opcode.LESS: self.alu_out < self.data_stack[-1],
-                Opcode.INC: self.alu_out + 1,
-                Opcode.DEC: self.alu_out - 1,
-                Opcode.EQUAL: self.alu_out == self.data_stack[-1],
-                Opcode.NOT_EQUAL: self.alu_out != self.data_stack[-1]
+                Opcode.ADD: oper + self.tos,
+                Opcode.SUB: oper - self.tos,
+                Opcode.MUL: oper * self.tos,
+                Opcode.DIV: oper / self.tos if self.tos != 0 else 0,
+                Opcode.MOD: oper % self.tos if self.tos != 0 else 0,
+                Opcode.LESS_EQ: oper <= self.tos,
+                Opcode.GREATER: oper > self.tos,
+                Opcode.EQUAL: oper == self.tos,
+                Opcode.NOT_EQUAL: oper != self.tos
             }
             self.alu_out = int(operations[operation])
 
@@ -103,13 +102,13 @@ class ControlUnit:
     def set_number_in_address(self):
         self.dp.number_address = self.instr["arg"]
 
-    def signal_latch_mPC(self, sel_mPC):
+    def signal_latch_mPC(self, signal):
         signals = {
             Signals.mPC_NEXT: self.mPC + 1,
             Signals.mPC_ZERO: 0,
             Signals.mPC_INSTR_JUMP: self.mPC_address
         }
-        self.mPC = signals[sel_mPC]
+        self.mPC = signals[signal]
 
     def signal_latch_PC(self, sel_pc):
         if sel_pc == Signals.PC_NEXT:
@@ -117,8 +116,6 @@ class ControlUnit:
         else:
             self.PC = self.instr["arg"] if self.dp.tos == 1 or sel_pc == Signals.PC_JUMP else self.PC + 1
         self.instr = self.instructions[self.PC]
-        if self.instr["index"] == 8:
-            pass
 
     def start(self):
         while not self.stop:

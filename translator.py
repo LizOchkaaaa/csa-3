@@ -13,12 +13,13 @@ def parse_math(row):
         "-": Opcode.SUB,
         "*": Opcode.MUL,
         "/": Opcode.DIV,
+        "mod": Opcode.MOD,
         "++": Opcode.INC,
         "--": Opcode.DEC,
+        "<=": Opcode.LESS_EQ,
         ">": Opcode.GREATER,
-        "<": Opcode.LESS,
         "=": Opcode.EQUAL,
-        "!=": Opcode.NOT_EQUAL
+        "!=": Opcode.NOT_EQUAL,
     }.get(row)
 
 
@@ -33,6 +34,8 @@ def inverse_condition(opcode):
     return {
         Opcode.EQUAL: Opcode.NOT_EQUAL,
         Opcode.NOT_EQUAL: Opcode.EQUAL,
+        Opcode.LESS_EQ: Opcode.GREATER,
+        Opcode.GREATER: Opcode.LESS_EQ
     }.get(opcode)
 
 
@@ -138,7 +141,7 @@ def translator(code):
             elif row == Term.UNTIL:
                 instructions.append(create_instruction(index, Term.UNTIL, Opcode.JIF, jump_buf.pop()))
 
-            elif re.search("-?[0-9]", row):
+            elif re.search("^-?[0-9]*$", row):
                 instructions.append(create_instruction(index, row, Opcode.PUSH, int(row)))
             elif parse_math(row) is not None:
                 instructions.append(create_instruction(index, row, parse_math(row)))
