@@ -15,11 +15,11 @@ def main(code_file, input_file):
 
     data_path = DataPath(30, input_tokens)
     control_unit = ControlUnit(instructions, data_path)
-    out, ticks = control_unit.start()
+    out, ticks, instr_count = control_unit.start()
 
     if len(out) > 0:
         print(out, "\n-------------------------------")
-    print(f"Количество инструкций: {len(instructions)}")
+    print(f"Количество инструкций: {instr_count}")
     print(f"Количество тактов: {ticks}")
 
 

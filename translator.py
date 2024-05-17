@@ -93,6 +93,12 @@ def next(i, code):
         return ""
 
 
+def skip_comments(i, code):
+    while "/" not in code[i]:
+        i += 1
+    return i + 1
+
+
 def translator(code):
     instructions = []
     index, i = 0, 0
@@ -105,6 +111,10 @@ def translator(code):
     variable_pointer = 2
 
     while i < len(code):
+        if "/" in code[i]:
+            i = skip_comments(i + 1, code)
+            if i >= len(code):
+                break
         row = code[i]
         if Term.STRING in row:
             i, index = parse_string(instructions, code, index, i)

@@ -88,6 +88,8 @@ class ControlUnit:
 
     def __init__(self, instructions, dp: DataPath):
         self._tick = 0
+        self.instr_count = 1
+
         self.PC = 0
         self.mPC = 0
         self.mPC_address = 0
@@ -112,10 +114,10 @@ class ControlUnit:
     def set_stop(self):
         self.stop = True
 
-    def set_number_in_tos(self):
+    def set_arg_in_tos(self):
         self.dp.number_tos = self.instr["arg"]
 
-    def set_number_in_address(self):
+    def set_arg_in_address(self):
         self.dp.number_address = self.instr["arg"]
 
     def signal_latch_mPC(self, signal):
@@ -130,9 +132,10 @@ class ControlUnit:
         if sel_pc == Signals.PC_NEXT:
             self.PC += 1
         else:
-            self.PC = self.instr["arg"] if self.dp.tos == 1 or sel_pc == Signals.PC_JUMP else self.PC + 1
+            self.PC = self.instr["arg"] if self.dp.tos != 0 or sel_pc == Signals.PC_JUMP else self.PC + 1
         self.instr = self.instructions[self.PC]
         self.dp.term = self.instr["term"]
+        self.instr_count += 1
 
     def start(self):
         while not self.stop:
@@ -144,7 +147,7 @@ class ControlUnit:
                     signal()
             self.tick()
 
-        return "".join(self.dp.output_buffer), self._tick
+        return "".join(self.dp.output_buffer), self._tick, self.instr_count
 
     def __repr__(self):
         dp = self.dp

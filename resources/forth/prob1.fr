@@ -1,0 +1,19 @@
+sum ! current !     /vsvsvs l,lkm edked/
+: add sum @ current @ + sum ! :
+
+begin
+    clear
+    current @
+    ++
+    current !
+    3 mod 0 = if add
+    else
+        current @
+        5 mod 0 = if add ;
+    ;
+    sum @
+1000 <= until
+
+clear
+sum @
+.

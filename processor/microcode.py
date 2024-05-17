@@ -43,7 +43,7 @@ class Microcode:
                 instr_end)
 
     def indirect(self, mPC_next):
-        return ([self.cu.set_number_in_address, (self.dp.signal_latch_address, Signals.LATCH_ADDR_NUMBER), mPC_next],
+        return ([self.cu.set_arg_in_address, (self.dp.signal_latch_address, Signals.LATCH_ADDR_NUMBER), mPC_next],
                 [self.dp.memory_read, mPC_next],
                 [(self.dp.signal_latch_address, Signals.LATCH_ADDR_FROM_MEM), mPC_next])
 
@@ -68,11 +68,11 @@ class Microcode:
             instr_end,
 
             # push
-            [dp.signal_stack_push, cu.set_number_in_tos, (dp.signal_latch_tos, Signals.LATCH_TOS_NUMBER), mPC_next],
+            [dp.signal_stack_push, cu.set_arg_in_tos, (dp.signal_latch_tos, Signals.LATCH_TOS_NUMBER), mPC_next],
             instr_end,
 
             # top
-            [cu.set_number_in_tos, (dp.signal_latch_tos, Signals.LATCH_TOS_NUMBER), mPC_next],
+            [cu.set_arg_in_tos, (dp.signal_latch_tos, Signals.LATCH_TOS_NUMBER), mPC_next],
             instr_end,
 
             # clear
@@ -80,7 +80,7 @@ class Microcode:
             instr_end,
 
             # load
-            [cu.set_number_in_address, (dp.signal_latch_address, Signals.LATCH_ADDR_NUMBER), mPC_next],
+            [cu.set_arg_in_address, (dp.signal_latch_address, Signals.LATCH_ADDR_NUMBER), mPC_next],
             [dp.memory_read, dp.signal_stack_push, (dp.signal_latch_tos, Signals.LATCH_TOS_MEM_OUT), mPC_next],
             instr_end,
 
@@ -90,7 +90,7 @@ class Microcode:
             instr_end,
 
             # store
-            [cu.set_number_in_address, (dp.signal_latch_address, Signals.LATCH_ADDR_NUMBER), mPC_next],
+            [cu.set_arg_in_address, (dp.signal_latch_address, Signals.LATCH_ADDR_NUMBER), mPC_next],
             [dp.memory_write, mPC_next],
             instr_end,
 

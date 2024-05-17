@@ -1,0 +1,540 @@
+input: cat cat cat
+
+source: |
+  begin
+    clear       /очистка стека после каждой итерации, чтобы не засорять стек данных/
+    key         /получение символа из буфера ввода/
+    0 != if drop drop emit      /если символ не 0, то печатаю его/
+    else drop ;
+  0 != until          /если пришел 0-терминатор с ввода, то значит, что строка закончилась/
+
+machine: |-
+  [{"index": 0, "term": "clear", "opcode": "clear"},
+   {"index": 1, "term": "key", "opcode": "load", "arg": 0},
+   {"index": 2, "term": "0", "opcode": "push", "arg": 0},
+   {"index": 3, "term": "!=", "opcode": "equal"},
+   {"index": 4, "term": "if", "opcode": "jif", "arg": 9},
+   {"index": 5, "term": "drop", "opcode": "drop"},
+   {"index": 6, "term": "drop", "opcode": "drop"},
+   {"index": 7, "term": "emit", "opcode": "store", "arg": 1},
+   {"index": 8, "term": "else", "opcode": "jmp", "arg": 10},
+   {"index": 9, "term": "drop", "opcode": "drop"},
+   {"index": 10, "term": "0", "opcode": "push", "arg": 0},
+   {"index": 11, "term": "!=", "opcode": "n_equal"},
+   {"index": 12, "term": "until", "opcode": "jif", "arg": 0},
+   {"index": 13, "term": null, "opcode": "stop"}]
+
+output: |
+  cat cat cat 
+  -------------------------------
+  Количество инструкций: 142
+  Количество тактов: 484
+
+out_log: |
+  DEBUG: (0: clear -> clear ) - TICK: 0 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 0 - mPC: 10
+  DEBUG: (0: clear -> clear ) - TICK: 1 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 0 - mPC: 11
+  DEBUG: (1: key -> load 0) - TICK: 2 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 1 - mPC: 0
+  DEBUG: (1: key -> load 0) - TICK: 3 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 1 - mPC: 12
+  DEBUG: (1: key -> load 0) - TICK: 4 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 1 - mPC: 13
+  INFO: add char 'c' from input buffer
+  DEBUG: (1: key -> load 0) - TICK: 5 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 1 - mPC: 14
+  DEBUG: (2: 0 -> push 0) - TICK: 6 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 2 - mPC: 0
+  DEBUG: (2: 0 -> push 0) - TICK: 7 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 2 - mPC: 6
+  DEBUG: (2: 0 -> push 0) - TICK: 8 - TOS: 0 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 2 - mPC: 7
+  DEBUG: (3: != -> equal ) - TICK: 9 - TOS: 0 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 3 - mPC: 0
+  DEBUG: (3: != -> equal ) - TICK: 10 - TOS: 0 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 3 - mPC: 56
+  DEBUG: (3: != -> equal ) - TICK: 11 - TOS: 0 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 3 - mPC: 57
+  DEBUG: (3: != -> equal ) - TICK: 12 - TOS: 0 - data stack: [0, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 3 - mPC: 58
+  DEBUG: (3: != -> equal ) - TICK: 13 - TOS: 0 - data stack: [0, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 3 - mPC: 59
+  DEBUG: (4: if -> jif 9) - TICK: 14 - TOS: 0 - data stack: [0, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 4 - mPC: 0
+  DEBUG: (4: if -> jif 9) - TICK: 15 - TOS: 0 - data stack: [0, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 4 - mPC: 69
+  DEBUG: (5: drop -> drop ) - TICK: 16 - TOS: 0 - data stack: [0, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 5 - mPC: 0
+  DEBUG: (5: drop -> drop ) - TICK: 17 - TOS: 0 - data stack: [0, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 5 - mPC: 3
+  DEBUG: (5: drop -> drop ) - TICK: 18 - TOS: 0 - data stack: [0, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 5 - mPC: 4
+  DEBUG: (5: drop -> drop ) - TICK: 19 - TOS: 0 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 5 - mPC: 5
+  DEBUG: (6: drop -> drop ) - TICK: 20 - TOS: 0 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 6 - mPC: 0
+  DEBUG: (6: drop -> drop ) - TICK: 21 - TOS: 0 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 6 - mPC: 3
+  DEBUG: (6: drop -> drop ) - TICK: 22 - TOS: 99 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 6 - mPC: 4
+  DEBUG: (6: drop -> drop ) - TICK: 23 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 6 - mPC: 5
+  DEBUG: (7: emit -> store 1) - TICK: 24 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 7 - mPC: 0
+  DEBUG: (7: emit -> store 1) - TICK: 25 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 7 - mPC: 20
+  DEBUG: (7: emit -> store 1) - TICK: 26 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 7 - mPC: 21
+  INFO: add char 'c' to output buffer
+  DEBUG: (7: emit -> store 1) - TICK: 27 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 7 - mPC: 22
+  DEBUG: (8: else -> jmp 10) - TICK: 28 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 8 - mPC: 0
+  DEBUG: (8: else -> jmp 10) - TICK: 29 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 8 - mPC: 68
+  DEBUG: (10: 0 -> push 0) - TICK: 30 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 10 - mPC: 0
+  DEBUG: (10: 0 -> push 0) - TICK: 31 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 10 - mPC: 6
+  DEBUG: (10: 0 -> push 0) - TICK: 32 - TOS: 0 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 10 - mPC: 7
+  DEBUG: (11: != -> n_equal ) - TICK: 33 - TOS: 0 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 11 - mPC: 0
+  DEBUG: (11: != -> n_equal ) - TICK: 34 - TOS: 0 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 11 - mPC: 60
+  DEBUG: (11: != -> n_equal ) - TICK: 35 - TOS: 0 - data stack: [0, 99] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 11 - mPC: 61
+  DEBUG: (11: != -> n_equal ) - TICK: 36 - TOS: 0 - data stack: [0, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 11 - mPC: 62
+  DEBUG: (11: != -> n_equal ) - TICK: 37 - TOS: 1 - data stack: [0, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 11 - mPC: 63
+  DEBUG: (12: until -> jif 0) - TICK: 38 - TOS: 1 - data stack: [0, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 12 - mPC: 0
+  DEBUG: (12: until -> jif 0) - TICK: 39 - TOS: 1 - data stack: [0, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 12 - mPC: 69
+  DEBUG: (0: clear -> clear ) - TICK: 40 - TOS: 1 - data stack: [0, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 0 - mPC: 0
+  DEBUG: (0: clear -> clear ) - TICK: 41 - TOS: 1 - data stack: [0, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 0 - mPC: 10
+  DEBUG: (0: clear -> clear ) - TICK: 42 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 0 - mPC: 11
+  DEBUG: (1: key -> load 0) - TICK: 43 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 1 - mPC: 0
+  DEBUG: (1: key -> load 0) - TICK: 44 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 1 - mPC: 12
+  DEBUG: (1: key -> load 0) - TICK: 45 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 99 - address reg: 0 - PC: 1 - mPC: 13
+  INFO: add char 'a' from input buffer
+  DEBUG: (1: key -> load 0) - TICK: 46 - TOS: 97 - data stack: [1] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 1 - mPC: 14
+  DEBUG: (2: 0 -> push 0) - TICK: 47 - TOS: 97 - data stack: [1] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 2 - mPC: 0
+  DEBUG: (2: 0 -> push 0) - TICK: 48 - TOS: 97 - data stack: [1] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 2 - mPC: 6
+  DEBUG: (2: 0 -> push 0) - TICK: 49 - TOS: 0 - data stack: [1, 97] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 2 - mPC: 7
+  DEBUG: (3: != -> equal ) - TICK: 50 - TOS: 0 - data stack: [1, 97] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 3 - mPC: 0
+  DEBUG: (3: != -> equal ) - TICK: 51 - TOS: 0 - data stack: [1, 97] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 3 - mPC: 56
+  DEBUG: (3: != -> equal ) - TICK: 52 - TOS: 0 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 3 - mPC: 57
+  DEBUG: (3: != -> equal ) - TICK: 53 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 3 - mPC: 58
+  DEBUG: (3: != -> equal ) - TICK: 54 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 3 - mPC: 59
+  DEBUG: (4: if -> jif 9) - TICK: 55 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 4 - mPC: 0
+  DEBUG: (4: if -> jif 9) - TICK: 56 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 4 - mPC: 69
+  DEBUG: (5: drop -> drop ) - TICK: 57 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 5 - mPC: 0
+  DEBUG: (5: drop -> drop ) - TICK: 58 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 5 - mPC: 3
+  DEBUG: (5: drop -> drop ) - TICK: 59 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 5 - mPC: 4
+  DEBUG: (5: drop -> drop ) - TICK: 60 - TOS: 0 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 5 - mPC: 5
+  DEBUG: (6: drop -> drop ) - TICK: 61 - TOS: 0 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 6 - mPC: 0
+  DEBUG: (6: drop -> drop ) - TICK: 62 - TOS: 0 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 6 - mPC: 3
+  DEBUG: (6: drop -> drop ) - TICK: 63 - TOS: 97 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 6 - mPC: 4
+  DEBUG: (6: drop -> drop ) - TICK: 64 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 6 - mPC: 5
+  DEBUG: (7: emit -> store 1) - TICK: 65 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 7 - mPC: 0
+  DEBUG: (7: emit -> store 1) - TICK: 66 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 7 - mPC: 20
+  DEBUG: (7: emit -> store 1) - TICK: 67 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 7 - mPC: 21
+  INFO: add char 'a' to output buffer
+  DEBUG: (7: emit -> store 1) - TICK: 68 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 7 - mPC: 22
+  DEBUG: (8: else -> jmp 10) - TICK: 69 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 8 - mPC: 0
+  DEBUG: (8: else -> jmp 10) - TICK: 70 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 8 - mPC: 68
+  DEBUG: (10: 0 -> push 0) - TICK: 71 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 10 - mPC: 0
+  DEBUG: (10: 0 -> push 0) - TICK: 72 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 10 - mPC: 6
+  DEBUG: (10: 0 -> push 0) - TICK: 73 - TOS: 0 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 10 - mPC: 7
+  DEBUG: (11: != -> n_equal ) - TICK: 74 - TOS: 0 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 11 - mPC: 0
+  DEBUG: (11: != -> n_equal ) - TICK: 75 - TOS: 0 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 11 - mPC: 60
+  DEBUG: (11: != -> n_equal ) - TICK: 76 - TOS: 0 - data stack: [1, 97] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 11 - mPC: 61
+  DEBUG: (11: != -> n_equal ) - TICK: 77 - TOS: 0 - data stack: [1, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 11 - mPC: 62
+  DEBUG: (11: != -> n_equal ) - TICK: 78 - TOS: 1 - data stack: [1, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 11 - mPC: 63
+  DEBUG: (12: until -> jif 0) - TICK: 79 - TOS: 1 - data stack: [1, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 12 - mPC: 0
+  DEBUG: (12: until -> jif 0) - TICK: 80 - TOS: 1 - data stack: [1, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 12 - mPC: 69
+  DEBUG: (0: clear -> clear ) - TICK: 81 - TOS: 1 - data stack: [1, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 0 - mPC: 0
+  DEBUG: (0: clear -> clear ) - TICK: 82 - TOS: 1 - data stack: [1, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 0 - mPC: 10
+  DEBUG: (0: clear -> clear ) - TICK: 83 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 0 - mPC: 11
+  DEBUG: (1: key -> load 0) - TICK: 84 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 1 - mPC: 0
+  DEBUG: (1: key -> load 0) - TICK: 85 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 1 - mPC: 12
+  DEBUG: (1: key -> load 0) - TICK: 86 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 1 - mPC: 13
+  INFO: add char 't' from input buffer
+  DEBUG: (1: key -> load 0) - TICK: 87 - TOS: 116 - data stack: [1] - alu out: 1 - memory out: 116 - address reg: 0 - PC: 1 - mPC: 14
+  DEBUG: (2: 0 -> push 0) - TICK: 88 - TOS: 116 - data stack: [1] - alu out: 1 - memory out: 116 - address reg: 0 - PC: 2 - mPC: 0
+  DEBUG: (2: 0 -> push 0) - TICK: 89 - TOS: 116 - data stack: [1] - alu out: 1 - memory out: 116 - address reg: 0 - PC: 2 - mPC: 6
+  DEBUG: (2: 0 -> push 0) - TICK: 90 - TOS: 0 - data stack: [1, 116] - alu out: 1 - memory out: 116 - address reg: 0 - PC: 2 - mPC: 7
+  DEBUG: (3: != -> equal ) - TICK: 91 - TOS: 0 - data stack: [1, 116] - alu out: 1 - memory out: 116 - address reg: 0 - PC: 3 - mPC: 0
+  DEBUG: (3: != -> equal ) - TICK: 92 - TOS: 0 - data stack: [1, 116] - alu out: 1 - memory out: 116 - address reg: 0 - PC: 3 - mPC: 56
+  DEBUG: (3: != -> equal ) - TICK: 93 - TOS: 0 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 3 - mPC: 57
+  DEBUG: (3: != -> equal ) - TICK: 94 - TOS: 0 - data stack: [1, 116, 0] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 3 - mPC: 58
+  DEBUG: (3: != -> equal ) - TICK: 95 - TOS: 0 - data stack: [1, 116, 0] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 3 - mPC: 59
+  DEBUG: (4: if -> jif 9) - TICK: 96 - TOS: 0 - data stack: [1, 116, 0] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 4 - mPC: 0
+  DEBUG: (4: if -> jif 9) - TICK: 97 - TOS: 0 - data stack: [1, 116, 0] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 4 - mPC: 69
+  DEBUG: (5: drop -> drop ) - TICK: 98 - TOS: 0 - data stack: [1, 116, 0] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 5 - mPC: 0
+  DEBUG: (5: drop -> drop ) - TICK: 99 - TOS: 0 - data stack: [1, 116, 0] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 5 - mPC: 3
+  DEBUG: (5: drop -> drop ) - TICK: 100 - TOS: 0 - data stack: [1, 116, 0] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 5 - mPC: 4
+  DEBUG: (5: drop -> drop ) - TICK: 101 - TOS: 0 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 5 - mPC: 5
+  DEBUG: (6: drop -> drop ) - TICK: 102 - TOS: 0 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 6 - mPC: 0
+  DEBUG: (6: drop -> drop ) - TICK: 103 - TOS: 0 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 6 - mPC: 3
+  DEBUG: (6: drop -> drop ) - TICK: 104 - TOS: 116 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 6 - mPC: 4
+  DEBUG: (6: drop -> drop ) - TICK: 105 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 6 - mPC: 5
+  DEBUG: (7: emit -> store 1) - TICK: 106 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 7 - mPC: 0
+  DEBUG: (7: emit -> store 1) - TICK: 107 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 7 - mPC: 20
+  DEBUG: (7: emit -> store 1) - TICK: 108 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 7 - mPC: 21
+  INFO: add char 't' to output buffer
+  DEBUG: (7: emit -> store 1) - TICK: 109 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 7 - mPC: 22
+  DEBUG: (8: else -> jmp 10) - TICK: 110 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 8 - mPC: 0
+  DEBUG: (8: else -> jmp 10) - TICK: 111 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 8 - mPC: 68
+  DEBUG: (10: 0 -> push 0) - TICK: 112 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 10 - mPC: 0
+  DEBUG: (10: 0 -> push 0) - TICK: 113 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 10 - mPC: 6
+  DEBUG: (10: 0 -> push 0) - TICK: 114 - TOS: 0 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 10 - mPC: 7
+  DEBUG: (11: != -> n_equal ) - TICK: 115 - TOS: 0 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 11 - mPC: 0
+  DEBUG: (11: != -> n_equal ) - TICK: 116 - TOS: 0 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 11 - mPC: 60
+  DEBUG: (11: != -> n_equal ) - TICK: 117 - TOS: 0 - data stack: [1, 116] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 11 - mPC: 61
+  DEBUG: (11: != -> n_equal ) - TICK: 118 - TOS: 0 - data stack: [1, 116, 0] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 11 - mPC: 62
+  DEBUG: (11: != -> n_equal ) - TICK: 119 - TOS: 1 - data stack: [1, 116, 0] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 11 - mPC: 63
+  DEBUG: (12: until -> jif 0) - TICK: 120 - TOS: 1 - data stack: [1, 116, 0] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 12 - mPC: 0
+  DEBUG: (12: until -> jif 0) - TICK: 121 - TOS: 1 - data stack: [1, 116, 0] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 12 - mPC: 69
+  DEBUG: (0: clear -> clear ) - TICK: 122 - TOS: 1 - data stack: [1, 116, 0] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 0 - mPC: 0
+  DEBUG: (0: clear -> clear ) - TICK: 123 - TOS: 1 - data stack: [1, 116, 0] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 0 - mPC: 10
+  DEBUG: (0: clear -> clear ) - TICK: 124 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 0 - mPC: 11
+  DEBUG: (1: key -> load 0) - TICK: 125 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 1 - mPC: 0
+  DEBUG: (1: key -> load 0) - TICK: 126 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 1 - mPC: 12
+  DEBUG: (1: key -> load 0) - TICK: 127 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 116 - address reg: 0 - PC: 1 - mPC: 13
+  INFO: add char ' ' from input buffer
+  DEBUG: (1: key -> load 0) - TICK: 128 - TOS: 32 - data stack: [1] - alu out: 1 - memory out: 32 - address reg: 0 - PC: 1 - mPC: 14
+  DEBUG: (2: 0 -> push 0) - TICK: 129 - TOS: 32 - data stack: [1] - alu out: 1 - memory out: 32 - address reg: 0 - PC: 2 - mPC: 0
+  DEBUG: (2: 0 -> push 0) - TICK: 130 - TOS: 32 - data stack: [1] - alu out: 1 - memory out: 32 - address reg: 0 - PC: 2 - mPC: 6
+  DEBUG: (2: 0 -> push 0) - TICK: 131 - TOS: 0 - data stack: [1, 32] - alu out: 1 - memory out: 32 - address reg: 0 - PC: 2 - mPC: 7
+  DEBUG: (3: != -> equal ) - TICK: 132 - TOS: 0 - data stack: [1, 32] - alu out: 1 - memory out: 32 - address reg: 0 - PC: 3 - mPC: 0
+  DEBUG: (3: != -> equal ) - TICK: 133 - TOS: 0 - data stack: [1, 32] - alu out: 1 - memory out: 32 - address reg: 0 - PC: 3 - mPC: 56
+  DEBUG: (3: != -> equal ) - TICK: 134 - TOS: 0 - data stack: [1, 32] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 3 - mPC: 57
+  DEBUG: (3: != -> equal ) - TICK: 135 - TOS: 0 - data stack: [1, 32, 0] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 3 - mPC: 58
+  DEBUG: (3: != -> equal ) - TICK: 136 - TOS: 0 - data stack: [1, 32, 0] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 3 - mPC: 59
+  DEBUG: (4: if -> jif 9) - TICK: 137 - TOS: 0 - data stack: [1, 32, 0] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 4 - mPC: 0
+  DEBUG: (4: if -> jif 9) - TICK: 138 - TOS: 0 - data stack: [1, 32, 0] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 4 - mPC: 69
+  DEBUG: (5: drop -> drop ) - TICK: 139 - TOS: 0 - data stack: [1, 32, 0] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 5 - mPC: 0
+  DEBUG: (5: drop -> drop ) - TICK: 140 - TOS: 0 - data stack: [1, 32, 0] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 5 - mPC: 3
+  DEBUG: (5: drop -> drop ) - TICK: 141 - TOS: 0 - data stack: [1, 32, 0] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 5 - mPC: 4
+  DEBUG: (5: drop -> drop ) - TICK: 142 - TOS: 0 - data stack: [1, 32] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 5 - mPC: 5
+  DEBUG: (6: drop -> drop ) - TICK: 143 - TOS: 0 - data stack: [1, 32] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 6 - mPC: 0
+  DEBUG: (6: drop -> drop ) - TICK: 144 - TOS: 0 - data stack: [1, 32] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 6 - mPC: 3
+  DEBUG: (6: drop -> drop ) - TICK: 145 - TOS: 32 - data stack: [1, 32] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 6 - mPC: 4
+  DEBUG: (6: drop -> drop ) - TICK: 146 - TOS: 32 - data stack: [1] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 6 - mPC: 5
+  DEBUG: (7: emit -> store 1) - TICK: 147 - TOS: 32 - data stack: [1] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 7 - mPC: 0
+  DEBUG: (7: emit -> store 1) - TICK: 148 - TOS: 32 - data stack: [1] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 7 - mPC: 20
+  DEBUG: (7: emit -> store 1) - TICK: 149 - TOS: 32 - data stack: [1] - alu out: 0 - memory out: 32 - address reg: 1 - PC: 7 - mPC: 21
+  INFO: add char ' ' to output buffer
+  DEBUG: (7: emit -> store 1) - TICK: 150 - TOS: 32 - data stack: [1] - alu out: 0 - memory out: 32 - address reg: 1 - PC: 7 - mPC: 22
+  DEBUG: (8: else -> jmp 10) - TICK: 151 - TOS: 32 - data stack: [1] - alu out: 0 - memory out: 32 - address reg: 1 - PC: 8 - mPC: 0
+  DEBUG: (8: else -> jmp 10) - TICK: 152 - TOS: 32 - data stack: [1] - alu out: 0 - memory out: 32 - address reg: 1 - PC: 8 - mPC: 68
+  DEBUG: (10: 0 -> push 0) - TICK: 153 - TOS: 32 - data stack: [1] - alu out: 0 - memory out: 32 - address reg: 1 - PC: 10 - mPC: 0
+  DEBUG: (10: 0 -> push 0) - TICK: 154 - TOS: 32 - data stack: [1] - alu out: 0 - memory out: 32 - address reg: 1 - PC: 10 - mPC: 6
+  DEBUG: (10: 0 -> push 0) - TICK: 155 - TOS: 0 - data stack: [1, 32] - alu out: 0 - memory out: 32 - address reg: 1 - PC: 10 - mPC: 7
+  DEBUG: (11: != -> n_equal ) - TICK: 156 - TOS: 0 - data stack: [1, 32] - alu out: 0 - memory out: 32 - address reg: 1 - PC: 11 - mPC: 0
+  DEBUG: (11: != -> n_equal ) - TICK: 157 - TOS: 0 - data stack: [1, 32] - alu out: 0 - memory out: 32 - address reg: 1 - PC: 11 - mPC: 60
+  DEBUG: (11: != -> n_equal ) - TICK: 158 - TOS: 0 - data stack: [1, 32] - alu out: 1 - memory out: 32 - address reg: 1 - PC: 11 - mPC: 61
+  DEBUG: (11: != -> n_equal ) - TICK: 159 - TOS: 0 - data stack: [1, 32, 0] - alu out: 1 - memory out: 32 - address reg: 1 - PC: 11 - mPC: 62
+  DEBUG: (11: != -> n_equal ) - TICK: 160 - TOS: 1 - data stack: [1, 32, 0] - alu out: 1 - memory out: 32 - address reg: 1 - PC: 11 - mPC: 63
+  DEBUG: (12: until -> jif 0) - TICK: 161 - TOS: 1 - data stack: [1, 32, 0] - alu out: 1 - memory out: 32 - address reg: 1 - PC: 12 - mPC: 0
+  DEBUG: (12: until -> jif 0) - TICK: 162 - TOS: 1 - data stack: [1, 32, 0] - alu out: 1 - memory out: 32 - address reg: 1 - PC: 12 - mPC: 69
+  DEBUG: (0: clear -> clear ) - TICK: 163 - TOS: 1 - data stack: [1, 32, 0] - alu out: 1 - memory out: 32 - address reg: 1 - PC: 0 - mPC: 0
+  DEBUG: (0: clear -> clear ) - TICK: 164 - TOS: 1 - data stack: [1, 32, 0] - alu out: 1 - memory out: 32 - address reg: 1 - PC: 0 - mPC: 10
+  DEBUG: (0: clear -> clear ) - TICK: 165 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 32 - address reg: 1 - PC: 0 - mPC: 11
+  DEBUG: (1: key -> load 0) - TICK: 166 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 32 - address reg: 1 - PC: 1 - mPC: 0
+  DEBUG: (1: key -> load 0) - TICK: 167 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 32 - address reg: 1 - PC: 1 - mPC: 12
+  DEBUG: (1: key -> load 0) - TICK: 168 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 32 - address reg: 0 - PC: 1 - mPC: 13
+  INFO: add char 'c' from input buffer
+  DEBUG: (1: key -> load 0) - TICK: 169 - TOS: 99 - data stack: [1] - alu out: 1 - memory out: 99 - address reg: 0 - PC: 1 - mPC: 14
+  DEBUG: (2: 0 -> push 0) - TICK: 170 - TOS: 99 - data stack: [1] - alu out: 1 - memory out: 99 - address reg: 0 - PC: 2 - mPC: 0
+  DEBUG: (2: 0 -> push 0) - TICK: 171 - TOS: 99 - data stack: [1] - alu out: 1 - memory out: 99 - address reg: 0 - PC: 2 - mPC: 6
+  DEBUG: (2: 0 -> push 0) - TICK: 172 - TOS: 0 - data stack: [1, 99] - alu out: 1 - memory out: 99 - address reg: 0 - PC: 2 - mPC: 7
+  DEBUG: (3: != -> equal ) - TICK: 173 - TOS: 0 - data stack: [1, 99] - alu out: 1 - memory out: 99 - address reg: 0 - PC: 3 - mPC: 0
+  DEBUG: (3: != -> equal ) - TICK: 174 - TOS: 0 - data stack: [1, 99] - alu out: 1 - memory out: 99 - address reg: 0 - PC: 3 - mPC: 56
+  DEBUG: (3: != -> equal ) - TICK: 175 - TOS: 0 - data stack: [1, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 3 - mPC: 57
+  DEBUG: (3: != -> equal ) - TICK: 176 - TOS: 0 - data stack: [1, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 3 - mPC: 58
+  DEBUG: (3: != -> equal ) - TICK: 177 - TOS: 0 - data stack: [1, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 3 - mPC: 59
+  DEBUG: (4: if -> jif 9) - TICK: 178 - TOS: 0 - data stack: [1, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 4 - mPC: 0
+  DEBUG: (4: if -> jif 9) - TICK: 179 - TOS: 0 - data stack: [1, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 4 - mPC: 69
+  DEBUG: (5: drop -> drop ) - TICK: 180 - TOS: 0 - data stack: [1, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 5 - mPC: 0
+  DEBUG: (5: drop -> drop ) - TICK: 181 - TOS: 0 - data stack: [1, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 5 - mPC: 3
+  DEBUG: (5: drop -> drop ) - TICK: 182 - TOS: 0 - data stack: [1, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 5 - mPC: 4
+  DEBUG: (5: drop -> drop ) - TICK: 183 - TOS: 0 - data stack: [1, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 5 - mPC: 5
+  DEBUG: (6: drop -> drop ) - TICK: 184 - TOS: 0 - data stack: [1, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 6 - mPC: 0
+  DEBUG: (6: drop -> drop ) - TICK: 185 - TOS: 0 - data stack: [1, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 6 - mPC: 3
+  DEBUG: (6: drop -> drop ) - TICK: 186 - TOS: 99 - data stack: [1, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 6 - mPC: 4
+  DEBUG: (6: drop -> drop ) - TICK: 187 - TOS: 99 - data stack: [1] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 6 - mPC: 5
+  DEBUG: (7: emit -> store 1) - TICK: 188 - TOS: 99 - data stack: [1] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 7 - mPC: 0
+  DEBUG: (7: emit -> store 1) - TICK: 189 - TOS: 99 - data stack: [1] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 7 - mPC: 20
+  DEBUG: (7: emit -> store 1) - TICK: 190 - TOS: 99 - data stack: [1] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 7 - mPC: 21
+  INFO: add char 'c' to output buffer
+  DEBUG: (7: emit -> store 1) - TICK: 191 - TOS: 99 - data stack: [1] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 7 - mPC: 22
+  DEBUG: (8: else -> jmp 10) - TICK: 192 - TOS: 99 - data stack: [1] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 8 - mPC: 0
+  DEBUG: (8: else -> jmp 10) - TICK: 193 - TOS: 99 - data stack: [1] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 8 - mPC: 68
+  DEBUG: (10: 0 -> push 0) - TICK: 194 - TOS: 99 - data stack: [1] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 10 - mPC: 0
+  DEBUG: (10: 0 -> push 0) - TICK: 195 - TOS: 99 - data stack: [1] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 10 - mPC: 6
+  DEBUG: (10: 0 -> push 0) - TICK: 196 - TOS: 0 - data stack: [1, 99] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 10 - mPC: 7
+  DEBUG: (11: != -> n_equal ) - TICK: 197 - TOS: 0 - data stack: [1, 99] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 11 - mPC: 0
+  DEBUG: (11: != -> n_equal ) - TICK: 198 - TOS: 0 - data stack: [1, 99] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 11 - mPC: 60
+  DEBUG: (11: != -> n_equal ) - TICK: 199 - TOS: 0 - data stack: [1, 99] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 11 - mPC: 61
+  DEBUG: (11: != -> n_equal ) - TICK: 200 - TOS: 0 - data stack: [1, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 11 - mPC: 62
+  DEBUG: (11: != -> n_equal ) - TICK: 201 - TOS: 1 - data stack: [1, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 11 - mPC: 63
+  DEBUG: (12: until -> jif 0) - TICK: 202 - TOS: 1 - data stack: [1, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 12 - mPC: 0
+  DEBUG: (12: until -> jif 0) - TICK: 203 - TOS: 1 - data stack: [1, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 12 - mPC: 69
+  DEBUG: (0: clear -> clear ) - TICK: 204 - TOS: 1 - data stack: [1, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 0 - mPC: 0
+  DEBUG: (0: clear -> clear ) - TICK: 205 - TOS: 1 - data stack: [1, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 0 - mPC: 10
+  DEBUG: (0: clear -> clear ) - TICK: 206 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 0 - mPC: 11
+  DEBUG: (1: key -> load 0) - TICK: 207 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 1 - mPC: 0
+  DEBUG: (1: key -> load 0) - TICK: 208 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 1 - mPC: 12
+  DEBUG: (1: key -> load 0) - TICK: 209 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 99 - address reg: 0 - PC: 1 - mPC: 13
+  INFO: add char 'a' from input buffer
+  DEBUG: (1: key -> load 0) - TICK: 210 - TOS: 97 - data stack: [1] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 1 - mPC: 14
+  DEBUG: (2: 0 -> push 0) - TICK: 211 - TOS: 97 - data stack: [1] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 2 - mPC: 0
+  DEBUG: (2: 0 -> push 0) - TICK: 212 - TOS: 97 - data stack: [1] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 2 - mPC: 6
+  DEBUG: (2: 0 -> push 0) - TICK: 213 - TOS: 0 - data stack: [1, 97] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 2 - mPC: 7
+  DEBUG: (3: != -> equal ) - TICK: 214 - TOS: 0 - data stack: [1, 97] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 3 - mPC: 0
+  DEBUG: (3: != -> equal ) - TICK: 215 - TOS: 0 - data stack: [1, 97] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 3 - mPC: 56
+  DEBUG: (3: != -> equal ) - TICK: 216 - TOS: 0 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 3 - mPC: 57
+  DEBUG: (3: != -> equal ) - TICK: 217 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 3 - mPC: 58
+  DEBUG: (3: != -> equal ) - TICK: 218 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 3 - mPC: 59
+  DEBUG: (4: if -> jif 9) - TICK: 219 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 4 - mPC: 0
+  DEBUG: (4: if -> jif 9) - TICK: 220 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 4 - mPC: 69
+  DEBUG: (5: drop -> drop ) - TICK: 221 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 5 - mPC: 0
+  DEBUG: (5: drop -> drop ) - TICK: 222 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 5 - mPC: 3
+  DEBUG: (5: drop -> drop ) - TICK: 223 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 5 - mPC: 4
+  DEBUG: (5: drop -> drop ) - TICK: 224 - TOS: 0 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 5 - mPC: 5
+  DEBUG: (6: drop -> drop ) - TICK: 225 - TOS: 0 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 6 - mPC: 0
+  DEBUG: (6: drop -> drop ) - TICK: 226 - TOS: 0 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 6 - mPC: 3
+  DEBUG: (6: drop -> drop ) - TICK: 227 - TOS: 97 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 6 - mPC: 4
+  DEBUG: (6: drop -> drop ) - TICK: 228 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 6 - mPC: 5
+  DEBUG: (7: emit -> store 1) - TICK: 229 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 7 - mPC: 0
+  DEBUG: (7: emit -> store 1) - TICK: 230 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 7 - mPC: 20
+  DEBUG: (7: emit -> store 1) - TICK: 231 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 7 - mPC: 21
+  INFO: add char 'a' to output buffer
+  DEBUG: (7: emit -> store 1) - TICK: 232 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 7 - mPC: 22
+  DEBUG: (8: else -> jmp 10) - TICK: 233 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 8 - mPC: 0
+  DEBUG: (8: else -> jmp 10) - TICK: 234 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 8 - mPC: 68
+  DEBUG: (10: 0 -> push 0) - TICK: 235 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 10 - mPC: 0
+  DEBUG: (10: 0 -> push 0) - TICK: 236 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 10 - mPC: 6
+  DEBUG: (10: 0 -> push 0) - TICK: 237 - TOS: 0 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 10 - mPC: 7
+  DEBUG: (11: != -> n_equal ) - TICK: 238 - TOS: 0 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 11 - mPC: 0
+  DEBUG: (11: != -> n_equal ) - TICK: 239 - TOS: 0 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 11 - mPC: 60
+  DEBUG: (11: != -> n_equal ) - TICK: 240 - TOS: 0 - data stack: [1, 97] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 11 - mPC: 61
+  DEBUG: (11: != -> n_equal ) - TICK: 241 - TOS: 0 - data stack: [1, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 11 - mPC: 62
+  DEBUG: (11: != -> n_equal ) - TICK: 242 - TOS: 1 - data stack: [1, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 11 - mPC: 63
+  DEBUG: (12: until -> jif 0) - TICK: 243 - TOS: 1 - data stack: [1, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 12 - mPC: 0
+  DEBUG: (12: until -> jif 0) - TICK: 244 - TOS: 1 - data stack: [1, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 12 - mPC: 69
+  DEBUG: (0: clear -> clear ) - TICK: 245 - TOS: 1 - data stack: [1, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 0 - mPC: 0
+  DEBUG: (0: clear -> clear ) - TICK: 246 - TOS: 1 - data stack: [1, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 0 - mPC: 10
+  DEBUG: (0: clear -> clear ) - TICK: 247 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 0 - mPC: 11
+  DEBUG: (1: key -> load 0) - TICK: 248 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 1 - mPC: 0
+  DEBUG: (1: key -> load 0) - TICK: 249 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 1 - mPC: 12
+  DEBUG: (1: key -> load 0) - TICK: 250 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 1 - mPC: 13
+  INFO: add char 't' from input buffer
+  DEBUG: (1: key -> load 0) - TICK: 251 - TOS: 116 - data stack: [1] - alu out: 1 - memory out: 116 - address reg: 0 - PC: 1 - mPC: 14
+  DEBUG: (2: 0 -> push 0) - TICK: 252 - TOS: 116 - data stack: [1] - alu out: 1 - memory out: 116 - address reg: 0 - PC: 2 - mPC: 0
+  DEBUG: (2: 0 -> push 0) - TICK: 253 - TOS: 116 - data stack: [1] - alu out: 1 - memory out: 116 - address reg: 0 - PC: 2 - mPC: 6
+  DEBUG: (2: 0 -> push 0) - TICK: 254 - TOS: 0 - data stack: [1, 116] - alu out: 1 - memory out: 116 - address reg: 0 - PC: 2 - mPC: 7
+  DEBUG: (3: != -> equal ) - TICK: 255 - TOS: 0 - data stack: [1, 116] - alu out: 1 - memory out: 116 - address reg: 0 - PC: 3 - mPC: 0
+  DEBUG: (3: != -> equal ) - TICK: 256 - TOS: 0 - data stack: [1, 116] - alu out: 1 - memory out: 116 - address reg: 0 - PC: 3 - mPC: 56
+  DEBUG: (3: != -> equal ) - TICK: 257 - TOS: 0 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 3 - mPC: 57
+  DEBUG: (3: != -> equal ) - TICK: 258 - TOS: 0 - data stack: [1, 116, 0] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 3 - mPC: 58
+  DEBUG: (3: != -> equal ) - TICK: 259 - TOS: 0 - data stack: [1, 116, 0] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 3 - mPC: 59
+  DEBUG: (4: if -> jif 9) - TICK: 260 - TOS: 0 - data stack: [1, 116, 0] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 4 - mPC: 0
+  DEBUG: (4: if -> jif 9) - TICK: 261 - TOS: 0 - data stack: [1, 116, 0] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 4 - mPC: 69
+  DEBUG: (5: drop -> drop ) - TICK: 262 - TOS: 0 - data stack: [1, 116, 0] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 5 - mPC: 0
+  DEBUG: (5: drop -> drop ) - TICK: 263 - TOS: 0 - data stack: [1, 116, 0] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 5 - mPC: 3
+  DEBUG: (5: drop -> drop ) - TICK: 264 - TOS: 0 - data stack: [1, 116, 0] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 5 - mPC: 4
+  DEBUG: (5: drop -> drop ) - TICK: 265 - TOS: 0 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 5 - mPC: 5
+  DEBUG: (6: drop -> drop ) - TICK: 266 - TOS: 0 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 6 - mPC: 0
+  DEBUG: (6: drop -> drop ) - TICK: 267 - TOS: 0 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 6 - mPC: 3
+  DEBUG: (6: drop -> drop ) - TICK: 268 - TOS: 116 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 6 - mPC: 4
+  DEBUG: (6: drop -> drop ) - TICK: 269 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 6 - mPC: 5
+  DEBUG: (7: emit -> store 1) - TICK: 270 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 7 - mPC: 0
+  DEBUG: (7: emit -> store 1) - TICK: 271 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 7 - mPC: 20
+  DEBUG: (7: emit -> store 1) - TICK: 272 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 7 - mPC: 21
+  INFO: add char 't' to output buffer
+  DEBUG: (7: emit -> store 1) - TICK: 273 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 7 - mPC: 22
+  DEBUG: (8: else -> jmp 10) - TICK: 274 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 8 - mPC: 0
+  DEBUG: (8: else -> jmp 10) - TICK: 275 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 8 - mPC: 68
+  DEBUG: (10: 0 -> push 0) - TICK: 276 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 10 - mPC: 0
+  DEBUG: (10: 0 -> push 0) - TICK: 277 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 10 - mPC: 6
+  DEBUG: (10: 0 -> push 0) - TICK: 278 - TOS: 0 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 10 - mPC: 7
+  DEBUG: (11: != -> n_equal ) - TICK: 279 - TOS: 0 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 11 - mPC: 0
+  DEBUG: (11: != -> n_equal ) - TICK: 280 - TOS: 0 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 11 - mPC: 60
+  DEBUG: (11: != -> n_equal ) - TICK: 281 - TOS: 0 - data stack: [1, 116] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 11 - mPC: 61
+  DEBUG: (11: != -> n_equal ) - TICK: 282 - TOS: 0 - data stack: [1, 116, 0] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 11 - mPC: 62
+  DEBUG: (11: != -> n_equal ) - TICK: 283 - TOS: 1 - data stack: [1, 116, 0] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 11 - mPC: 63
+  DEBUG: (12: until -> jif 0) - TICK: 284 - TOS: 1 - data stack: [1, 116, 0] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 12 - mPC: 0
+  DEBUG: (12: until -> jif 0) - TICK: 285 - TOS: 1 - data stack: [1, 116, 0] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 12 - mPC: 69
+  DEBUG: (0: clear -> clear ) - TICK: 286 - TOS: 1 - data stack: [1, 116, 0] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 0 - mPC: 0
+  DEBUG: (0: clear -> clear ) - TICK: 287 - TOS: 1 - data stack: [1, 116, 0] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 0 - mPC: 10
+  DEBUG: (0: clear -> clear ) - TICK: 288 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 0 - mPC: 11
+  DEBUG: (1: key -> load 0) - TICK: 289 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 1 - mPC: 0
+  DEBUG: (1: key -> load 0) - TICK: 290 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 1 - mPC: 12
+  DEBUG: (1: key -> load 0) - TICK: 291 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 116 - address reg: 0 - PC: 1 - mPC: 13
+  INFO: add char ' ' from input buffer
+  DEBUG: (1: key -> load 0) - TICK: 292 - TOS: 32 - data stack: [1] - alu out: 1 - memory out: 32 - address reg: 0 - PC: 1 - mPC: 14
+  DEBUG: (2: 0 -> push 0) - TICK: 293 - TOS: 32 - data stack: [1] - alu out: 1 - memory out: 32 - address reg: 0 - PC: 2 - mPC: 0
+  DEBUG: (2: 0 -> push 0) - TICK: 294 - TOS: 32 - data stack: [1] - alu out: 1 - memory out: 32 - address reg: 0 - PC: 2 - mPC: 6
+  DEBUG: (2: 0 -> push 0) - TICK: 295 - TOS: 0 - data stack: [1, 32] - alu out: 1 - memory out: 32 - address reg: 0 - PC: 2 - mPC: 7
+  DEBUG: (3: != -> equal ) - TICK: 296 - TOS: 0 - data stack: [1, 32] - alu out: 1 - memory out: 32 - address reg: 0 - PC: 3 - mPC: 0
+  DEBUG: (3: != -> equal ) - TICK: 297 - TOS: 0 - data stack: [1, 32] - alu out: 1 - memory out: 32 - address reg: 0 - PC: 3 - mPC: 56
+  DEBUG: (3: != -> equal ) - TICK: 298 - TOS: 0 - data stack: [1, 32] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 3 - mPC: 57
+  DEBUG: (3: != -> equal ) - TICK: 299 - TOS: 0 - data stack: [1, 32, 0] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 3 - mPC: 58
+  DEBUG: (3: != -> equal ) - TICK: 300 - TOS: 0 - data stack: [1, 32, 0] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 3 - mPC: 59
+  DEBUG: (4: if -> jif 9) - TICK: 301 - TOS: 0 - data stack: [1, 32, 0] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 4 - mPC: 0
+  DEBUG: (4: if -> jif 9) - TICK: 302 - TOS: 0 - data stack: [1, 32, 0] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 4 - mPC: 69
+  DEBUG: (5: drop -> drop ) - TICK: 303 - TOS: 0 - data stack: [1, 32, 0] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 5 - mPC: 0
+  DEBUG: (5: drop -> drop ) - TICK: 304 - TOS: 0 - data stack: [1, 32, 0] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 5 - mPC: 3
+  DEBUG: (5: drop -> drop ) - TICK: 305 - TOS: 0 - data stack: [1, 32, 0] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 5 - mPC: 4
+  DEBUG: (5: drop -> drop ) - TICK: 306 - TOS: 0 - data stack: [1, 32] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 5 - mPC: 5
+  DEBUG: (6: drop -> drop ) - TICK: 307 - TOS: 0 - data stack: [1, 32] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 6 - mPC: 0
+  DEBUG: (6: drop -> drop ) - TICK: 308 - TOS: 0 - data stack: [1, 32] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 6 - mPC: 3
+  DEBUG: (6: drop -> drop ) - TICK: 309 - TOS: 32 - data stack: [1, 32] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 6 - mPC: 4
+  DEBUG: (6: drop -> drop ) - TICK: 310 - TOS: 32 - data stack: [1] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 6 - mPC: 5
+  DEBUG: (7: emit -> store 1) - TICK: 311 - TOS: 32 - data stack: [1] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 7 - mPC: 0
+  DEBUG: (7: emit -> store 1) - TICK: 312 - TOS: 32 - data stack: [1] - alu out: 0 - memory out: 32 - address reg: 0 - PC: 7 - mPC: 20
+  DEBUG: (7: emit -> store 1) - TICK: 313 - TOS: 32 - data stack: [1] - alu out: 0 - memory out: 32 - address reg: 1 - PC: 7 - mPC: 21
+  INFO: add char ' ' to output buffer
+  DEBUG: (7: emit -> store 1) - TICK: 314 - TOS: 32 - data stack: [1] - alu out: 0 - memory out: 32 - address reg: 1 - PC: 7 - mPC: 22
+  DEBUG: (8: else -> jmp 10) - TICK: 315 - TOS: 32 - data stack: [1] - alu out: 0 - memory out: 32 - address reg: 1 - PC: 8 - mPC: 0
+  DEBUG: (8: else -> jmp 10) - TICK: 316 - TOS: 32 - data stack: [1] - alu out: 0 - memory out: 32 - address reg: 1 - PC: 8 - mPC: 68
+  DEBUG: (10: 0 -> push 0) - TICK: 317 - TOS: 32 - data stack: [1] - alu out: 0 - memory out: 32 - address reg: 1 - PC: 10 - mPC: 0
+  DEBUG: (10: 0 -> push 0) - TICK: 318 - TOS: 32 - data stack: [1] - alu out: 0 - memory out: 32 - address reg: 1 - PC: 10 - mPC: 6
+  DEBUG: (10: 0 -> push 0) - TICK: 319 - TOS: 0 - data stack: [1, 32] - alu out: 0 - memory out: 32 - address reg: 1 - PC: 10 - mPC: 7
+  DEBUG: (11: != -> n_equal ) - TICK: 320 - TOS: 0 - data stack: [1, 32] - alu out: 0 - memory out: 32 - address reg: 1 - PC: 11 - mPC: 0
+  DEBUG: (11: != -> n_equal ) - TICK: 321 - TOS: 0 - data stack: [1, 32] - alu out: 0 - memory out: 32 - address reg: 1 - PC: 11 - mPC: 60
+  DEBUG: (11: != -> n_equal ) - TICK: 322 - TOS: 0 - data stack: [1, 32] - alu out: 1 - memory out: 32 - address reg: 1 - PC: 11 - mPC: 61
+  DEBUG: (11: != -> n_equal ) - TICK: 323 - TOS: 0 - data stack: [1, 32, 0] - alu out: 1 - memory out: 32 - address reg: 1 - PC: 11 - mPC: 62
+  DEBUG: (11: != -> n_equal ) - TICK: 324 - TOS: 1 - data stack: [1, 32, 0] - alu out: 1 - memory out: 32 - address reg: 1 - PC: 11 - mPC: 63
+  DEBUG: (12: until -> jif 0) - TICK: 325 - TOS: 1 - data stack: [1, 32, 0] - alu out: 1 - memory out: 32 - address reg: 1 - PC: 12 - mPC: 0
+  DEBUG: (12: until -> jif 0) - TICK: 326 - TOS: 1 - data stack: [1, 32, 0] - alu out: 1 - memory out: 32 - address reg: 1 - PC: 12 - mPC: 69
+  DEBUG: (0: clear -> clear ) - TICK: 327 - TOS: 1 - data stack: [1, 32, 0] - alu out: 1 - memory out: 32 - address reg: 1 - PC: 0 - mPC: 0
+  DEBUG: (0: clear -> clear ) - TICK: 328 - TOS: 1 - data stack: [1, 32, 0] - alu out: 1 - memory out: 32 - address reg: 1 - PC: 0 - mPC: 10
+  DEBUG: (0: clear -> clear ) - TICK: 329 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 32 - address reg: 1 - PC: 0 - mPC: 11
+  DEBUG: (1: key -> load 0) - TICK: 330 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 32 - address reg: 1 - PC: 1 - mPC: 0
+  DEBUG: (1: key -> load 0) - TICK: 331 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 32 - address reg: 1 - PC: 1 - mPC: 12
+  DEBUG: (1: key -> load 0) - TICK: 332 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 32 - address reg: 0 - PC: 1 - mPC: 13
+  INFO: add char 'c' from input buffer
+  DEBUG: (1: key -> load 0) - TICK: 333 - TOS: 99 - data stack: [1] - alu out: 1 - memory out: 99 - address reg: 0 - PC: 1 - mPC: 14
+  DEBUG: (2: 0 -> push 0) - TICK: 334 - TOS: 99 - data stack: [1] - alu out: 1 - memory out: 99 - address reg: 0 - PC: 2 - mPC: 0
+  DEBUG: (2: 0 -> push 0) - TICK: 335 - TOS: 99 - data stack: [1] - alu out: 1 - memory out: 99 - address reg: 0 - PC: 2 - mPC: 6
+  DEBUG: (2: 0 -> push 0) - TICK: 336 - TOS: 0 - data stack: [1, 99] - alu out: 1 - memory out: 99 - address reg: 0 - PC: 2 - mPC: 7
+  DEBUG: (3: != -> equal ) - TICK: 337 - TOS: 0 - data stack: [1, 99] - alu out: 1 - memory out: 99 - address reg: 0 - PC: 3 - mPC: 0
+  DEBUG: (3: != -> equal ) - TICK: 338 - TOS: 0 - data stack: [1, 99] - alu out: 1 - memory out: 99 - address reg: 0 - PC: 3 - mPC: 56
+  DEBUG: (3: != -> equal ) - TICK: 339 - TOS: 0 - data stack: [1, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 3 - mPC: 57
+  DEBUG: (3: != -> equal ) - TICK: 340 - TOS: 0 - data stack: [1, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 3 - mPC: 58
+  DEBUG: (3: != -> equal ) - TICK: 341 - TOS: 0 - data stack: [1, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 3 - mPC: 59
+  DEBUG: (4: if -> jif 9) - TICK: 342 - TOS: 0 - data stack: [1, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 4 - mPC: 0
+  DEBUG: (4: if -> jif 9) - TICK: 343 - TOS: 0 - data stack: [1, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 4 - mPC: 69
+  DEBUG: (5: drop -> drop ) - TICK: 344 - TOS: 0 - data stack: [1, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 5 - mPC: 0
+  DEBUG: (5: drop -> drop ) - TICK: 345 - TOS: 0 - data stack: [1, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 5 - mPC: 3
+  DEBUG: (5: drop -> drop ) - TICK: 346 - TOS: 0 - data stack: [1, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 5 - mPC: 4
+  DEBUG: (5: drop -> drop ) - TICK: 347 - TOS: 0 - data stack: [1, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 5 - mPC: 5
+  DEBUG: (6: drop -> drop ) - TICK: 348 - TOS: 0 - data stack: [1, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 6 - mPC: 0
+  DEBUG: (6: drop -> drop ) - TICK: 349 - TOS: 0 - data stack: [1, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 6 - mPC: 3
+  DEBUG: (6: drop -> drop ) - TICK: 350 - TOS: 99 - data stack: [1, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 6 - mPC: 4
+  DEBUG: (6: drop -> drop ) - TICK: 351 - TOS: 99 - data stack: [1] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 6 - mPC: 5
+  DEBUG: (7: emit -> store 1) - TICK: 352 - TOS: 99 - data stack: [1] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 7 - mPC: 0
+  DEBUG: (7: emit -> store 1) - TICK: 353 - TOS: 99 - data stack: [1] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 7 - mPC: 20
+  DEBUG: (7: emit -> store 1) - TICK: 354 - TOS: 99 - data stack: [1] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 7 - mPC: 21
+  INFO: add char 'c' to output buffer
+  DEBUG: (7: emit -> store 1) - TICK: 355 - TOS: 99 - data stack: [1] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 7 - mPC: 22
+  DEBUG: (8: else -> jmp 10) - TICK: 356 - TOS: 99 - data stack: [1] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 8 - mPC: 0
+  DEBUG: (8: else -> jmp 10) - TICK: 357 - TOS: 99 - data stack: [1] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 8 - mPC: 68
+  DEBUG: (10: 0 -> push 0) - TICK: 358 - TOS: 99 - data stack: [1] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 10 - mPC: 0
+  DEBUG: (10: 0 -> push 0) - TICK: 359 - TOS: 99 - data stack: [1] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 10 - mPC: 6
+  DEBUG: (10: 0 -> push 0) - TICK: 360 - TOS: 0 - data stack: [1, 99] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 10 - mPC: 7
+  DEBUG: (11: != -> n_equal ) - TICK: 361 - TOS: 0 - data stack: [1, 99] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 11 - mPC: 0
+  DEBUG: (11: != -> n_equal ) - TICK: 362 - TOS: 0 - data stack: [1, 99] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 11 - mPC: 60
+  DEBUG: (11: != -> n_equal ) - TICK: 363 - TOS: 0 - data stack: [1, 99] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 11 - mPC: 61
+  DEBUG: (11: != -> n_equal ) - TICK: 364 - TOS: 0 - data stack: [1, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 11 - mPC: 62
+  DEBUG: (11: != -> n_equal ) - TICK: 365 - TOS: 1 - data stack: [1, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 11 - mPC: 63
+  DEBUG: (12: until -> jif 0) - TICK: 366 - TOS: 1 - data stack: [1, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 12 - mPC: 0
+  DEBUG: (12: until -> jif 0) - TICK: 367 - TOS: 1 - data stack: [1, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 12 - mPC: 69
+  DEBUG: (0: clear -> clear ) - TICK: 368 - TOS: 1 - data stack: [1, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 0 - mPC: 0
+  DEBUG: (0: clear -> clear ) - TICK: 369 - TOS: 1 - data stack: [1, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 0 - mPC: 10
+  DEBUG: (0: clear -> clear ) - TICK: 370 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 0 - mPC: 11
+  DEBUG: (1: key -> load 0) - TICK: 371 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 1 - mPC: 0
+  DEBUG: (1: key -> load 0) - TICK: 372 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 1 - mPC: 12
+  DEBUG: (1: key -> load 0) - TICK: 373 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 99 - address reg: 0 - PC: 1 - mPC: 13
+  INFO: add char 'a' from input buffer
+  DEBUG: (1: key -> load 0) - TICK: 374 - TOS: 97 - data stack: [1] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 1 - mPC: 14
+  DEBUG: (2: 0 -> push 0) - TICK: 375 - TOS: 97 - data stack: [1] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 2 - mPC: 0
+  DEBUG: (2: 0 -> push 0) - TICK: 376 - TOS: 97 - data stack: [1] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 2 - mPC: 6
+  DEBUG: (2: 0 -> push 0) - TICK: 377 - TOS: 0 - data stack: [1, 97] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 2 - mPC: 7
+  DEBUG: (3: != -> equal ) - TICK: 378 - TOS: 0 - data stack: [1, 97] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 3 - mPC: 0
+  DEBUG: (3: != -> equal ) - TICK: 379 - TOS: 0 - data stack: [1, 97] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 3 - mPC: 56
+  DEBUG: (3: != -> equal ) - TICK: 380 - TOS: 0 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 3 - mPC: 57
+  DEBUG: (3: != -> equal ) - TICK: 381 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 3 - mPC: 58
+  DEBUG: (3: != -> equal ) - TICK: 382 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 3 - mPC: 59
+  DEBUG: (4: if -> jif 9) - TICK: 383 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 4 - mPC: 0
+  DEBUG: (4: if -> jif 9) - TICK: 384 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 4 - mPC: 69
+  DEBUG: (5: drop -> drop ) - TICK: 385 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 5 - mPC: 0
+  DEBUG: (5: drop -> drop ) - TICK: 386 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 5 - mPC: 3
+  DEBUG: (5: drop -> drop ) - TICK: 387 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 5 - mPC: 4
+  DEBUG: (5: drop -> drop ) - TICK: 388 - TOS: 0 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 5 - mPC: 5
+  DEBUG: (6: drop -> drop ) - TICK: 389 - TOS: 0 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 6 - mPC: 0
+  DEBUG: (6: drop -> drop ) - TICK: 390 - TOS: 0 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 6 - mPC: 3
+  DEBUG: (6: drop -> drop ) - TICK: 391 - TOS: 97 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 6 - mPC: 4
+  DEBUG: (6: drop -> drop ) - TICK: 392 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 6 - mPC: 5
+  DEBUG: (7: emit -> store 1) - TICK: 393 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 7 - mPC: 0
+  DEBUG: (7: emit -> store 1) - TICK: 394 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 7 - mPC: 20
+  DEBUG: (7: emit -> store 1) - TICK: 395 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 7 - mPC: 21
+  INFO: add char 'a' to output buffer
+  DEBUG: (7: emit -> store 1) - TICK: 396 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 7 - mPC: 22
+  DEBUG: (8: else -> jmp 10) - TICK: 397 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 8 - mPC: 0
+  DEBUG: (8: else -> jmp 10) - TICK: 398 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 8 - mPC: 68
+  DEBUG: (10: 0 -> push 0) - TICK: 399 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 10 - mPC: 0
+  DEBUG: (10: 0 -> push 0) - TICK: 400 - TOS: 97 - data stack: [1] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 10 - mPC: 6
+  DEBUG: (10: 0 -> push 0) - TICK: 401 - TOS: 0 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 10 - mPC: 7
+  DEBUG: (11: != -> n_equal ) - TICK: 402 - TOS: 0 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 11 - mPC: 0
+  DEBUG: (11: != -> n_equal ) - TICK: 403 - TOS: 0 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 11 - mPC: 60
+  DEBUG: (11: != -> n_equal ) - TICK: 404 - TOS: 0 - data stack: [1, 97] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 11 - mPC: 61
+  DEBUG: (11: != -> n_equal ) - TICK: 405 - TOS: 0 - data stack: [1, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 11 - mPC: 62
+  DEBUG: (11: != -> n_equal ) - TICK: 406 - TOS: 1 - data stack: [1, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 11 - mPC: 63
+  DEBUG: (12: until -> jif 0) - TICK: 407 - TOS: 1 - data stack: [1, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 12 - mPC: 0
+  DEBUG: (12: until -> jif 0) - TICK: 408 - TOS: 1 - data stack: [1, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 12 - mPC: 69
+  DEBUG: (0: clear -> clear ) - TICK: 409 - TOS: 1 - data stack: [1, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 0 - mPC: 0
+  DEBUG: (0: clear -> clear ) - TICK: 410 - TOS: 1 - data stack: [1, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 0 - mPC: 10
+  DEBUG: (0: clear -> clear ) - TICK: 411 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 0 - mPC: 11
+  DEBUG: (1: key -> load 0) - TICK: 412 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 1 - mPC: 0
+  DEBUG: (1: key -> load 0) - TICK: 413 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 1 - mPC: 12
+  DEBUG: (1: key -> load 0) - TICK: 414 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 1 - mPC: 13
+  INFO: add char 't' from input buffer
+  DEBUG: (1: key -> load 0) - TICK: 415 - TOS: 116 - data stack: [1] - alu out: 1 - memory out: 116 - address reg: 0 - PC: 1 - mPC: 14
+  DEBUG: (2: 0 -> push 0) - TICK: 416 - TOS: 116 - data stack: [1] - alu out: 1 - memory out: 116 - address reg: 0 - PC: 2 - mPC: 0
+  DEBUG: (2: 0 -> push 0) - TICK: 417 - TOS: 116 - data stack: [1] - alu out: 1 - memory out: 116 - address reg: 0 - PC: 2 - mPC: 6
+  DEBUG: (2: 0 -> push 0) - TICK: 418 - TOS: 0 - data stack: [1, 116] - alu out: 1 - memory out: 116 - address reg: 0 - PC: 2 - mPC: 7
+  DEBUG: (3: != -> equal ) - TICK: 419 - TOS: 0 - data stack: [1, 116] - alu out: 1 - memory out: 116 - address reg: 0 - PC: 3 - mPC: 0
+  DEBUG: (3: != -> equal ) - TICK: 420 - TOS: 0 - data stack: [1, 116] - alu out: 1 - memory out: 116 - address reg: 0 - PC: 3 - mPC: 56
+  DEBUG: (3: != -> equal ) - TICK: 421 - TOS: 0 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 3 - mPC: 57
+  DEBUG: (3: != -> equal ) - TICK: 422 - TOS: 0 - data stack: [1, 116, 0] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 3 - mPC: 58
+  DEBUG: (3: != -> equal ) - TICK: 423 - TOS: 0 - data stack: [1, 116, 0] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 3 - mPC: 59
+  DEBUG: (4: if -> jif 9) - TICK: 424 - TOS: 0 - data stack: [1, 116, 0] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 4 - mPC: 0
+  DEBUG: (4: if -> jif 9) - TICK: 425 - TOS: 0 - data stack: [1, 116, 0] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 4 - mPC: 69
+  DEBUG: (5: drop -> drop ) - TICK: 426 - TOS: 0 - data stack: [1, 116, 0] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 5 - mPC: 0
+  DEBUG: (5: drop -> drop ) - TICK: 427 - TOS: 0 - data stack: [1, 116, 0] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 5 - mPC: 3
+  DEBUG: (5: drop -> drop ) - TICK: 428 - TOS: 0 - data stack: [1, 116, 0] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 5 - mPC: 4
+  DEBUG: (5: drop -> drop ) - TICK: 429 - TOS: 0 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 5 - mPC: 5
+  DEBUG: (6: drop -> drop ) - TICK: 430 - TOS: 0 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 6 - mPC: 0
+  DEBUG: (6: drop -> drop ) - TICK: 431 - TOS: 0 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 6 - mPC: 3
+  DEBUG: (6: drop -> drop ) - TICK: 432 - TOS: 116 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 6 - mPC: 4
+  DEBUG: (6: drop -> drop ) - TICK: 433 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 6 - mPC: 5
+  DEBUG: (7: emit -> store 1) - TICK: 434 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 7 - mPC: 0
+  DEBUG: (7: emit -> store 1) - TICK: 435 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 0 - PC: 7 - mPC: 20
+  DEBUG: (7: emit -> store 1) - TICK: 436 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 7 - mPC: 21
+  INFO: add char 't' to output buffer
+  DEBUG: (7: emit -> store 1) - TICK: 437 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 7 - mPC: 22
+  DEBUG: (8: else -> jmp 10) - TICK: 438 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 8 - mPC: 0
+  DEBUG: (8: else -> jmp 10) - TICK: 439 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 8 - mPC: 68
+  DEBUG: (10: 0 -> push 0) - TICK: 440 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 10 - mPC: 0
+  DEBUG: (10: 0 -> push 0) - TICK: 441 - TOS: 116 - data stack: [1] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 10 - mPC: 6
+  DEBUG: (10: 0 -> push 0) - TICK: 442 - TOS: 0 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 10 - mPC: 7
+  DEBUG: (11: != -> n_equal ) - TICK: 443 - TOS: 0 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 11 - mPC: 0
+  DEBUG: (11: != -> n_equal ) - TICK: 444 - TOS: 0 - data stack: [1, 116] - alu out: 0 - memory out: 116 - address reg: 1 - PC: 11 - mPC: 60
+  DEBUG: (11: != -> n_equal ) - TICK: 445 - TOS: 0 - data stack: [1, 116] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 11 - mPC: 61
+  DEBUG: (11: != -> n_equal ) - TICK: 446 - TOS: 0 - data stack: [1, 116, 0] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 11 - mPC: 62
+  DEBUG: (11: != -> n_equal ) - TICK: 447 - TOS: 1 - data stack: [1, 116, 0] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 11 - mPC: 63
+  DEBUG: (12: until -> jif 0) - TICK: 448 - TOS: 1 - data stack: [1, 116, 0] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 12 - mPC: 0
+  DEBUG: (12: until -> jif 0) - TICK: 449 - TOS: 1 - data stack: [1, 116, 0] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 12 - mPC: 69
+  DEBUG: (0: clear -> clear ) - TICK: 450 - TOS: 1 - data stack: [1, 116, 0] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 0 - mPC: 0
+  DEBUG: (0: clear -> clear ) - TICK: 451 - TOS: 1 - data stack: [1, 116, 0] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 0 - mPC: 10
+  DEBUG: (0: clear -> clear ) - TICK: 452 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 0 - mPC: 11
+  DEBUG: (1: key -> load 0) - TICK: 453 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 1 - mPC: 0
+  DEBUG: (1: key -> load 0) - TICK: 454 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 116 - address reg: 1 - PC: 1 - mPC: 12
+  DEBUG: (1: key -> load 0) - TICK: 455 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 116 - address reg: 0 - PC: 1 - mPC: 13
+  INFO: add char ' ' from input buffer
+  DEBUG: (1: key -> load 0) - TICK: 456 - TOS: 0 - data stack: [1] - alu out: 1 - memory out: 0 - address reg: 0 - PC: 1 - mPC: 14
+  DEBUG: (2: 0 -> push 0) - TICK: 457 - TOS: 0 - data stack: [1] - alu out: 1 - memory out: 0 - address reg: 0 - PC: 2 - mPC: 0
+  DEBUG: (2: 0 -> push 0) - TICK: 458 - TOS: 0 - data stack: [1] - alu out: 1 - memory out: 0 - address reg: 0 - PC: 2 - mPC: 6
+  DEBUG: (2: 0 -> push 0) - TICK: 459 - TOS: 0 - data stack: [1, 0] - alu out: 1 - memory out: 0 - address reg: 0 - PC: 2 - mPC: 7
+  DEBUG: (3: != -> equal ) - TICK: 460 - TOS: 0 - data stack: [1, 0] - alu out: 1 - memory out: 0 - address reg: 0 - PC: 3 - mPC: 0
+  DEBUG: (3: != -> equal ) - TICK: 461 - TOS: 0 - data stack: [1, 0] - alu out: 1 - memory out: 0 - address reg: 0 - PC: 3 - mPC: 56
+  DEBUG: (3: != -> equal ) - TICK: 462 - TOS: 0 - data stack: [1, 0] - alu out: 1 - memory out: 0 - address reg: 0 - PC: 3 - mPC: 57
+  DEBUG: (3: != -> equal ) - TICK: 463 - TOS: 0 - data stack: [1, 0, 0] - alu out: 1 - memory out: 0 - address reg: 0 - PC: 3 - mPC: 58
+  DEBUG: (3: != -> equal ) - TICK: 464 - TOS: 1 - data stack: [1, 0, 0] - alu out: 1 - memory out: 0 - address reg: 0 - PC: 3 - mPC: 59
+  DEBUG: (4: if -> jif 9) - TICK: 465 - TOS: 1 - data stack: [1, 0, 0] - alu out: 1 - memory out: 0 - address reg: 0 - PC: 4 - mPC: 0
+  DEBUG: (4: if -> jif 9) - TICK: 466 - TOS: 1 - data stack: [1, 0, 0] - alu out: 1 - memory out: 0 - address reg: 0 - PC: 4 - mPC: 69
+  DEBUG: (9: drop -> drop ) - TICK: 467 - TOS: 1 - data stack: [1, 0, 0] - alu out: 1 - memory out: 0 - address reg: 0 - PC: 9 - mPC: 0
+  DEBUG: (9: drop -> drop ) - TICK: 468 - TOS: 1 - data stack: [1, 0, 0] - alu out: 1 - memory out: 0 - address reg: 0 - PC: 9 - mPC: 3
+  DEBUG: (9: drop -> drop ) - TICK: 469 - TOS: 0 - data stack: [1, 0, 0] - alu out: 1 - memory out: 0 - address reg: 0 - PC: 9 - mPC: 4
+  DEBUG: (9: drop -> drop ) - TICK: 470 - TOS: 0 - data stack: [1, 0] - alu out: 1 - memory out: 0 - address reg: 0 - PC: 9 - mPC: 5
+  DEBUG: (10: 0 -> push 0) - TICK: 471 - TOS: 0 - data stack: [1, 0] - alu out: 1 - memory out: 0 - address reg: 0 - PC: 10 - mPC: 0
+  DEBUG: (10: 0 -> push 0) - TICK: 472 - TOS: 0 - data stack: [1, 0] - alu out: 1 - memory out: 0 - address reg: 0 - PC: 10 - mPC: 6
+  DEBUG: (10: 0 -> push 0) - TICK: 473 - TOS: 0 - data stack: [1, 0, 0] - alu out: 1 - memory out: 0 - address reg: 0 - PC: 10 - mPC: 7
+  DEBUG: (11: != -> n_equal ) - TICK: 474 - TOS: 0 - data stack: [1, 0, 0] - alu out: 1 - memory out: 0 - address reg: 0 - PC: 11 - mPC: 0
+  DEBUG: (11: != -> n_equal ) - TICK: 475 - TOS: 0 - data stack: [1, 0, 0] - alu out: 1 - memory out: 0 - address reg: 0 - PC: 11 - mPC: 60
+  DEBUG: (11: != -> n_equal ) - TICK: 476 - TOS: 0 - data stack: [1, 0, 0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 11 - mPC: 61
+  DEBUG: (11: != -> n_equal ) - TICK: 477 - TOS: 0 - data stack: [1, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 11 - mPC: 62
+  DEBUG: (11: != -> n_equal ) - TICK: 478 - TOS: 0 - data stack: [1, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 11 - mPC: 63
+  DEBUG: (12: until -> jif 0) - TICK: 479 - TOS: 0 - data stack: [1, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 12 - mPC: 0
+  DEBUG: (12: until -> jif 0) - TICK: 480 - TOS: 0 - data stack: [1, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 12 - mPC: 69
+  DEBUG: (13: None -> stop ) - TICK: 481 - TOS: 0 - data stack: [1, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 13 - mPC: 0
+  DEBUG: (13: None -> stop ) - TICK: 482 - TOS: 0 - data stack: [1, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 13 - mPC: 70
+  DEBUG: (13: None -> stop ) - TICK: 483 - TOS: 0 - data stack: [1, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 13 - mPC: 70
