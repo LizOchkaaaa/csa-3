@@ -122,676 +122,713 @@ output: |
   Hello, Liza! 
   -------------------------------
   Количество инструкций: 174
-  Количество тактов: 633
+  Количество тактов: 670
 
 out_log: |
   DEBUG: (0: . -> dup ) - TICK: 0 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 0 - mPC: 1
   DEBUG: (0: . -> dup ) - TICK: 1 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 0 - mPC: 2
   DEBUG: (1: W -> top 87) - TICK: 2 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 1 - mPC: 0
-  DEBUG: (1: W -> top 87) - TICK: 3 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 1 - mPC: 8
-  DEBUG: (1: W -> top 87) - TICK: 4 - TOS: 87 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 1 - mPC: 9
+  DEBUG: (1: W -> top 87) - TICK: 3 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 1 - mPC: 9
+  DEBUG: (1: W -> top 87) - TICK: 4 - TOS: 87 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 1 - mPC: 10
   DEBUG: (2: W -> store 1) - TICK: 5 - TOS: 87 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 2 - mPC: 0
-  DEBUG: (2: W -> store 1) - TICK: 6 - TOS: 87 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 2 - mPC: 20
-  DEBUG: (2: W -> store 1) - TICK: 7 - TOS: 87 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 2 - mPC: 21
+  DEBUG: (2: W -> store 1) - TICK: 6 - TOS: 87 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 2 - mPC: 23
+  DEBUG: (2: W -> store 1) - TICK: 7 - TOS: 87 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 2 - mPC: 24
   INFO: add char 'W' to output buffer
-  DEBUG: (2: W -> store 1) - TICK: 8 - TOS: 87 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 2 - mPC: 22
+  DEBUG: (2: W -> store 1) - TICK: 8 - TOS: 87 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 2 - mPC: 25
   DEBUG: (3: h -> top 104) - TICK: 9 - TOS: 87 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 3 - mPC: 0
-  DEBUG: (3: h -> top 104) - TICK: 10 - TOS: 87 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 3 - mPC: 8
-  DEBUG: (3: h -> top 104) - TICK: 11 - TOS: 104 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 3 - mPC: 9
+  DEBUG: (3: h -> top 104) - TICK: 10 - TOS: 87 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 3 - mPC: 9
+  DEBUG: (3: h -> top 104) - TICK: 11 - TOS: 104 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 3 - mPC: 10
   DEBUG: (4: h -> store 1) - TICK: 12 - TOS: 104 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 4 - mPC: 0
-  DEBUG: (4: h -> store 1) - TICK: 13 - TOS: 104 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 4 - mPC: 20
-  DEBUG: (4: h -> store 1) - TICK: 14 - TOS: 104 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 4 - mPC: 21
+  DEBUG: (4: h -> store 1) - TICK: 13 - TOS: 104 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 4 - mPC: 23
+  DEBUG: (4: h -> store 1) - TICK: 14 - TOS: 104 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 4 - mPC: 24
   INFO: add char 'h' to output buffer
-  DEBUG: (4: h -> store 1) - TICK: 15 - TOS: 104 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 4 - mPC: 22
+  DEBUG: (4: h -> store 1) - TICK: 15 - TOS: 104 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 4 - mPC: 25
   DEBUG: (5: a -> top 97) - TICK: 16 - TOS: 104 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 5 - mPC: 0
-  DEBUG: (5: a -> top 97) - TICK: 17 - TOS: 104 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 5 - mPC: 8
-  DEBUG: (5: a -> top 97) - TICK: 18 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 5 - mPC: 9
+  DEBUG: (5: a -> top 97) - TICK: 17 - TOS: 104 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 5 - mPC: 9
+  DEBUG: (5: a -> top 97) - TICK: 18 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 5 - mPC: 10
   DEBUG: (6: a -> store 1) - TICK: 19 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 6 - mPC: 0
-  DEBUG: (6: a -> store 1) - TICK: 20 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 6 - mPC: 20
-  DEBUG: (6: a -> store 1) - TICK: 21 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 6 - mPC: 21
+  DEBUG: (6: a -> store 1) - TICK: 20 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 6 - mPC: 23
+  DEBUG: (6: a -> store 1) - TICK: 21 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 6 - mPC: 24
   INFO: add char 'a' to output buffer
-  DEBUG: (6: a -> store 1) - TICK: 22 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 6 - mPC: 22
+  DEBUG: (6: a -> store 1) - TICK: 22 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 6 - mPC: 25
   DEBUG: (7: t -> top 116) - TICK: 23 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 7 - mPC: 0
-  DEBUG: (7: t -> top 116) - TICK: 24 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 7 - mPC: 8
-  DEBUG: (7: t -> top 116) - TICK: 25 - TOS: 116 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 7 - mPC: 9
+  DEBUG: (7: t -> top 116) - TICK: 24 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 7 - mPC: 9
+  DEBUG: (7: t -> top 116) - TICK: 25 - TOS: 116 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 7 - mPC: 10
   DEBUG: (8: t -> store 1) - TICK: 26 - TOS: 116 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 8 - mPC: 0
-  DEBUG: (8: t -> store 1) - TICK: 27 - TOS: 116 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 8 - mPC: 20
-  DEBUG: (8: t -> store 1) - TICK: 28 - TOS: 116 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 8 - mPC: 21
+  DEBUG: (8: t -> store 1) - TICK: 27 - TOS: 116 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 8 - mPC: 23
+  DEBUG: (8: t -> store 1) - TICK: 28 - TOS: 116 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 8 - mPC: 24
   INFO: add char 't' to output buffer
-  DEBUG: (8: t -> store 1) - TICK: 29 - TOS: 116 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 8 - mPC: 22
+  DEBUG: (8: t -> store 1) - TICK: 29 - TOS: 116 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 8 - mPC: 25
   DEBUG: (9:   -> top 32) - TICK: 30 - TOS: 116 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 9 - mPC: 0
-  DEBUG: (9:   -> top 32) - TICK: 31 - TOS: 116 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 9 - mPC: 8
-  DEBUG: (9:   -> top 32) - TICK: 32 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 9 - mPC: 9
+  DEBUG: (9:   -> top 32) - TICK: 31 - TOS: 116 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 9 - mPC: 9
+  DEBUG: (9:   -> top 32) - TICK: 32 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 9 - mPC: 10
   DEBUG: (10:   -> store 1) - TICK: 33 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 10 - mPC: 0
-  DEBUG: (10:   -> store 1) - TICK: 34 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 10 - mPC: 20
-  DEBUG: (10:   -> store 1) - TICK: 35 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 10 - mPC: 21
+  DEBUG: (10:   -> store 1) - TICK: 34 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 10 - mPC: 23
+  DEBUG: (10:   -> store 1) - TICK: 35 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 10 - mPC: 24
   INFO: add char ' ' to output buffer
-  DEBUG: (10:   -> store 1) - TICK: 36 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 10 - mPC: 22
+  DEBUG: (10:   -> store 1) - TICK: 36 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 10 - mPC: 25
   DEBUG: (11: i -> top 105) - TICK: 37 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 11 - mPC: 0
-  DEBUG: (11: i -> top 105) - TICK: 38 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 11 - mPC: 8
-  DEBUG: (11: i -> top 105) - TICK: 39 - TOS: 105 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 11 - mPC: 9
+  DEBUG: (11: i -> top 105) - TICK: 38 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 11 - mPC: 9
+  DEBUG: (11: i -> top 105) - TICK: 39 - TOS: 105 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 11 - mPC: 10
   DEBUG: (12: i -> store 1) - TICK: 40 - TOS: 105 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 12 - mPC: 0
-  DEBUG: (12: i -> store 1) - TICK: 41 - TOS: 105 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 12 - mPC: 20
-  DEBUG: (12: i -> store 1) - TICK: 42 - TOS: 105 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 12 - mPC: 21
+  DEBUG: (12: i -> store 1) - TICK: 41 - TOS: 105 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 12 - mPC: 23
+  DEBUG: (12: i -> store 1) - TICK: 42 - TOS: 105 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 12 - mPC: 24
   INFO: add char 'i' to output buffer
-  DEBUG: (12: i -> store 1) - TICK: 43 - TOS: 105 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 12 - mPC: 22
+  DEBUG: (12: i -> store 1) - TICK: 43 - TOS: 105 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 12 - mPC: 25
   DEBUG: (13: s -> top 115) - TICK: 44 - TOS: 105 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 13 - mPC: 0
-  DEBUG: (13: s -> top 115) - TICK: 45 - TOS: 105 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 13 - mPC: 8
-  DEBUG: (13: s -> top 115) - TICK: 46 - TOS: 115 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 13 - mPC: 9
+  DEBUG: (13: s -> top 115) - TICK: 45 - TOS: 105 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 13 - mPC: 9
+  DEBUG: (13: s -> top 115) - TICK: 46 - TOS: 115 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 13 - mPC: 10
   DEBUG: (14: s -> store 1) - TICK: 47 - TOS: 115 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 14 - mPC: 0
-  DEBUG: (14: s -> store 1) - TICK: 48 - TOS: 115 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 14 - mPC: 20
-  DEBUG: (14: s -> store 1) - TICK: 49 - TOS: 115 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 14 - mPC: 21
+  DEBUG: (14: s -> store 1) - TICK: 48 - TOS: 115 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 14 - mPC: 23
+  DEBUG: (14: s -> store 1) - TICK: 49 - TOS: 115 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 14 - mPC: 24
   INFO: add char 's' to output buffer
-  DEBUG: (14: s -> store 1) - TICK: 50 - TOS: 115 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 14 - mPC: 22
+  DEBUG: (14: s -> store 1) - TICK: 50 - TOS: 115 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 14 - mPC: 25
   DEBUG: (15:   -> top 32) - TICK: 51 - TOS: 115 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 15 - mPC: 0
-  DEBUG: (15:   -> top 32) - TICK: 52 - TOS: 115 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 15 - mPC: 8
-  DEBUG: (15:   -> top 32) - TICK: 53 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 15 - mPC: 9
+  DEBUG: (15:   -> top 32) - TICK: 52 - TOS: 115 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 15 - mPC: 9
+  DEBUG: (15:   -> top 32) - TICK: 53 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 15 - mPC: 10
   DEBUG: (16:   -> store 1) - TICK: 54 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 16 - mPC: 0
-  DEBUG: (16:   -> store 1) - TICK: 55 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 16 - mPC: 20
-  DEBUG: (16:   -> store 1) - TICK: 56 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 16 - mPC: 21
+  DEBUG: (16:   -> store 1) - TICK: 55 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 16 - mPC: 23
+  DEBUG: (16:   -> store 1) - TICK: 56 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 16 - mPC: 24
   INFO: add char ' ' to output buffer
-  DEBUG: (16:   -> store 1) - TICK: 57 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 16 - mPC: 22
+  DEBUG: (16:   -> store 1) - TICK: 57 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 16 - mPC: 25
   DEBUG: (17: y -> top 121) - TICK: 58 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 17 - mPC: 0
-  DEBUG: (17: y -> top 121) - TICK: 59 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 17 - mPC: 8
-  DEBUG: (17: y -> top 121) - TICK: 60 - TOS: 121 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 17 - mPC: 9
+  DEBUG: (17: y -> top 121) - TICK: 59 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 17 - mPC: 9
+  DEBUG: (17: y -> top 121) - TICK: 60 - TOS: 121 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 17 - mPC: 10
   DEBUG: (18: y -> store 1) - TICK: 61 - TOS: 121 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 18 - mPC: 0
-  DEBUG: (18: y -> store 1) - TICK: 62 - TOS: 121 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 18 - mPC: 20
-  DEBUG: (18: y -> store 1) - TICK: 63 - TOS: 121 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 18 - mPC: 21
+  DEBUG: (18: y -> store 1) - TICK: 62 - TOS: 121 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 18 - mPC: 23
+  DEBUG: (18: y -> store 1) - TICK: 63 - TOS: 121 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 18 - mPC: 24
   INFO: add char 'y' to output buffer
-  DEBUG: (18: y -> store 1) - TICK: 64 - TOS: 121 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 18 - mPC: 22
+  DEBUG: (18: y -> store 1) - TICK: 64 - TOS: 121 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 18 - mPC: 25
   DEBUG: (19: o -> top 111) - TICK: 65 - TOS: 121 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 19 - mPC: 0
-  DEBUG: (19: o -> top 111) - TICK: 66 - TOS: 121 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 19 - mPC: 8
-  DEBUG: (19: o -> top 111) - TICK: 67 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 19 - mPC: 9
+  DEBUG: (19: o -> top 111) - TICK: 66 - TOS: 121 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 19 - mPC: 9
+  DEBUG: (19: o -> top 111) - TICK: 67 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 19 - mPC: 10
   DEBUG: (20: o -> store 1) - TICK: 68 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 20 - mPC: 0
-  DEBUG: (20: o -> store 1) - TICK: 69 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 20 - mPC: 20
-  DEBUG: (20: o -> store 1) - TICK: 70 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 20 - mPC: 21
+  DEBUG: (20: o -> store 1) - TICK: 69 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 20 - mPC: 23
+  DEBUG: (20: o -> store 1) - TICK: 70 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 20 - mPC: 24
   INFO: add char 'o' to output buffer
-  DEBUG: (20: o -> store 1) - TICK: 71 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 20 - mPC: 22
+  DEBUG: (20: o -> store 1) - TICK: 71 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 20 - mPC: 25
   DEBUG: (21: u -> top 117) - TICK: 72 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 21 - mPC: 0
-  DEBUG: (21: u -> top 117) - TICK: 73 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 21 - mPC: 8
-  DEBUG: (21: u -> top 117) - TICK: 74 - TOS: 117 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 21 - mPC: 9
+  DEBUG: (21: u -> top 117) - TICK: 73 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 21 - mPC: 9
+  DEBUG: (21: u -> top 117) - TICK: 74 - TOS: 117 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 21 - mPC: 10
   DEBUG: (22: u -> store 1) - TICK: 75 - TOS: 117 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 22 - mPC: 0
-  DEBUG: (22: u -> store 1) - TICK: 76 - TOS: 117 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 22 - mPC: 20
-  DEBUG: (22: u -> store 1) - TICK: 77 - TOS: 117 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 22 - mPC: 21
+  DEBUG: (22: u -> store 1) - TICK: 76 - TOS: 117 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 22 - mPC: 23
+  DEBUG: (22: u -> store 1) - TICK: 77 - TOS: 117 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 22 - mPC: 24
   INFO: add char 'u' to output buffer
-  DEBUG: (22: u -> store 1) - TICK: 78 - TOS: 117 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 22 - mPC: 22
+  DEBUG: (22: u -> store 1) - TICK: 78 - TOS: 117 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 22 - mPC: 25
   DEBUG: (23: r -> top 114) - TICK: 79 - TOS: 117 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 23 - mPC: 0
-  DEBUG: (23: r -> top 114) - TICK: 80 - TOS: 117 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 23 - mPC: 8
-  DEBUG: (23: r -> top 114) - TICK: 81 - TOS: 114 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 23 - mPC: 9
+  DEBUG: (23: r -> top 114) - TICK: 80 - TOS: 117 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 23 - mPC: 9
+  DEBUG: (23: r -> top 114) - TICK: 81 - TOS: 114 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 23 - mPC: 10
   DEBUG: (24: r -> store 1) - TICK: 82 - TOS: 114 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 24 - mPC: 0
-  DEBUG: (24: r -> store 1) - TICK: 83 - TOS: 114 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 24 - mPC: 20
-  DEBUG: (24: r -> store 1) - TICK: 84 - TOS: 114 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 24 - mPC: 21
+  DEBUG: (24: r -> store 1) - TICK: 83 - TOS: 114 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 24 - mPC: 23
+  DEBUG: (24: r -> store 1) - TICK: 84 - TOS: 114 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 24 - mPC: 24
   INFO: add char 'r' to output buffer
-  DEBUG: (24: r -> store 1) - TICK: 85 - TOS: 114 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 24 - mPC: 22
+  DEBUG: (24: r -> store 1) - TICK: 85 - TOS: 114 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 24 - mPC: 25
   DEBUG: (25:   -> top 32) - TICK: 86 - TOS: 114 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 25 - mPC: 0
-  DEBUG: (25:   -> top 32) - TICK: 87 - TOS: 114 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 25 - mPC: 8
-  DEBUG: (25:   -> top 32) - TICK: 88 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 25 - mPC: 9
+  DEBUG: (25:   -> top 32) - TICK: 87 - TOS: 114 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 25 - mPC: 9
+  DEBUG: (25:   -> top 32) - TICK: 88 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 25 - mPC: 10
   DEBUG: (26:   -> store 1) - TICK: 89 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 26 - mPC: 0
-  DEBUG: (26:   -> store 1) - TICK: 90 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 26 - mPC: 20
-  DEBUG: (26:   -> store 1) - TICK: 91 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 26 - mPC: 21
+  DEBUG: (26:   -> store 1) - TICK: 90 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 26 - mPC: 23
+  DEBUG: (26:   -> store 1) - TICK: 91 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 26 - mPC: 24
   INFO: add char ' ' to output buffer
-  DEBUG: (26:   -> store 1) - TICK: 92 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 26 - mPC: 22
+  DEBUG: (26:   -> store 1) - TICK: 92 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 26 - mPC: 25
   DEBUG: (27: n -> top 110) - TICK: 93 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 27 - mPC: 0
-  DEBUG: (27: n -> top 110) - TICK: 94 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 27 - mPC: 8
-  DEBUG: (27: n -> top 110) - TICK: 95 - TOS: 110 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 27 - mPC: 9
+  DEBUG: (27: n -> top 110) - TICK: 94 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 27 - mPC: 9
+  DEBUG: (27: n -> top 110) - TICK: 95 - TOS: 110 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 27 - mPC: 10
   DEBUG: (28: n -> store 1) - TICK: 96 - TOS: 110 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 28 - mPC: 0
-  DEBUG: (28: n -> store 1) - TICK: 97 - TOS: 110 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 28 - mPC: 20
-  DEBUG: (28: n -> store 1) - TICK: 98 - TOS: 110 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 28 - mPC: 21
+  DEBUG: (28: n -> store 1) - TICK: 97 - TOS: 110 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 28 - mPC: 23
+  DEBUG: (28: n -> store 1) - TICK: 98 - TOS: 110 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 28 - mPC: 24
   INFO: add char 'n' to output buffer
-  DEBUG: (28: n -> store 1) - TICK: 99 - TOS: 110 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 28 - mPC: 22
+  DEBUG: (28: n -> store 1) - TICK: 99 - TOS: 110 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 28 - mPC: 25
   DEBUG: (29: a -> top 97) - TICK: 100 - TOS: 110 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 29 - mPC: 0
-  DEBUG: (29: a -> top 97) - TICK: 101 - TOS: 110 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 29 - mPC: 8
-  DEBUG: (29: a -> top 97) - TICK: 102 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 29 - mPC: 9
+  DEBUG: (29: a -> top 97) - TICK: 101 - TOS: 110 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 29 - mPC: 9
+  DEBUG: (29: a -> top 97) - TICK: 102 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 29 - mPC: 10
   DEBUG: (30: a -> store 1) - TICK: 103 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 30 - mPC: 0
-  DEBUG: (30: a -> store 1) - TICK: 104 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 30 - mPC: 20
-  DEBUG: (30: a -> store 1) - TICK: 105 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 30 - mPC: 21
+  DEBUG: (30: a -> store 1) - TICK: 104 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 30 - mPC: 23
+  DEBUG: (30: a -> store 1) - TICK: 105 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 30 - mPC: 24
   INFO: add char 'a' to output buffer
-  DEBUG: (30: a -> store 1) - TICK: 106 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 30 - mPC: 22
+  DEBUG: (30: a -> store 1) - TICK: 106 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 30 - mPC: 25
   DEBUG: (31: m -> top 109) - TICK: 107 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 31 - mPC: 0
-  DEBUG: (31: m -> top 109) - TICK: 108 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 31 - mPC: 8
-  DEBUG: (31: m -> top 109) - TICK: 109 - TOS: 109 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 31 - mPC: 9
+  DEBUG: (31: m -> top 109) - TICK: 108 - TOS: 97 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 31 - mPC: 9
+  DEBUG: (31: m -> top 109) - TICK: 109 - TOS: 109 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 31 - mPC: 10
   DEBUG: (32: m -> store 1) - TICK: 110 - TOS: 109 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 32 - mPC: 0
-  DEBUG: (32: m -> store 1) - TICK: 111 - TOS: 109 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 32 - mPC: 20
-  DEBUG: (32: m -> store 1) - TICK: 112 - TOS: 109 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 32 - mPC: 21
+  DEBUG: (32: m -> store 1) - TICK: 111 - TOS: 109 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 32 - mPC: 23
+  DEBUG: (32: m -> store 1) - TICK: 112 - TOS: 109 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 32 - mPC: 24
   INFO: add char 'm' to output buffer
-  DEBUG: (32: m -> store 1) - TICK: 113 - TOS: 109 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 32 - mPC: 22
+  DEBUG: (32: m -> store 1) - TICK: 113 - TOS: 109 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 32 - mPC: 25
   DEBUG: (33: e -> top 101) - TICK: 114 - TOS: 109 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 33 - mPC: 0
-  DEBUG: (33: e -> top 101) - TICK: 115 - TOS: 109 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 33 - mPC: 8
-  DEBUG: (33: e -> top 101) - TICK: 116 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 33 - mPC: 9
+  DEBUG: (33: e -> top 101) - TICK: 115 - TOS: 109 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 33 - mPC: 9
+  DEBUG: (33: e -> top 101) - TICK: 116 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 33 - mPC: 10
   DEBUG: (34: e -> store 1) - TICK: 117 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 34 - mPC: 0
-  DEBUG: (34: e -> store 1) - TICK: 118 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 34 - mPC: 20
-  DEBUG: (34: e -> store 1) - TICK: 119 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 34 - mPC: 21
+  DEBUG: (34: e -> store 1) - TICK: 118 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 34 - mPC: 23
+  DEBUG: (34: e -> store 1) - TICK: 119 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 34 - mPC: 24
   INFO: add char 'e' to output buffer
-  DEBUG: (34: e -> store 1) - TICK: 120 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 34 - mPC: 22
+  DEBUG: (34: e -> store 1) - TICK: 120 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 34 - mPC: 25
   DEBUG: (35: ? -> top 63) - TICK: 121 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 35 - mPC: 0
-  DEBUG: (35: ? -> top 63) - TICK: 122 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 35 - mPC: 8
-  DEBUG: (35: ? -> top 63) - TICK: 123 - TOS: 63 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 35 - mPC: 9
+  DEBUG: (35: ? -> top 63) - TICK: 122 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 35 - mPC: 9
+  DEBUG: (35: ? -> top 63) - TICK: 123 - TOS: 63 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 35 - mPC: 10
   DEBUG: (36: ? -> store 1) - TICK: 124 - TOS: 63 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 36 - mPC: 0
-  DEBUG: (36: ? -> store 1) - TICK: 125 - TOS: 63 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 36 - mPC: 20
-  DEBUG: (36: ? -> store 1) - TICK: 126 - TOS: 63 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 36 - mPC: 21
+  DEBUG: (36: ? -> store 1) - TICK: 125 - TOS: 63 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 36 - mPC: 23
+  DEBUG: (36: ? -> store 1) - TICK: 126 - TOS: 63 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 36 - mPC: 24
   INFO: add char '?' to output buffer
-  DEBUG: (36: ? -> store 1) - TICK: 127 - TOS: 63 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 36 - mPC: 22
+  DEBUG: (36: ? -> store 1) - TICK: 127 - TOS: 63 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 36 - mPC: 25
   DEBUG: (37: None -> drop ) - TICK: 128 - TOS: 63 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 37 - mPC: 0
   DEBUG: (37: None -> drop ) - TICK: 129 - TOS: 63 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 37 - mPC: 3
   DEBUG: (37: None -> drop ) - TICK: 130 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 37 - mPC: 4
   DEBUG: (37: None -> drop ) - TICK: 131 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 37 - mPC: 5
   DEBUG: (38: cr -> push 10) - TICK: 132 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 38 - mPC: 0
   DEBUG: (38: cr -> push 10) - TICK: 133 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 38 - mPC: 6
-  DEBUG: (38: cr -> push 10) - TICK: 134 - TOS: 10 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 38 - mPC: 7
-  DEBUG: (39: cr -> store 1) - TICK: 135 - TOS: 10 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 39 - mPC: 0
-  DEBUG: (39: cr -> store 1) - TICK: 136 - TOS: 10 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 39 - mPC: 20
-  DEBUG: (39: cr -> store 1) - TICK: 137 - TOS: 10 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 39 - mPC: 21
+  DEBUG: (38: cr -> push 10) - TICK: 134 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 38 - mPC: 7
+  DEBUG: (38: cr -> push 10) - TICK: 135 - TOS: 10 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 38 - mPC: 8
+  DEBUG: (39: cr -> store 1) - TICK: 136 - TOS: 10 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 39 - mPC: 0
+  DEBUG: (39: cr -> store 1) - TICK: 137 - TOS: 10 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 39 - mPC: 23
+  DEBUG: (39: cr -> store 1) - TICK: 138 - TOS: 10 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 39 - mPC: 24
   INFO: add char '
   ' to output buffer
-  DEBUG: (39: cr -> store 1) - TICK: 138 - TOS: 10 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 39 - mPC: 22
-  DEBUG: (40: cr -> drop ) - TICK: 139 - TOS: 10 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 40 - mPC: 0
-  DEBUG: (40: cr -> drop ) - TICK: 140 - TOS: 10 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 40 - mPC: 3
-  DEBUG: (40: cr -> drop ) - TICK: 141 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 40 - mPC: 4
-  DEBUG: (40: cr -> drop ) - TICK: 142 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 40 - mPC: 5
-  DEBUG: (41: 3 -> push 3) - TICK: 143 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 41 - mPC: 0
-  DEBUG: (41: 3 -> push 3) - TICK: 144 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 41 - mPC: 6
-  DEBUG: (41: 3 -> push 3) - TICK: 145 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 41 - mPC: 7
-  DEBUG: (42: ! -> store 2) - TICK: 146 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 42 - mPC: 0
-  DEBUG: (42: ! -> store 2) - TICK: 147 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 42 - mPC: 20
-  DEBUG: (42: ! -> store 2) - TICK: 148 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 2 - PC: 42 - mPC: 21
-  DEBUG: (42: ! -> store 2) - TICK: 149 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 2 - PC: 42 - mPC: 22
-  DEBUG: (43: ! -> store 3) - TICK: 150 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 2 - PC: 43 - mPC: 0
-  DEBUG: (43: ! -> store 3) - TICK: 151 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 2 - PC: 43 - mPC: 20
-  DEBUG: (43: ! -> store 3) - TICK: 152 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 3 - PC: 43 - mPC: 21
-  DEBUG: (43: ! -> store 3) - TICK: 153 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 3 - PC: 43 - mPC: 22
-  DEBUG: (44: @ -> load 3) - TICK: 154 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 3 - PC: 44 - mPC: 0
-  DEBUG: (44: @ -> load 3) - TICK: 155 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 3 - PC: 44 - mPC: 12
-  DEBUG: (44: @ -> load 3) - TICK: 156 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 3 - PC: 44 - mPC: 13
-  DEBUG: (44: @ -> load 3) - TICK: 157 - TOS: 3 - data stack: [0, 3] - alu out: 0 - memory out: 3 - address reg: 3 - PC: 44 - mPC: 14
-  DEBUG: (45: ++ -> inc ) - TICK: 158 - TOS: 3 - data stack: [0, 3] - alu out: 0 - memory out: 3 - address reg: 3 - PC: 45 - mPC: 0
-  DEBUG: (45: ++ -> inc ) - TICK: 159 - TOS: 3 - data stack: [0, 3] - alu out: 0 - memory out: 3 - address reg: 3 - PC: 45 - mPC: 64
-  DEBUG: (45: ++ -> inc ) - TICK: 160 - TOS: 4 - data stack: [0, 3] - alu out: 4 - memory out: 3 - address reg: 3 - PC: 45 - mPC: 65
-  DEBUG: (46: ! -> store 3) - TICK: 161 - TOS: 4 - data stack: [0, 3] - alu out: 4 - memory out: 3 - address reg: 3 - PC: 46 - mPC: 0
-  DEBUG: (46: ! -> store 3) - TICK: 162 - TOS: 4 - data stack: [0, 3] - alu out: 4 - memory out: 3 - address reg: 3 - PC: 46 - mPC: 20
-  DEBUG: (46: ! -> store 3) - TICK: 163 - TOS: 4 - data stack: [0, 3] - alu out: 4 - memory out: 3 - address reg: 3 - PC: 46 - mPC: 21
-  DEBUG: (46: ! -> store 3) - TICK: 164 - TOS: 4 - data stack: [0, 3] - alu out: 4 - memory out: 3 - address reg: 3 - PC: 46 - mPC: 22
-  DEBUG: (47: key -> load 0) - TICK: 165 - TOS: 4 - data stack: [0, 3] - alu out: 4 - memory out: 3 - address reg: 3 - PC: 47 - mPC: 0
-  DEBUG: (47: key -> load 0) - TICK: 166 - TOS: 4 - data stack: [0, 3] - alu out: 4 - memory out: 3 - address reg: 3 - PC: 47 - mPC: 12
-  DEBUG: (47: key -> load 0) - TICK: 167 - TOS: 4 - data stack: [0, 3] - alu out: 4 - memory out: 3 - address reg: 0 - PC: 47 - mPC: 13
+  DEBUG: (39: cr -> store 1) - TICK: 139 - TOS: 10 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 39 - mPC: 25
+  DEBUG: (40: cr -> drop ) - TICK: 140 - TOS: 10 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 40 - mPC: 0
+  DEBUG: (40: cr -> drop ) - TICK: 141 - TOS: 10 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 40 - mPC: 3
+  DEBUG: (40: cr -> drop ) - TICK: 142 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 40 - mPC: 4
+  DEBUG: (40: cr -> drop ) - TICK: 143 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 40 - mPC: 5
+  DEBUG: (41: 3 -> push 3) - TICK: 144 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 41 - mPC: 0
+  DEBUG: (41: 3 -> push 3) - TICK: 145 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 41 - mPC: 6
+  DEBUG: (41: 3 -> push 3) - TICK: 146 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 41 - mPC: 7
+  DEBUG: (41: 3 -> push 3) - TICK: 147 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 41 - mPC: 8
+  DEBUG: (42: ! -> store 2) - TICK: 148 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 42 - mPC: 0
+  DEBUG: (42: ! -> store 2) - TICK: 149 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 42 - mPC: 23
+  DEBUG: (42: ! -> store 2) - TICK: 150 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 2 - PC: 42 - mPC: 24
+  DEBUG: (42: ! -> store 2) - TICK: 151 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 2 - PC: 42 - mPC: 25
+  DEBUG: (43: ! -> store 3) - TICK: 152 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 2 - PC: 43 - mPC: 0
+  DEBUG: (43: ! -> store 3) - TICK: 153 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 2 - PC: 43 - mPC: 23
+  DEBUG: (43: ! -> store 3) - TICK: 154 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 3 - PC: 43 - mPC: 24
+  DEBUG: (43: ! -> store 3) - TICK: 155 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 3 - PC: 43 - mPC: 25
+  DEBUG: (44: @ -> load 3) - TICK: 156 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 3 - PC: 44 - mPC: 0
+  DEBUG: (44: @ -> load 3) - TICK: 157 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 3 - PC: 44 - mPC: 13
+  DEBUG: (44: @ -> load 3) - TICK: 158 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 3 - PC: 44 - mPC: 14
+  DEBUG: (44: @ -> load 3) - TICK: 159 - TOS: 3 - data stack: [0, 3] - alu out: 0 - memory out: 3 - address reg: 3 - PC: 44 - mPC: 15
+  DEBUG: (44: @ -> load 3) - TICK: 160 - TOS: 3 - data stack: [0, 3] - alu out: 0 - memory out: 3 - address reg: 3 - PC: 44 - mPC: 16
+  DEBUG: (45: ++ -> inc ) - TICK: 161 - TOS: 3 - data stack: [0, 3] - alu out: 0 - memory out: 3 - address reg: 3 - PC: 45 - mPC: 0
+  DEBUG: (45: ++ -> inc ) - TICK: 162 - TOS: 3 - data stack: [0, 3] - alu out: 0 - memory out: 3 - address reg: 3 - PC: 45 - mPC: 67
+  DEBUG: (45: ++ -> inc ) - TICK: 163 - TOS: 4 - data stack: [0, 3] - alu out: 4 - memory out: 3 - address reg: 3 - PC: 45 - mPC: 68
+  DEBUG: (46: ! -> store 3) - TICK: 164 - TOS: 4 - data stack: [0, 3] - alu out: 4 - memory out: 3 - address reg: 3 - PC: 46 - mPC: 0
+  DEBUG: (46: ! -> store 3) - TICK: 165 - TOS: 4 - data stack: [0, 3] - alu out: 4 - memory out: 3 - address reg: 3 - PC: 46 - mPC: 23
+  DEBUG: (46: ! -> store 3) - TICK: 166 - TOS: 4 - data stack: [0, 3] - alu out: 4 - memory out: 3 - address reg: 3 - PC: 46 - mPC: 24
+  DEBUG: (46: ! -> store 3) - TICK: 167 - TOS: 4 - data stack: [0, 3] - alu out: 4 - memory out: 3 - address reg: 3 - PC: 46 - mPC: 25
+  DEBUG: (47: key -> load 0) - TICK: 168 - TOS: 4 - data stack: [0, 3] - alu out: 4 - memory out: 3 - address reg: 3 - PC: 47 - mPC: 0
+  DEBUG: (47: key -> load 0) - TICK: 169 - TOS: 4 - data stack: [0, 3] - alu out: 4 - memory out: 3 - address reg: 3 - PC: 47 - mPC: 13
+  DEBUG: (47: key -> load 0) - TICK: 170 - TOS: 4 - data stack: [0, 3] - alu out: 4 - memory out: 3 - address reg: 0 - PC: 47 - mPC: 14
   INFO: add char 'L' from input buffer
-  DEBUG: (47: key -> load 0) - TICK: 168 - TOS: 76 - data stack: [0, 3, 4] - alu out: 4 - memory out: 76 - address reg: 0 - PC: 47 - mPC: 14
-  DEBUG: (48: !* -> ind_store 3) - TICK: 169 - TOS: 76 - data stack: [0, 3, 4] - alu out: 4 - memory out: 76 - address reg: 0 - PC: 48 - mPC: 0
-  DEBUG: (48: !* -> ind_store 3) - TICK: 170 - TOS: 76 - data stack: [0, 3, 4] - alu out: 4 - memory out: 76 - address reg: 0 - PC: 48 - mPC: 23
-  DEBUG: (48: !* -> ind_store 3) - TICK: 171 - TOS: 76 - data stack: [0, 3, 4] - alu out: 4 - memory out: 76 - address reg: 3 - PC: 48 - mPC: 24
-  DEBUG: (48: !* -> ind_store 3) - TICK: 172 - TOS: 76 - data stack: [0, 3, 4] - alu out: 4 - memory out: 4 - address reg: 3 - PC: 48 - mPC: 25
-  DEBUG: (48: !* -> ind_store 3) - TICK: 173 - TOS: 76 - data stack: [0, 3, 4] - alu out: 4 - memory out: 4 - address reg: 4 - PC: 48 - mPC: 26
-  DEBUG: (48: !* -> ind_store 3) - TICK: 174 - TOS: 76 - data stack: [0, 3, 4] - alu out: 4 - memory out: 4 - address reg: 4 - PC: 48 - mPC: 27
-  DEBUG: (49: 0 -> push 0) - TICK: 175 - TOS: 76 - data stack: [0, 3, 4] - alu out: 4 - memory out: 4 - address reg: 4 - PC: 49 - mPC: 0
-  DEBUG: (49: 0 -> push 0) - TICK: 176 - TOS: 76 - data stack: [0, 3, 4] - alu out: 4 - memory out: 4 - address reg: 4 - PC: 49 - mPC: 6
-  DEBUG: (49: 0 -> push 0) - TICK: 177 - TOS: 0 - data stack: [0, 3, 4, 76] - alu out: 4 - memory out: 4 - address reg: 4 - PC: 49 - mPC: 7
-  DEBUG: (50: != -> n_equal ) - TICK: 178 - TOS: 0 - data stack: [0, 3, 4, 76] - alu out: 4 - memory out: 4 - address reg: 4 - PC: 50 - mPC: 0
-  DEBUG: (50: != -> n_equal ) - TICK: 179 - TOS: 0 - data stack: [0, 3, 4, 76] - alu out: 4 - memory out: 4 - address reg: 4 - PC: 50 - mPC: 60
-  DEBUG: (50: != -> n_equal ) - TICK: 180 - TOS: 0 - data stack: [0, 3, 4, 76] - alu out: 1 - memory out: 4 - address reg: 4 - PC: 50 - mPC: 61
-  DEBUG: (50: != -> n_equal ) - TICK: 181 - TOS: 0 - data stack: [0, 3, 4, 76, 0] - alu out: 1 - memory out: 4 - address reg: 4 - PC: 50 - mPC: 62
-  DEBUG: (50: != -> n_equal ) - TICK: 182 - TOS: 1 - data stack: [0, 3, 4, 76, 0] - alu out: 1 - memory out: 4 - address reg: 4 - PC: 50 - mPC: 63
-  DEBUG: (51: until -> jif 44) - TICK: 183 - TOS: 1 - data stack: [0, 3, 4, 76, 0] - alu out: 1 - memory out: 4 - address reg: 4 - PC: 51 - mPC: 0
-  DEBUG: (51: until -> jif 44) - TICK: 184 - TOS: 1 - data stack: [0, 3, 4, 76, 0] - alu out: 1 - memory out: 4 - address reg: 4 - PC: 51 - mPC: 69
-  DEBUG: (44: @ -> load 3) - TICK: 185 - TOS: 1 - data stack: [0, 3, 4, 76, 0] - alu out: 1 - memory out: 4 - address reg: 4 - PC: 44 - mPC: 0
-  DEBUG: (44: @ -> load 3) - TICK: 186 - TOS: 1 - data stack: [0, 3, 4, 76, 0] - alu out: 1 - memory out: 4 - address reg: 4 - PC: 44 - mPC: 12
-  DEBUG: (44: @ -> load 3) - TICK: 187 - TOS: 1 - data stack: [0, 3, 4, 76, 0] - alu out: 1 - memory out: 4 - address reg: 3 - PC: 44 - mPC: 13
-  DEBUG: (44: @ -> load 3) - TICK: 188 - TOS: 4 - data stack: [0, 3, 4, 76, 0, 1] - alu out: 1 - memory out: 4 - address reg: 3 - PC: 44 - mPC: 14
-  DEBUG: (45: ++ -> inc ) - TICK: 189 - TOS: 4 - data stack: [0, 3, 4, 76, 0, 1] - alu out: 1 - memory out: 4 - address reg: 3 - PC: 45 - mPC: 0
-  DEBUG: (45: ++ -> inc ) - TICK: 190 - TOS: 4 - data stack: [0, 3, 4, 76, 0, 1] - alu out: 1 - memory out: 4 - address reg: 3 - PC: 45 - mPC: 64
-  DEBUG: (45: ++ -> inc ) - TICK: 191 - TOS: 5 - data stack: [0, 3, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 3 - PC: 45 - mPC: 65
-  DEBUG: (46: ! -> store 3) - TICK: 192 - TOS: 5 - data stack: [0, 3, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 3 - PC: 46 - mPC: 0
-  DEBUG: (46: ! -> store 3) - TICK: 193 - TOS: 5 - data stack: [0, 3, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 3 - PC: 46 - mPC: 20
-  DEBUG: (46: ! -> store 3) - TICK: 194 - TOS: 5 - data stack: [0, 3, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 3 - PC: 46 - mPC: 21
-  DEBUG: (46: ! -> store 3) - TICK: 195 - TOS: 5 - data stack: [0, 3, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 3 - PC: 46 - mPC: 22
-  DEBUG: (47: key -> load 0) - TICK: 196 - TOS: 5 - data stack: [0, 3, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 3 - PC: 47 - mPC: 0
-  DEBUG: (47: key -> load 0) - TICK: 197 - TOS: 5 - data stack: [0, 3, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 3 - PC: 47 - mPC: 12
-  DEBUG: (47: key -> load 0) - TICK: 198 - TOS: 5 - data stack: [0, 3, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 0 - PC: 47 - mPC: 13
+  DEBUG: (47: key -> load 0) - TICK: 171 - TOS: 4 - data stack: [0, 3, 4] - alu out: 4 - memory out: 76 - address reg: 0 - PC: 47 - mPC: 15
+  DEBUG: (47: key -> load 0) - TICK: 172 - TOS: 76 - data stack: [0, 3, 4] - alu out: 4 - memory out: 76 - address reg: 0 - PC: 47 - mPC: 16
+  DEBUG: (48: !* -> ind_store 3) - TICK: 173 - TOS: 76 - data stack: [0, 3, 4] - alu out: 4 - memory out: 76 - address reg: 0 - PC: 48 - mPC: 0
+  DEBUG: (48: !* -> ind_store 3) - TICK: 174 - TOS: 76 - data stack: [0, 3, 4] - alu out: 4 - memory out: 76 - address reg: 0 - PC: 48 - mPC: 26
+  DEBUG: (48: !* -> ind_store 3) - TICK: 175 - TOS: 76 - data stack: [0, 3, 4] - alu out: 4 - memory out: 76 - address reg: 3 - PC: 48 - mPC: 27
+  DEBUG: (48: !* -> ind_store 3) - TICK: 176 - TOS: 76 - data stack: [0, 3, 4] - alu out: 4 - memory out: 4 - address reg: 3 - PC: 48 - mPC: 28
+  DEBUG: (48: !* -> ind_store 3) - TICK: 177 - TOS: 76 - data stack: [0, 3, 4] - alu out: 4 - memory out: 4 - address reg: 4 - PC: 48 - mPC: 29
+  DEBUG: (48: !* -> ind_store 3) - TICK: 178 - TOS: 76 - data stack: [0, 3, 4] - alu out: 4 - memory out: 4 - address reg: 4 - PC: 48 - mPC: 30
+  DEBUG: (49: 0 -> push 0) - TICK: 179 - TOS: 76 - data stack: [0, 3, 4] - alu out: 4 - memory out: 4 - address reg: 4 - PC: 49 - mPC: 0
+  DEBUG: (49: 0 -> push 0) - TICK: 180 - TOS: 76 - data stack: [0, 3, 4] - alu out: 4 - memory out: 4 - address reg: 4 - PC: 49 - mPC: 6
+  DEBUG: (49: 0 -> push 0) - TICK: 181 - TOS: 76 - data stack: [0, 3, 4, 76] - alu out: 4 - memory out: 4 - address reg: 4 - PC: 49 - mPC: 7
+  DEBUG: (49: 0 -> push 0) - TICK: 182 - TOS: 0 - data stack: [0, 3, 4, 76] - alu out: 4 - memory out: 4 - address reg: 4 - PC: 49 - mPC: 8
+  DEBUG: (50: != -> n_equal ) - TICK: 183 - TOS: 0 - data stack: [0, 3, 4, 76] - alu out: 4 - memory out: 4 - address reg: 4 - PC: 50 - mPC: 0
+  DEBUG: (50: != -> n_equal ) - TICK: 184 - TOS: 0 - data stack: [0, 3, 4, 76] - alu out: 4 - memory out: 4 - address reg: 4 - PC: 50 - mPC: 63
+  DEBUG: (50: != -> n_equal ) - TICK: 185 - TOS: 0 - data stack: [0, 3, 4, 76] - alu out: 1 - memory out: 4 - address reg: 4 - PC: 50 - mPC: 64
+  DEBUG: (50: != -> n_equal ) - TICK: 186 - TOS: 0 - data stack: [0, 3, 4, 76, 0] - alu out: 1 - memory out: 4 - address reg: 4 - PC: 50 - mPC: 65
+  DEBUG: (50: != -> n_equal ) - TICK: 187 - TOS: 1 - data stack: [0, 3, 4, 76, 0] - alu out: 1 - memory out: 4 - address reg: 4 - PC: 50 - mPC: 66
+  DEBUG: (51: until -> jif 44) - TICK: 188 - TOS: 1 - data stack: [0, 3, 4, 76, 0] - alu out: 1 - memory out: 4 - address reg: 4 - PC: 51 - mPC: 0
+  DEBUG: (51: until -> jif 44) - TICK: 189 - TOS: 1 - data stack: [0, 3, 4, 76, 0] - alu out: 1 - memory out: 4 - address reg: 4 - PC: 51 - mPC: 72
+  DEBUG: (44: @ -> load 3) - TICK: 190 - TOS: 1 - data stack: [0, 3, 4, 76, 0] - alu out: 1 - memory out: 4 - address reg: 4 - PC: 44 - mPC: 0
+  DEBUG: (44: @ -> load 3) - TICK: 191 - TOS: 1 - data stack: [0, 3, 4, 76, 0] - alu out: 1 - memory out: 4 - address reg: 4 - PC: 44 - mPC: 13
+  DEBUG: (44: @ -> load 3) - TICK: 192 - TOS: 1 - data stack: [0, 3, 4, 76, 0] - alu out: 1 - memory out: 4 - address reg: 3 - PC: 44 - mPC: 14
+  DEBUG: (44: @ -> load 3) - TICK: 193 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1] - alu out: 1 - memory out: 4 - address reg: 3 - PC: 44 - mPC: 15
+  DEBUG: (44: @ -> load 3) - TICK: 194 - TOS: 4 - data stack: [0, 3, 4, 76, 0, 1] - alu out: 1 - memory out: 4 - address reg: 3 - PC: 44 - mPC: 16
+  DEBUG: (45: ++ -> inc ) - TICK: 195 - TOS: 4 - data stack: [0, 3, 4, 76, 0, 1] - alu out: 1 - memory out: 4 - address reg: 3 - PC: 45 - mPC: 0
+  DEBUG: (45: ++ -> inc ) - TICK: 196 - TOS: 4 - data stack: [0, 3, 4, 76, 0, 1] - alu out: 1 - memory out: 4 - address reg: 3 - PC: 45 - mPC: 67
+  DEBUG: (45: ++ -> inc ) - TICK: 197 - TOS: 5 - data stack: [0, 3, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 3 - PC: 45 - mPC: 68
+  DEBUG: (46: ! -> store 3) - TICK: 198 - TOS: 5 - data stack: [0, 3, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 3 - PC: 46 - mPC: 0
+  DEBUG: (46: ! -> store 3) - TICK: 199 - TOS: 5 - data stack: [0, 3, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 3 - PC: 46 - mPC: 23
+  DEBUG: (46: ! -> store 3) - TICK: 200 - TOS: 5 - data stack: [0, 3, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 3 - PC: 46 - mPC: 24
+  DEBUG: (46: ! -> store 3) - TICK: 201 - TOS: 5 - data stack: [0, 3, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 3 - PC: 46 - mPC: 25
+  DEBUG: (47: key -> load 0) - TICK: 202 - TOS: 5 - data stack: [0, 3, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 3 - PC: 47 - mPC: 0
+  DEBUG: (47: key -> load 0) - TICK: 203 - TOS: 5 - data stack: [0, 3, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 3 - PC: 47 - mPC: 13
+  DEBUG: (47: key -> load 0) - TICK: 204 - TOS: 5 - data stack: [0, 3, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 0 - PC: 47 - mPC: 14
   INFO: add char 'i' from input buffer
-  DEBUG: (47: key -> load 0) - TICK: 199 - TOS: 105 - data stack: [0, 3, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 105 - address reg: 0 - PC: 47 - mPC: 14
-  DEBUG: (48: !* -> ind_store 3) - TICK: 200 - TOS: 105 - data stack: [0, 3, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 105 - address reg: 0 - PC: 48 - mPC: 0
-  DEBUG: (48: !* -> ind_store 3) - TICK: 201 - TOS: 105 - data stack: [0, 3, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 105 - address reg: 0 - PC: 48 - mPC: 23
-  DEBUG: (48: !* -> ind_store 3) - TICK: 202 - TOS: 105 - data stack: [0, 3, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 105 - address reg: 3 - PC: 48 - mPC: 24
-  DEBUG: (48: !* -> ind_store 3) - TICK: 203 - TOS: 105 - data stack: [0, 3, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 5 - address reg: 3 - PC: 48 - mPC: 25
-  DEBUG: (48: !* -> ind_store 3) - TICK: 204 - TOS: 105 - data stack: [0, 3, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 5 - address reg: 5 - PC: 48 - mPC: 26
-  DEBUG: (48: !* -> ind_store 3) - TICK: 205 - TOS: 105 - data stack: [0, 3, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 5 - address reg: 5 - PC: 48 - mPC: 27
-  DEBUG: (49: 0 -> push 0) - TICK: 206 - TOS: 105 - data stack: [0, 3, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 5 - address reg: 5 - PC: 49 - mPC: 0
-  DEBUG: (49: 0 -> push 0) - TICK: 207 - TOS: 105 - data stack: [0, 3, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 5 - address reg: 5 - PC: 49 - mPC: 6
-  DEBUG: (49: 0 -> push 0) - TICK: 208 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105] - alu out: 5 - memory out: 5 - address reg: 5 - PC: 49 - mPC: 7
-  DEBUG: (50: != -> n_equal ) - TICK: 209 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105] - alu out: 5 - memory out: 5 - address reg: 5 - PC: 50 - mPC: 0
-  DEBUG: (50: != -> n_equal ) - TICK: 210 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105] - alu out: 5 - memory out: 5 - address reg: 5 - PC: 50 - mPC: 60
-  DEBUG: (50: != -> n_equal ) - TICK: 211 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105] - alu out: 1 - memory out: 5 - address reg: 5 - PC: 50 - mPC: 61
-  DEBUG: (50: != -> n_equal ) - TICK: 212 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 5 - address reg: 5 - PC: 50 - mPC: 62
-  DEBUG: (50: != -> n_equal ) - TICK: 213 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 5 - address reg: 5 - PC: 50 - mPC: 63
-  DEBUG: (51: until -> jif 44) - TICK: 214 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 5 - address reg: 5 - PC: 51 - mPC: 0
-  DEBUG: (51: until -> jif 44) - TICK: 215 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 5 - address reg: 5 - PC: 51 - mPC: 69
-  DEBUG: (44: @ -> load 3) - TICK: 216 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 5 - address reg: 5 - PC: 44 - mPC: 0
-  DEBUG: (44: @ -> load 3) - TICK: 217 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 5 - address reg: 5 - PC: 44 - mPC: 12
-  DEBUG: (44: @ -> load 3) - TICK: 218 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 5 - address reg: 3 - PC: 44 - mPC: 13
-  DEBUG: (44: @ -> load 3) - TICK: 219 - TOS: 5 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 1 - memory out: 5 - address reg: 3 - PC: 44 - mPC: 14
-  DEBUG: (45: ++ -> inc ) - TICK: 220 - TOS: 5 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 1 - memory out: 5 - address reg: 3 - PC: 45 - mPC: 0
-  DEBUG: (45: ++ -> inc ) - TICK: 221 - TOS: 5 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 1 - memory out: 5 - address reg: 3 - PC: 45 - mPC: 64
-  DEBUG: (45: ++ -> inc ) - TICK: 222 - TOS: 6 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 3 - PC: 45 - mPC: 65
-  DEBUG: (46: ! -> store 3) - TICK: 223 - TOS: 6 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 3 - PC: 46 - mPC: 0
-  DEBUG: (46: ! -> store 3) - TICK: 224 - TOS: 6 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 3 - PC: 46 - mPC: 20
-  DEBUG: (46: ! -> store 3) - TICK: 225 - TOS: 6 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 3 - PC: 46 - mPC: 21
-  DEBUG: (46: ! -> store 3) - TICK: 226 - TOS: 6 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 3 - PC: 46 - mPC: 22
-  DEBUG: (47: key -> load 0) - TICK: 227 - TOS: 6 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 3 - PC: 47 - mPC: 0
-  DEBUG: (47: key -> load 0) - TICK: 228 - TOS: 6 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 3 - PC: 47 - mPC: 12
-  DEBUG: (47: key -> load 0) - TICK: 229 - TOS: 6 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 0 - PC: 47 - mPC: 13
+  DEBUG: (47: key -> load 0) - TICK: 205 - TOS: 5 - data stack: [0, 3, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 105 - address reg: 0 - PC: 47 - mPC: 15
+  DEBUG: (47: key -> load 0) - TICK: 206 - TOS: 105 - data stack: [0, 3, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 105 - address reg: 0 - PC: 47 - mPC: 16
+  DEBUG: (48: !* -> ind_store 3) - TICK: 207 - TOS: 105 - data stack: [0, 3, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 105 - address reg: 0 - PC: 48 - mPC: 0
+  DEBUG: (48: !* -> ind_store 3) - TICK: 208 - TOS: 105 - data stack: [0, 3, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 105 - address reg: 0 - PC: 48 - mPC: 26
+  DEBUG: (48: !* -> ind_store 3) - TICK: 209 - TOS: 105 - data stack: [0, 3, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 105 - address reg: 3 - PC: 48 - mPC: 27
+  DEBUG: (48: !* -> ind_store 3) - TICK: 210 - TOS: 105 - data stack: [0, 3, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 5 - address reg: 3 - PC: 48 - mPC: 28
+  DEBUG: (48: !* -> ind_store 3) - TICK: 211 - TOS: 105 - data stack: [0, 3, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 5 - address reg: 5 - PC: 48 - mPC: 29
+  DEBUG: (48: !* -> ind_store 3) - TICK: 212 - TOS: 105 - data stack: [0, 3, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 5 - address reg: 5 - PC: 48 - mPC: 30
+  DEBUG: (49: 0 -> push 0) - TICK: 213 - TOS: 105 - data stack: [0, 3, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 5 - address reg: 5 - PC: 49 - mPC: 0
+  DEBUG: (49: 0 -> push 0) - TICK: 214 - TOS: 105 - data stack: [0, 3, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 5 - address reg: 5 - PC: 49 - mPC: 6
+  DEBUG: (49: 0 -> push 0) - TICK: 215 - TOS: 105 - data stack: [0, 3, 4, 76, 0, 1, 5, 105] - alu out: 5 - memory out: 5 - address reg: 5 - PC: 49 - mPC: 7
+  DEBUG: (49: 0 -> push 0) - TICK: 216 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105] - alu out: 5 - memory out: 5 - address reg: 5 - PC: 49 - mPC: 8
+  DEBUG: (50: != -> n_equal ) - TICK: 217 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105] - alu out: 5 - memory out: 5 - address reg: 5 - PC: 50 - mPC: 0
+  DEBUG: (50: != -> n_equal ) - TICK: 218 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105] - alu out: 5 - memory out: 5 - address reg: 5 - PC: 50 - mPC: 63
+  DEBUG: (50: != -> n_equal ) - TICK: 219 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105] - alu out: 1 - memory out: 5 - address reg: 5 - PC: 50 - mPC: 64
+  DEBUG: (50: != -> n_equal ) - TICK: 220 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 5 - address reg: 5 - PC: 50 - mPC: 65
+  DEBUG: (50: != -> n_equal ) - TICK: 221 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 5 - address reg: 5 - PC: 50 - mPC: 66
+  DEBUG: (51: until -> jif 44) - TICK: 222 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 5 - address reg: 5 - PC: 51 - mPC: 0
+  DEBUG: (51: until -> jif 44) - TICK: 223 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 5 - address reg: 5 - PC: 51 - mPC: 72
+  DEBUG: (44: @ -> load 3) - TICK: 224 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 5 - address reg: 5 - PC: 44 - mPC: 0
+  DEBUG: (44: @ -> load 3) - TICK: 225 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 5 - address reg: 5 - PC: 44 - mPC: 13
+  DEBUG: (44: @ -> load 3) - TICK: 226 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 5 - address reg: 3 - PC: 44 - mPC: 14
+  DEBUG: (44: @ -> load 3) - TICK: 227 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 1 - memory out: 5 - address reg: 3 - PC: 44 - mPC: 15
+  DEBUG: (44: @ -> load 3) - TICK: 228 - TOS: 5 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 1 - memory out: 5 - address reg: 3 - PC: 44 - mPC: 16
+  DEBUG: (45: ++ -> inc ) - TICK: 229 - TOS: 5 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 1 - memory out: 5 - address reg: 3 - PC: 45 - mPC: 0
+  DEBUG: (45: ++ -> inc ) - TICK: 230 - TOS: 5 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 1 - memory out: 5 - address reg: 3 - PC: 45 - mPC: 67
+  DEBUG: (45: ++ -> inc ) - TICK: 231 - TOS: 6 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 3 - PC: 45 - mPC: 68
+  DEBUG: (46: ! -> store 3) - TICK: 232 - TOS: 6 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 3 - PC: 46 - mPC: 0
+  DEBUG: (46: ! -> store 3) - TICK: 233 - TOS: 6 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 3 - PC: 46 - mPC: 23
+  DEBUG: (46: ! -> store 3) - TICK: 234 - TOS: 6 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 3 - PC: 46 - mPC: 24
+  DEBUG: (46: ! -> store 3) - TICK: 235 - TOS: 6 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 3 - PC: 46 - mPC: 25
+  DEBUG: (47: key -> load 0) - TICK: 236 - TOS: 6 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 3 - PC: 47 - mPC: 0
+  DEBUG: (47: key -> load 0) - TICK: 237 - TOS: 6 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 3 - PC: 47 - mPC: 13
+  DEBUG: (47: key -> load 0) - TICK: 238 - TOS: 6 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 0 - PC: 47 - mPC: 14
   INFO: add char 'z' from input buffer
-  DEBUG: (47: key -> load 0) - TICK: 230 - TOS: 122 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 122 - address reg: 0 - PC: 47 - mPC: 14
-  DEBUG: (48: !* -> ind_store 3) - TICK: 231 - TOS: 122 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 122 - address reg: 0 - PC: 48 - mPC: 0
-  DEBUG: (48: !* -> ind_store 3) - TICK: 232 - TOS: 122 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 122 - address reg: 0 - PC: 48 - mPC: 23
-  DEBUG: (48: !* -> ind_store 3) - TICK: 233 - TOS: 122 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 122 - address reg: 3 - PC: 48 - mPC: 24
-  DEBUG: (48: !* -> ind_store 3) - TICK: 234 - TOS: 122 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 6 - address reg: 3 - PC: 48 - mPC: 25
-  DEBUG: (48: !* -> ind_store 3) - TICK: 235 - TOS: 122 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 6 - address reg: 6 - PC: 48 - mPC: 26
-  DEBUG: (48: !* -> ind_store 3) - TICK: 236 - TOS: 122 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 6 - address reg: 6 - PC: 48 - mPC: 27
-  DEBUG: (49: 0 -> push 0) - TICK: 237 - TOS: 122 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 6 - address reg: 6 - PC: 49 - mPC: 0
-  DEBUG: (49: 0 -> push 0) - TICK: 238 - TOS: 122 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 6 - address reg: 6 - PC: 49 - mPC: 6
-  DEBUG: (49: 0 -> push 0) - TICK: 239 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 6 - memory out: 6 - address reg: 6 - PC: 49 - mPC: 7
-  DEBUG: (50: != -> n_equal ) - TICK: 240 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 6 - memory out: 6 - address reg: 6 - PC: 50 - mPC: 0
-  DEBUG: (50: != -> n_equal ) - TICK: 241 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 6 - memory out: 6 - address reg: 6 - PC: 50 - mPC: 60
-  DEBUG: (50: != -> n_equal ) - TICK: 242 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 1 - memory out: 6 - address reg: 6 - PC: 50 - mPC: 61
-  DEBUG: (50: != -> n_equal ) - TICK: 243 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 6 - address reg: 6 - PC: 50 - mPC: 62
-  DEBUG: (50: != -> n_equal ) - TICK: 244 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 6 - address reg: 6 - PC: 50 - mPC: 63
-  DEBUG: (51: until -> jif 44) - TICK: 245 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 6 - address reg: 6 - PC: 51 - mPC: 0
-  DEBUG: (51: until -> jif 44) - TICK: 246 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 6 - address reg: 6 - PC: 51 - mPC: 69
-  DEBUG: (44: @ -> load 3) - TICK: 247 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 6 - address reg: 6 - PC: 44 - mPC: 0
-  DEBUG: (44: @ -> load 3) - TICK: 248 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 6 - address reg: 6 - PC: 44 - mPC: 12
-  DEBUG: (44: @ -> load 3) - TICK: 249 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 6 - address reg: 3 - PC: 44 - mPC: 13
-  DEBUG: (44: @ -> load 3) - TICK: 250 - TOS: 6 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 1 - memory out: 6 - address reg: 3 - PC: 44 - mPC: 14
-  DEBUG: (45: ++ -> inc ) - TICK: 251 - TOS: 6 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 1 - memory out: 6 - address reg: 3 - PC: 45 - mPC: 0
-  DEBUG: (45: ++ -> inc ) - TICK: 252 - TOS: 6 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 1 - memory out: 6 - address reg: 3 - PC: 45 - mPC: 64
-  DEBUG: (45: ++ -> inc ) - TICK: 253 - TOS: 7 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 3 - PC: 45 - mPC: 65
-  DEBUG: (46: ! -> store 3) - TICK: 254 - TOS: 7 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 3 - PC: 46 - mPC: 0
-  DEBUG: (46: ! -> store 3) - TICK: 255 - TOS: 7 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 3 - PC: 46 - mPC: 20
-  DEBUG: (46: ! -> store 3) - TICK: 256 - TOS: 7 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 3 - PC: 46 - mPC: 21
-  DEBUG: (46: ! -> store 3) - TICK: 257 - TOS: 7 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 3 - PC: 46 - mPC: 22
-  DEBUG: (47: key -> load 0) - TICK: 258 - TOS: 7 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 3 - PC: 47 - mPC: 0
-  DEBUG: (47: key -> load 0) - TICK: 259 - TOS: 7 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 3 - PC: 47 - mPC: 12
-  DEBUG: (47: key -> load 0) - TICK: 260 - TOS: 7 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 0 - PC: 47 - mPC: 13
+  DEBUG: (47: key -> load 0) - TICK: 239 - TOS: 6 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 122 - address reg: 0 - PC: 47 - mPC: 15
+  DEBUG: (47: key -> load 0) - TICK: 240 - TOS: 122 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 122 - address reg: 0 - PC: 47 - mPC: 16
+  DEBUG: (48: !* -> ind_store 3) - TICK: 241 - TOS: 122 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 122 - address reg: 0 - PC: 48 - mPC: 0
+  DEBUG: (48: !* -> ind_store 3) - TICK: 242 - TOS: 122 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 122 - address reg: 0 - PC: 48 - mPC: 26
+  DEBUG: (48: !* -> ind_store 3) - TICK: 243 - TOS: 122 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 122 - address reg: 3 - PC: 48 - mPC: 27
+  DEBUG: (48: !* -> ind_store 3) - TICK: 244 - TOS: 122 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 6 - address reg: 3 - PC: 48 - mPC: 28
+  DEBUG: (48: !* -> ind_store 3) - TICK: 245 - TOS: 122 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 6 - address reg: 6 - PC: 48 - mPC: 29
+  DEBUG: (48: !* -> ind_store 3) - TICK: 246 - TOS: 122 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 6 - address reg: 6 - PC: 48 - mPC: 30
+  DEBUG: (49: 0 -> push 0) - TICK: 247 - TOS: 122 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 6 - address reg: 6 - PC: 49 - mPC: 0
+  DEBUG: (49: 0 -> push 0) - TICK: 248 - TOS: 122 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 6 - address reg: 6 - PC: 49 - mPC: 6
+  DEBUG: (49: 0 -> push 0) - TICK: 249 - TOS: 122 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 6 - memory out: 6 - address reg: 6 - PC: 49 - mPC: 7
+  DEBUG: (49: 0 -> push 0) - TICK: 250 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 6 - memory out: 6 - address reg: 6 - PC: 49 - mPC: 8
+  DEBUG: (50: != -> n_equal ) - TICK: 251 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 6 - memory out: 6 - address reg: 6 - PC: 50 - mPC: 0
+  DEBUG: (50: != -> n_equal ) - TICK: 252 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 6 - memory out: 6 - address reg: 6 - PC: 50 - mPC: 63
+  DEBUG: (50: != -> n_equal ) - TICK: 253 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 1 - memory out: 6 - address reg: 6 - PC: 50 - mPC: 64
+  DEBUG: (50: != -> n_equal ) - TICK: 254 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 6 - address reg: 6 - PC: 50 - mPC: 65
+  DEBUG: (50: != -> n_equal ) - TICK: 255 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 6 - address reg: 6 - PC: 50 - mPC: 66
+  DEBUG: (51: until -> jif 44) - TICK: 256 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 6 - address reg: 6 - PC: 51 - mPC: 0
+  DEBUG: (51: until -> jif 44) - TICK: 257 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 6 - address reg: 6 - PC: 51 - mPC: 72
+  DEBUG: (44: @ -> load 3) - TICK: 258 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 6 - address reg: 6 - PC: 44 - mPC: 0
+  DEBUG: (44: @ -> load 3) - TICK: 259 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 6 - address reg: 6 - PC: 44 - mPC: 13
+  DEBUG: (44: @ -> load 3) - TICK: 260 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 6 - address reg: 3 - PC: 44 - mPC: 14
+  DEBUG: (44: @ -> load 3) - TICK: 261 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 1 - memory out: 6 - address reg: 3 - PC: 44 - mPC: 15
+  DEBUG: (44: @ -> load 3) - TICK: 262 - TOS: 6 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 1 - memory out: 6 - address reg: 3 - PC: 44 - mPC: 16
+  DEBUG: (45: ++ -> inc ) - TICK: 263 - TOS: 6 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 1 - memory out: 6 - address reg: 3 - PC: 45 - mPC: 0
+  DEBUG: (45: ++ -> inc ) - TICK: 264 - TOS: 6 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 1 - memory out: 6 - address reg: 3 - PC: 45 - mPC: 67
+  DEBUG: (45: ++ -> inc ) - TICK: 265 - TOS: 7 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 3 - PC: 45 - mPC: 68
+  DEBUG: (46: ! -> store 3) - TICK: 266 - TOS: 7 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 3 - PC: 46 - mPC: 0
+  DEBUG: (46: ! -> store 3) - TICK: 267 - TOS: 7 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 3 - PC: 46 - mPC: 23
+  DEBUG: (46: ! -> store 3) - TICK: 268 - TOS: 7 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 3 - PC: 46 - mPC: 24
+  DEBUG: (46: ! -> store 3) - TICK: 269 - TOS: 7 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 3 - PC: 46 - mPC: 25
+  DEBUG: (47: key -> load 0) - TICK: 270 - TOS: 7 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 3 - PC: 47 - mPC: 0
+  DEBUG: (47: key -> load 0) - TICK: 271 - TOS: 7 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 3 - PC: 47 - mPC: 13
+  DEBUG: (47: key -> load 0) - TICK: 272 - TOS: 7 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 0 - PC: 47 - mPC: 14
   INFO: add char 'a' from input buffer
-  DEBUG: (47: key -> load 0) - TICK: 261 - TOS: 97 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 97 - address reg: 0 - PC: 47 - mPC: 14
-  DEBUG: (48: !* -> ind_store 3) - TICK: 262 - TOS: 97 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 97 - address reg: 0 - PC: 48 - mPC: 0
-  DEBUG: (48: !* -> ind_store 3) - TICK: 263 - TOS: 97 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 97 - address reg: 0 - PC: 48 - mPC: 23
-  DEBUG: (48: !* -> ind_store 3) - TICK: 264 - TOS: 97 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 97 - address reg: 3 - PC: 48 - mPC: 24
-  DEBUG: (48: !* -> ind_store 3) - TICK: 265 - TOS: 97 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 7 - address reg: 3 - PC: 48 - mPC: 25
-  DEBUG: (48: !* -> ind_store 3) - TICK: 266 - TOS: 97 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 7 - address reg: 7 - PC: 48 - mPC: 26
-  DEBUG: (48: !* -> ind_store 3) - TICK: 267 - TOS: 97 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 7 - address reg: 7 - PC: 48 - mPC: 27
-  DEBUG: (49: 0 -> push 0) - TICK: 268 - TOS: 97 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 7 - address reg: 7 - PC: 49 - mPC: 0
-  DEBUG: (49: 0 -> push 0) - TICK: 269 - TOS: 97 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 7 - address reg: 7 - PC: 49 - mPC: 6
-  DEBUG: (49: 0 -> push 0) - TICK: 270 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 7 - memory out: 7 - address reg: 7 - PC: 49 - mPC: 7
-  DEBUG: (50: != -> n_equal ) - TICK: 271 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 7 - memory out: 7 - address reg: 7 - PC: 50 - mPC: 0
-  DEBUG: (50: != -> n_equal ) - TICK: 272 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 7 - memory out: 7 - address reg: 7 - PC: 50 - mPC: 60
-  DEBUG: (50: != -> n_equal ) - TICK: 273 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 1 - memory out: 7 - address reg: 7 - PC: 50 - mPC: 61
-  DEBUG: (50: != -> n_equal ) - TICK: 274 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 7 - address reg: 7 - PC: 50 - mPC: 62
-  DEBUG: (50: != -> n_equal ) - TICK: 275 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 7 - address reg: 7 - PC: 50 - mPC: 63
-  DEBUG: (51: until -> jif 44) - TICK: 276 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 7 - address reg: 7 - PC: 51 - mPC: 0
-  DEBUG: (51: until -> jif 44) - TICK: 277 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 7 - address reg: 7 - PC: 51 - mPC: 69
-  DEBUG: (44: @ -> load 3) - TICK: 278 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 7 - address reg: 7 - PC: 44 - mPC: 0
-  DEBUG: (44: @ -> load 3) - TICK: 279 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 7 - address reg: 7 - PC: 44 - mPC: 12
-  DEBUG: (44: @ -> load 3) - TICK: 280 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 7 - address reg: 3 - PC: 44 - mPC: 13
-  DEBUG: (44: @ -> load 3) - TICK: 281 - TOS: 7 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 1 - memory out: 7 - address reg: 3 - PC: 44 - mPC: 14
-  DEBUG: (45: ++ -> inc ) - TICK: 282 - TOS: 7 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 1 - memory out: 7 - address reg: 3 - PC: 45 - mPC: 0
-  DEBUG: (45: ++ -> inc ) - TICK: 283 - TOS: 7 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 1 - memory out: 7 - address reg: 3 - PC: 45 - mPC: 64
-  DEBUG: (45: ++ -> inc ) - TICK: 284 - TOS: 8 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 3 - PC: 45 - mPC: 65
-  DEBUG: (46: ! -> store 3) - TICK: 285 - TOS: 8 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 3 - PC: 46 - mPC: 0
-  DEBUG: (46: ! -> store 3) - TICK: 286 - TOS: 8 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 3 - PC: 46 - mPC: 20
-  DEBUG: (46: ! -> store 3) - TICK: 287 - TOS: 8 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 3 - PC: 46 - mPC: 21
-  DEBUG: (46: ! -> store 3) - TICK: 288 - TOS: 8 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 3 - PC: 46 - mPC: 22
-  DEBUG: (47: key -> load 0) - TICK: 289 - TOS: 8 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 3 - PC: 47 - mPC: 0
-  DEBUG: (47: key -> load 0) - TICK: 290 - TOS: 8 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 3 - PC: 47 - mPC: 12
-  DEBUG: (47: key -> load 0) - TICK: 291 - TOS: 8 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 0 - PC: 47 - mPC: 13
+  DEBUG: (47: key -> load 0) - TICK: 273 - TOS: 7 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 97 - address reg: 0 - PC: 47 - mPC: 15
+  DEBUG: (47: key -> load 0) - TICK: 274 - TOS: 97 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 97 - address reg: 0 - PC: 47 - mPC: 16
+  DEBUG: (48: !* -> ind_store 3) - TICK: 275 - TOS: 97 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 97 - address reg: 0 - PC: 48 - mPC: 0
+  DEBUG: (48: !* -> ind_store 3) - TICK: 276 - TOS: 97 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 97 - address reg: 0 - PC: 48 - mPC: 26
+  DEBUG: (48: !* -> ind_store 3) - TICK: 277 - TOS: 97 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 97 - address reg: 3 - PC: 48 - mPC: 27
+  DEBUG: (48: !* -> ind_store 3) - TICK: 278 - TOS: 97 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 7 - address reg: 3 - PC: 48 - mPC: 28
+  DEBUG: (48: !* -> ind_store 3) - TICK: 279 - TOS: 97 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 7 - address reg: 7 - PC: 48 - mPC: 29
+  DEBUG: (48: !* -> ind_store 3) - TICK: 280 - TOS: 97 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 7 - address reg: 7 - PC: 48 - mPC: 30
+  DEBUG: (49: 0 -> push 0) - TICK: 281 - TOS: 97 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 7 - address reg: 7 - PC: 49 - mPC: 0
+  DEBUG: (49: 0 -> push 0) - TICK: 282 - TOS: 97 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 7 - address reg: 7 - PC: 49 - mPC: 6
+  DEBUG: (49: 0 -> push 0) - TICK: 283 - TOS: 97 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 7 - memory out: 7 - address reg: 7 - PC: 49 - mPC: 7
+  DEBUG: (49: 0 -> push 0) - TICK: 284 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 7 - memory out: 7 - address reg: 7 - PC: 49 - mPC: 8
+  DEBUG: (50: != -> n_equal ) - TICK: 285 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 7 - memory out: 7 - address reg: 7 - PC: 50 - mPC: 0
+  DEBUG: (50: != -> n_equal ) - TICK: 286 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 7 - memory out: 7 - address reg: 7 - PC: 50 - mPC: 63
+  DEBUG: (50: != -> n_equal ) - TICK: 287 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 1 - memory out: 7 - address reg: 7 - PC: 50 - mPC: 64
+  DEBUG: (50: != -> n_equal ) - TICK: 288 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 7 - address reg: 7 - PC: 50 - mPC: 65
+  DEBUG: (50: != -> n_equal ) - TICK: 289 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 7 - address reg: 7 - PC: 50 - mPC: 66
+  DEBUG: (51: until -> jif 44) - TICK: 290 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 7 - address reg: 7 - PC: 51 - mPC: 0
+  DEBUG: (51: until -> jif 44) - TICK: 291 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 7 - address reg: 7 - PC: 51 - mPC: 72
+  DEBUG: (44: @ -> load 3) - TICK: 292 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 7 - address reg: 7 - PC: 44 - mPC: 0
+  DEBUG: (44: @ -> load 3) - TICK: 293 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 7 - address reg: 7 - PC: 44 - mPC: 13
+  DEBUG: (44: @ -> load 3) - TICK: 294 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 7 - address reg: 3 - PC: 44 - mPC: 14
+  DEBUG: (44: @ -> load 3) - TICK: 295 - TOS: 1 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 1 - memory out: 7 - address reg: 3 - PC: 44 - mPC: 15
+  DEBUG: (44: @ -> load 3) - TICK: 296 - TOS: 7 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 1 - memory out: 7 - address reg: 3 - PC: 44 - mPC: 16
+  DEBUG: (45: ++ -> inc ) - TICK: 297 - TOS: 7 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 1 - memory out: 7 - address reg: 3 - PC: 45 - mPC: 0
+  DEBUG: (45: ++ -> inc ) - TICK: 298 - TOS: 7 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 1 - memory out: 7 - address reg: 3 - PC: 45 - mPC: 67
+  DEBUG: (45: ++ -> inc ) - TICK: 299 - TOS: 8 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 3 - PC: 45 - mPC: 68
+  DEBUG: (46: ! -> store 3) - TICK: 300 - TOS: 8 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 3 - PC: 46 - mPC: 0
+  DEBUG: (46: ! -> store 3) - TICK: 301 - TOS: 8 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 3 - PC: 46 - mPC: 23
+  DEBUG: (46: ! -> store 3) - TICK: 302 - TOS: 8 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 3 - PC: 46 - mPC: 24
+  DEBUG: (46: ! -> store 3) - TICK: 303 - TOS: 8 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 3 - PC: 46 - mPC: 25
+  DEBUG: (47: key -> load 0) - TICK: 304 - TOS: 8 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 3 - PC: 47 - mPC: 0
+  DEBUG: (47: key -> load 0) - TICK: 305 - TOS: 8 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 3 - PC: 47 - mPC: 13
+  DEBUG: (47: key -> load 0) - TICK: 306 - TOS: 8 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 0 - PC: 47 - mPC: 14
   INFO: add char ' ' from input buffer
-  DEBUG: (47: key -> load 0) - TICK: 292 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 0 - address reg: 0 - PC: 47 - mPC: 14
-  DEBUG: (48: !* -> ind_store 3) - TICK: 293 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 0 - address reg: 0 - PC: 48 - mPC: 0
-  DEBUG: (48: !* -> ind_store 3) - TICK: 294 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 0 - address reg: 0 - PC: 48 - mPC: 23
-  DEBUG: (48: !* -> ind_store 3) - TICK: 295 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 0 - address reg: 3 - PC: 48 - mPC: 24
-  DEBUG: (48: !* -> ind_store 3) - TICK: 296 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 8 - address reg: 3 - PC: 48 - mPC: 25
-  DEBUG: (48: !* -> ind_store 3) - TICK: 297 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 8 - address reg: 8 - PC: 48 - mPC: 26
-  DEBUG: (48: !* -> ind_store 3) - TICK: 298 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 8 - address reg: 8 - PC: 48 - mPC: 27
-  DEBUG: (49: 0 -> push 0) - TICK: 299 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 8 - address reg: 8 - PC: 49 - mPC: 0
-  DEBUG: (49: 0 -> push 0) - TICK: 300 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 8 - address reg: 8 - PC: 49 - mPC: 6
-  DEBUG: (49: 0 -> push 0) - TICK: 301 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 8 - memory out: 8 - address reg: 8 - PC: 49 - mPC: 7
-  DEBUG: (50: != -> n_equal ) - TICK: 302 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 8 - memory out: 8 - address reg: 8 - PC: 50 - mPC: 0
-  DEBUG: (50: != -> n_equal ) - TICK: 303 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 8 - memory out: 8 - address reg: 8 - PC: 50 - mPC: 60
-  DEBUG: (50: != -> n_equal ) - TICK: 304 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 50 - mPC: 61
-  DEBUG: (50: != -> n_equal ) - TICK: 305 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 50 - mPC: 62
-  DEBUG: (50: != -> n_equal ) - TICK: 306 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 50 - mPC: 63
-  DEBUG: (51: until -> jif 44) - TICK: 307 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 51 - mPC: 0
-  DEBUG: (51: until -> jif 44) - TICK: 308 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 51 - mPC: 69
-  DEBUG: (52: clear -> clear ) - TICK: 309 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 52 - mPC: 0
-  DEBUG: (52: clear -> clear ) - TICK: 310 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 52 - mPC: 10
-  DEBUG: (52: clear -> clear ) - TICK: 311 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 52 - mPC: 11
-  DEBUG: (53: . -> dup ) - TICK: 312 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 53 - mPC: 0
-  DEBUG: (53: . -> dup ) - TICK: 313 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 53 - mPC: 1
-  DEBUG: (53: . -> dup ) - TICK: 314 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 53 - mPC: 2
-  DEBUG: (54: H -> top 72) - TICK: 315 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 54 - mPC: 0
-  DEBUG: (54: H -> top 72) - TICK: 316 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 54 - mPC: 8
-  DEBUG: (54: H -> top 72) - TICK: 317 - TOS: 72 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 54 - mPC: 9
-  DEBUG: (55: H -> store 1) - TICK: 318 - TOS: 72 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 55 - mPC: 0
-  DEBUG: (55: H -> store 1) - TICK: 319 - TOS: 72 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 55 - mPC: 20
-  DEBUG: (55: H -> store 1) - TICK: 320 - TOS: 72 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 55 - mPC: 21
+  DEBUG: (47: key -> load 0) - TICK: 307 - TOS: 8 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 0 - address reg: 0 - PC: 47 - mPC: 15
+  DEBUG: (47: key -> load 0) - TICK: 308 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 0 - address reg: 0 - PC: 47 - mPC: 16
+  DEBUG: (48: !* -> ind_store 3) - TICK: 309 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 0 - address reg: 0 - PC: 48 - mPC: 0
+  DEBUG: (48: !* -> ind_store 3) - TICK: 310 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 0 - address reg: 0 - PC: 48 - mPC: 26
+  DEBUG: (48: !* -> ind_store 3) - TICK: 311 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 0 - address reg: 3 - PC: 48 - mPC: 27
+  DEBUG: (48: !* -> ind_store 3) - TICK: 312 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 8 - address reg: 3 - PC: 48 - mPC: 28
+  DEBUG: (48: !* -> ind_store 3) - TICK: 313 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 8 - address reg: 8 - PC: 48 - mPC: 29
+  DEBUG: (48: !* -> ind_store 3) - TICK: 314 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 8 - address reg: 8 - PC: 48 - mPC: 30
+  DEBUG: (49: 0 -> push 0) - TICK: 315 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 8 - address reg: 8 - PC: 49 - mPC: 0
+  DEBUG: (49: 0 -> push 0) - TICK: 316 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 8 - address reg: 8 - PC: 49 - mPC: 6
+  DEBUG: (49: 0 -> push 0) - TICK: 317 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 8 - memory out: 8 - address reg: 8 - PC: 49 - mPC: 7
+  DEBUG: (49: 0 -> push 0) - TICK: 318 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 8 - memory out: 8 - address reg: 8 - PC: 49 - mPC: 8
+  DEBUG: (50: != -> n_equal ) - TICK: 319 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 8 - memory out: 8 - address reg: 8 - PC: 50 - mPC: 0
+  DEBUG: (50: != -> n_equal ) - TICK: 320 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 8 - memory out: 8 - address reg: 8 - PC: 50 - mPC: 63
+  DEBUG: (50: != -> n_equal ) - TICK: 321 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 50 - mPC: 64
+  DEBUG: (50: != -> n_equal ) - TICK: 322 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 50 - mPC: 65
+  DEBUG: (50: != -> n_equal ) - TICK: 323 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 50 - mPC: 66
+  DEBUG: (51: until -> jif 44) - TICK: 324 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 51 - mPC: 0
+  DEBUG: (51: until -> jif 44) - TICK: 325 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 51 - mPC: 72
+  DEBUG: (52: clear -> clear ) - TICK: 326 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 52 - mPC: 0
+  DEBUG: (52: clear -> clear ) - TICK: 327 - TOS: 0 - data stack: [0, 3, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 52 - mPC: 11
+  DEBUG: (52: clear -> clear ) - TICK: 328 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 52 - mPC: 12
+  DEBUG: (53: . -> dup ) - TICK: 329 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 53 - mPC: 0
+  DEBUG: (53: . -> dup ) - TICK: 330 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 53 - mPC: 1
+  DEBUG: (53: . -> dup ) - TICK: 331 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 53 - mPC: 2
+  DEBUG: (54: H -> top 72) - TICK: 332 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 54 - mPC: 0
+  DEBUG: (54: H -> top 72) - TICK: 333 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 54 - mPC: 9
+  DEBUG: (54: H -> top 72) - TICK: 334 - TOS: 72 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 54 - mPC: 10
+  DEBUG: (55: H -> store 1) - TICK: 335 - TOS: 72 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 55 - mPC: 0
+  DEBUG: (55: H -> store 1) - TICK: 336 - TOS: 72 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 8 - PC: 55 - mPC: 23
+  DEBUG: (55: H -> store 1) - TICK: 337 - TOS: 72 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 55 - mPC: 24
   INFO: add char 'H' to output buffer
-  DEBUG: (55: H -> store 1) - TICK: 321 - TOS: 72 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 55 - mPC: 22
-  DEBUG: (56: e -> top 101) - TICK: 322 - TOS: 72 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 56 - mPC: 0
-  DEBUG: (56: e -> top 101) - TICK: 323 - TOS: 72 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 56 - mPC: 8
-  DEBUG: (56: e -> top 101) - TICK: 324 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 56 - mPC: 9
-  DEBUG: (57: e -> store 1) - TICK: 325 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 57 - mPC: 0
-  DEBUG: (57: e -> store 1) - TICK: 326 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 57 - mPC: 20
-  DEBUG: (57: e -> store 1) - TICK: 327 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 57 - mPC: 21
+  DEBUG: (55: H -> store 1) - TICK: 338 - TOS: 72 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 55 - mPC: 25
+  DEBUG: (56: e -> top 101) - TICK: 339 - TOS: 72 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 56 - mPC: 0
+  DEBUG: (56: e -> top 101) - TICK: 340 - TOS: 72 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 56 - mPC: 9
+  DEBUG: (56: e -> top 101) - TICK: 341 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 56 - mPC: 10
+  DEBUG: (57: e -> store 1) - TICK: 342 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 57 - mPC: 0
+  DEBUG: (57: e -> store 1) - TICK: 343 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 57 - mPC: 23
+  DEBUG: (57: e -> store 1) - TICK: 344 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 57 - mPC: 24
   INFO: add char 'e' to output buffer
-  DEBUG: (57: e -> store 1) - TICK: 328 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 57 - mPC: 22
-  DEBUG: (58: l -> top 108) - TICK: 329 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 58 - mPC: 0
-  DEBUG: (58: l -> top 108) - TICK: 330 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 58 - mPC: 8
-  DEBUG: (58: l -> top 108) - TICK: 331 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 58 - mPC: 9
-  DEBUG: (59: l -> store 1) - TICK: 332 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 59 - mPC: 0
-  DEBUG: (59: l -> store 1) - TICK: 333 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 59 - mPC: 20
-  DEBUG: (59: l -> store 1) - TICK: 334 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 59 - mPC: 21
+  DEBUG: (57: e -> store 1) - TICK: 345 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 57 - mPC: 25
+  DEBUG: (58: l -> top 108) - TICK: 346 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 58 - mPC: 0
+  DEBUG: (58: l -> top 108) - TICK: 347 - TOS: 101 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 58 - mPC: 9
+  DEBUG: (58: l -> top 108) - TICK: 348 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 58 - mPC: 10
+  DEBUG: (59: l -> store 1) - TICK: 349 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 59 - mPC: 0
+  DEBUG: (59: l -> store 1) - TICK: 350 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 59 - mPC: 23
+  DEBUG: (59: l -> store 1) - TICK: 351 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 59 - mPC: 24
   INFO: add char 'l' to output buffer
-  DEBUG: (59: l -> store 1) - TICK: 335 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 59 - mPC: 22
-  DEBUG: (60: l -> top 108) - TICK: 336 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 60 - mPC: 0
-  DEBUG: (60: l -> top 108) - TICK: 337 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 60 - mPC: 8
-  DEBUG: (60: l -> top 108) - TICK: 338 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 60 - mPC: 9
-  DEBUG: (61: l -> store 1) - TICK: 339 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 61 - mPC: 0
-  DEBUG: (61: l -> store 1) - TICK: 340 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 61 - mPC: 20
-  DEBUG: (61: l -> store 1) - TICK: 341 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 61 - mPC: 21
+  DEBUG: (59: l -> store 1) - TICK: 352 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 59 - mPC: 25
+  DEBUG: (60: l -> top 108) - TICK: 353 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 60 - mPC: 0
+  DEBUG: (60: l -> top 108) - TICK: 354 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 60 - mPC: 9
+  DEBUG: (60: l -> top 108) - TICK: 355 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 60 - mPC: 10
+  DEBUG: (61: l -> store 1) - TICK: 356 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 61 - mPC: 0
+  DEBUG: (61: l -> store 1) - TICK: 357 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 61 - mPC: 23
+  DEBUG: (61: l -> store 1) - TICK: 358 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 61 - mPC: 24
   INFO: add char 'l' to output buffer
-  DEBUG: (61: l -> store 1) - TICK: 342 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 61 - mPC: 22
-  DEBUG: (62: o -> top 111) - TICK: 343 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 62 - mPC: 0
-  DEBUG: (62: o -> top 111) - TICK: 344 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 62 - mPC: 8
-  DEBUG: (62: o -> top 111) - TICK: 345 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 62 - mPC: 9
-  DEBUG: (63: o -> store 1) - TICK: 346 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 63 - mPC: 0
-  DEBUG: (63: o -> store 1) - TICK: 347 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 63 - mPC: 20
-  DEBUG: (63: o -> store 1) - TICK: 348 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 63 - mPC: 21
+  DEBUG: (61: l -> store 1) - TICK: 359 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 61 - mPC: 25
+  DEBUG: (62: o -> top 111) - TICK: 360 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 62 - mPC: 0
+  DEBUG: (62: o -> top 111) - TICK: 361 - TOS: 108 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 62 - mPC: 9
+  DEBUG: (62: o -> top 111) - TICK: 362 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 62 - mPC: 10
+  DEBUG: (63: o -> store 1) - TICK: 363 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 63 - mPC: 0
+  DEBUG: (63: o -> store 1) - TICK: 364 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 63 - mPC: 23
+  DEBUG: (63: o -> store 1) - TICK: 365 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 63 - mPC: 24
   INFO: add char 'o' to output buffer
-  DEBUG: (63: o -> store 1) - TICK: 349 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 63 - mPC: 22
-  DEBUG: (64: , -> top 44) - TICK: 350 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 64 - mPC: 0
-  DEBUG: (64: , -> top 44) - TICK: 351 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 64 - mPC: 8
-  DEBUG: (64: , -> top 44) - TICK: 352 - TOS: 44 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 64 - mPC: 9
-  DEBUG: (65: , -> store 1) - TICK: 353 - TOS: 44 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 65 - mPC: 0
-  DEBUG: (65: , -> store 1) - TICK: 354 - TOS: 44 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 65 - mPC: 20
-  DEBUG: (65: , -> store 1) - TICK: 355 - TOS: 44 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 65 - mPC: 21
+  DEBUG: (63: o -> store 1) - TICK: 366 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 63 - mPC: 25
+  DEBUG: (64: , -> top 44) - TICK: 367 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 64 - mPC: 0
+  DEBUG: (64: , -> top 44) - TICK: 368 - TOS: 111 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 64 - mPC: 9
+  DEBUG: (64: , -> top 44) - TICK: 369 - TOS: 44 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 64 - mPC: 10
+  DEBUG: (65: , -> store 1) - TICK: 370 - TOS: 44 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 65 - mPC: 0
+  DEBUG: (65: , -> store 1) - TICK: 371 - TOS: 44 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 65 - mPC: 23
+  DEBUG: (65: , -> store 1) - TICK: 372 - TOS: 44 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 65 - mPC: 24
   INFO: add char ',' to output buffer
-  DEBUG: (65: , -> store 1) - TICK: 356 - TOS: 44 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 65 - mPC: 22
-  DEBUG: (66:   -> top 32) - TICK: 357 - TOS: 44 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 66 - mPC: 0
-  DEBUG: (66:   -> top 32) - TICK: 358 - TOS: 44 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 66 - mPC: 8
-  DEBUG: (66:   -> top 32) - TICK: 359 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 66 - mPC: 9
-  DEBUG: (67:   -> store 1) - TICK: 360 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 67 - mPC: 0
-  DEBUG: (67:   -> store 1) - TICK: 361 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 67 - mPC: 20
-  DEBUG: (67:   -> store 1) - TICK: 362 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 67 - mPC: 21
+  DEBUG: (65: , -> store 1) - TICK: 373 - TOS: 44 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 65 - mPC: 25
+  DEBUG: (66:   -> top 32) - TICK: 374 - TOS: 44 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 66 - mPC: 0
+  DEBUG: (66:   -> top 32) - TICK: 375 - TOS: 44 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 66 - mPC: 9
+  DEBUG: (66:   -> top 32) - TICK: 376 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 66 - mPC: 10
+  DEBUG: (67:   -> store 1) - TICK: 377 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 67 - mPC: 0
+  DEBUG: (67:   -> store 1) - TICK: 378 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 67 - mPC: 23
+  DEBUG: (67:   -> store 1) - TICK: 379 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 67 - mPC: 24
   INFO: add char ' ' to output buffer
-  DEBUG: (67:   -> store 1) - TICK: 363 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 67 - mPC: 22
-  DEBUG: (68: None -> drop ) - TICK: 364 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 68 - mPC: 0
-  DEBUG: (68: None -> drop ) - TICK: 365 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 68 - mPC: 3
-  DEBUG: (68: None -> drop ) - TICK: 366 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 68 - mPC: 4
-  DEBUG: (68: None -> drop ) - TICK: 367 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 68 - mPC: 5
-  DEBUG: (69: @ -> load 2) - TICK: 368 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 69 - mPC: 0
-  DEBUG: (69: @ -> load 2) - TICK: 369 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 69 - mPC: 12
-  DEBUG: (69: @ -> load 2) - TICK: 370 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 8 - address reg: 2 - PC: 69 - mPC: 13
-  DEBUG: (69: @ -> load 2) - TICK: 371 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 3 - address reg: 2 - PC: 69 - mPC: 14
-  DEBUG: (70: ++ -> inc ) - TICK: 372 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 3 - address reg: 2 - PC: 70 - mPC: 0
-  DEBUG: (70: ++ -> inc ) - TICK: 373 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 3 - address reg: 2 - PC: 70 - mPC: 64
-  DEBUG: (70: ++ -> inc ) - TICK: 374 - TOS: 4 - data stack: [0] - alu out: 4 - memory out: 3 - address reg: 2 - PC: 70 - mPC: 65
-  DEBUG: (71: ! -> store 2) - TICK: 375 - TOS: 4 - data stack: [0] - alu out: 4 - memory out: 3 - address reg: 2 - PC: 71 - mPC: 0
-  DEBUG: (71: ! -> store 2) - TICK: 376 - TOS: 4 - data stack: [0] - alu out: 4 - memory out: 3 - address reg: 2 - PC: 71 - mPC: 20
-  DEBUG: (71: ! -> store 2) - TICK: 377 - TOS: 4 - data stack: [0] - alu out: 4 - memory out: 3 - address reg: 2 - PC: 71 - mPC: 21
-  DEBUG: (71: ! -> store 2) - TICK: 378 - TOS: 4 - data stack: [0] - alu out: 4 - memory out: 3 - address reg: 2 - PC: 71 - mPC: 22
-  DEBUG: (72: @* -> ind_load 2) - TICK: 379 - TOS: 4 - data stack: [0] - alu out: 4 - memory out: 3 - address reg: 2 - PC: 72 - mPC: 0
-  DEBUG: (72: @* -> ind_load 2) - TICK: 380 - TOS: 4 - data stack: [0] - alu out: 4 - memory out: 3 - address reg: 2 - PC: 72 - mPC: 15
-  DEBUG: (72: @* -> ind_load 2) - TICK: 381 - TOS: 4 - data stack: [0] - alu out: 4 - memory out: 3 - address reg: 2 - PC: 72 - mPC: 16
-  DEBUG: (72: @* -> ind_load 2) - TICK: 382 - TOS: 4 - data stack: [0] - alu out: 4 - memory out: 4 - address reg: 2 - PC: 72 - mPC: 17
-  DEBUG: (72: @* -> ind_load 2) - TICK: 383 - TOS: 4 - data stack: [0] - alu out: 4 - memory out: 4 - address reg: 4 - PC: 72 - mPC: 18
-  DEBUG: (72: @* -> ind_load 2) - TICK: 384 - TOS: 76 - data stack: [0, 4] - alu out: 4 - memory out: 76 - address reg: 4 - PC: 72 - mPC: 19
-  DEBUG: (73: 0 -> push 0) - TICK: 385 - TOS: 76 - data stack: [0, 4] - alu out: 4 - memory out: 76 - address reg: 4 - PC: 73 - mPC: 0
-  DEBUG: (73: 0 -> push 0) - TICK: 386 - TOS: 76 - data stack: [0, 4] - alu out: 4 - memory out: 76 - address reg: 4 - PC: 73 - mPC: 6
-  DEBUG: (73: 0 -> push 0) - TICK: 387 - TOS: 0 - data stack: [0, 4, 76] - alu out: 4 - memory out: 76 - address reg: 4 - PC: 73 - mPC: 7
-  DEBUG: (74: != -> equal ) - TICK: 388 - TOS: 0 - data stack: [0, 4, 76] - alu out: 4 - memory out: 76 - address reg: 4 - PC: 74 - mPC: 0
-  DEBUG: (74: != -> equal ) - TICK: 389 - TOS: 0 - data stack: [0, 4, 76] - alu out: 4 - memory out: 76 - address reg: 4 - PC: 74 - mPC: 56
-  DEBUG: (74: != -> equal ) - TICK: 390 - TOS: 0 - data stack: [0, 4, 76] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 74 - mPC: 57
-  DEBUG: (74: != -> equal ) - TICK: 391 - TOS: 0 - data stack: [0, 4, 76, 0] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 74 - mPC: 58
-  DEBUG: (74: != -> equal ) - TICK: 392 - TOS: 0 - data stack: [0, 4, 76, 0] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 74 - mPC: 59
-  DEBUG: (75: if -> jif 80) - TICK: 393 - TOS: 0 - data stack: [0, 4, 76, 0] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 75 - mPC: 0
-  DEBUG: (75: if -> jif 80) - TICK: 394 - TOS: 0 - data stack: [0, 4, 76, 0] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 75 - mPC: 69
-  DEBUG: (76: drop -> drop ) - TICK: 395 - TOS: 0 - data stack: [0, 4, 76, 0] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 76 - mPC: 0
-  DEBUG: (76: drop -> drop ) - TICK: 396 - TOS: 0 - data stack: [0, 4, 76, 0] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 76 - mPC: 3
-  DEBUG: (76: drop -> drop ) - TICK: 397 - TOS: 0 - data stack: [0, 4, 76, 0] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 76 - mPC: 4
-  DEBUG: (76: drop -> drop ) - TICK: 398 - TOS: 0 - data stack: [0, 4, 76] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 76 - mPC: 5
-  DEBUG: (77: drop -> drop ) - TICK: 399 - TOS: 0 - data stack: [0, 4, 76] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 77 - mPC: 0
-  DEBUG: (77: drop -> drop ) - TICK: 400 - TOS: 0 - data stack: [0, 4, 76] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 77 - mPC: 3
-  DEBUG: (77: drop -> drop ) - TICK: 401 - TOS: 76 - data stack: [0, 4, 76] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 77 - mPC: 4
-  DEBUG: (77: drop -> drop ) - TICK: 402 - TOS: 76 - data stack: [0, 4] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 77 - mPC: 5
-  DEBUG: (78: emit -> store 1) - TICK: 403 - TOS: 76 - data stack: [0, 4] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 78 - mPC: 0
-  DEBUG: (78: emit -> store 1) - TICK: 404 - TOS: 76 - data stack: [0, 4] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 78 - mPC: 20
-  DEBUG: (78: emit -> store 1) - TICK: 405 - TOS: 76 - data stack: [0, 4] - alu out: 0 - memory out: 76 - address reg: 1 - PC: 78 - mPC: 21
+  DEBUG: (67:   -> store 1) - TICK: 380 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 67 - mPC: 25
+  DEBUG: (68: None -> drop ) - TICK: 381 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 68 - mPC: 0
+  DEBUG: (68: None -> drop ) - TICK: 382 - TOS: 32 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 68 - mPC: 3
+  DEBUG: (68: None -> drop ) - TICK: 383 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 68 - mPC: 4
+  DEBUG: (68: None -> drop ) - TICK: 384 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 68 - mPC: 5
+  DEBUG: (69: @ -> load 2) - TICK: 385 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 69 - mPC: 0
+  DEBUG: (69: @ -> load 2) - TICK: 386 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 8 - address reg: 1 - PC: 69 - mPC: 13
+  DEBUG: (69: @ -> load 2) - TICK: 387 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 8 - address reg: 2 - PC: 69 - mPC: 14
+  DEBUG: (69: @ -> load 2) - TICK: 388 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 3 - address reg: 2 - PC: 69 - mPC: 15
+  DEBUG: (69: @ -> load 2) - TICK: 389 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 3 - address reg: 2 - PC: 69 - mPC: 16
+  DEBUG: (70: ++ -> inc ) - TICK: 390 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 3 - address reg: 2 - PC: 70 - mPC: 0
+  DEBUG: (70: ++ -> inc ) - TICK: 391 - TOS: 3 - data stack: [0] - alu out: 0 - memory out: 3 - address reg: 2 - PC: 70 - mPC: 67
+  DEBUG: (70: ++ -> inc ) - TICK: 392 - TOS: 4 - data stack: [0] - alu out: 4 - memory out: 3 - address reg: 2 - PC: 70 - mPC: 68
+  DEBUG: (71: ! -> store 2) - TICK: 393 - TOS: 4 - data stack: [0] - alu out: 4 - memory out: 3 - address reg: 2 - PC: 71 - mPC: 0
+  DEBUG: (71: ! -> store 2) - TICK: 394 - TOS: 4 - data stack: [0] - alu out: 4 - memory out: 3 - address reg: 2 - PC: 71 - mPC: 23
+  DEBUG: (71: ! -> store 2) - TICK: 395 - TOS: 4 - data stack: [0] - alu out: 4 - memory out: 3 - address reg: 2 - PC: 71 - mPC: 24
+  DEBUG: (71: ! -> store 2) - TICK: 396 - TOS: 4 - data stack: [0] - alu out: 4 - memory out: 3 - address reg: 2 - PC: 71 - mPC: 25
+  DEBUG: (72: @* -> ind_load 2) - TICK: 397 - TOS: 4 - data stack: [0] - alu out: 4 - memory out: 3 - address reg: 2 - PC: 72 - mPC: 0
+  DEBUG: (72: @* -> ind_load 2) - TICK: 398 - TOS: 4 - data stack: [0] - alu out: 4 - memory out: 3 - address reg: 2 - PC: 72 - mPC: 17
+  DEBUG: (72: @* -> ind_load 2) - TICK: 399 - TOS: 4 - data stack: [0] - alu out: 4 - memory out: 3 - address reg: 2 - PC: 72 - mPC: 18
+  DEBUG: (72: @* -> ind_load 2) - TICK: 400 - TOS: 4 - data stack: [0] - alu out: 4 - memory out: 4 - address reg: 2 - PC: 72 - mPC: 19
+  DEBUG: (72: @* -> ind_load 2) - TICK: 401 - TOS: 4 - data stack: [0] - alu out: 4 - memory out: 4 - address reg: 4 - PC: 72 - mPC: 20
+  DEBUG: (72: @* -> ind_load 2) - TICK: 402 - TOS: 4 - data stack: [0, 4] - alu out: 4 - memory out: 76 - address reg: 4 - PC: 72 - mPC: 21
+  DEBUG: (72: @* -> ind_load 2) - TICK: 403 - TOS: 76 - data stack: [0, 4] - alu out: 4 - memory out: 76 - address reg: 4 - PC: 72 - mPC: 22
+  DEBUG: (73: 0 -> push 0) - TICK: 404 - TOS: 76 - data stack: [0, 4] - alu out: 4 - memory out: 76 - address reg: 4 - PC: 73 - mPC: 0
+  DEBUG: (73: 0 -> push 0) - TICK: 405 - TOS: 76 - data stack: [0, 4] - alu out: 4 - memory out: 76 - address reg: 4 - PC: 73 - mPC: 6
+  DEBUG: (73: 0 -> push 0) - TICK: 406 - TOS: 76 - data stack: [0, 4, 76] - alu out: 4 - memory out: 76 - address reg: 4 - PC: 73 - mPC: 7
+  DEBUG: (73: 0 -> push 0) - TICK: 407 - TOS: 0 - data stack: [0, 4, 76] - alu out: 4 - memory out: 76 - address reg: 4 - PC: 73 - mPC: 8
+  DEBUG: (74: != -> equal ) - TICK: 408 - TOS: 0 - data stack: [0, 4, 76] - alu out: 4 - memory out: 76 - address reg: 4 - PC: 74 - mPC: 0
+  DEBUG: (74: != -> equal ) - TICK: 409 - TOS: 0 - data stack: [0, 4, 76] - alu out: 4 - memory out: 76 - address reg: 4 - PC: 74 - mPC: 59
+  DEBUG: (74: != -> equal ) - TICK: 410 - TOS: 0 - data stack: [0, 4, 76] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 74 - mPC: 60
+  DEBUG: (74: != -> equal ) - TICK: 411 - TOS: 0 - data stack: [0, 4, 76, 0] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 74 - mPC: 61
+  DEBUG: (74: != -> equal ) - TICK: 412 - TOS: 0 - data stack: [0, 4, 76, 0] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 74 - mPC: 62
+  DEBUG: (75: if -> jif 80) - TICK: 413 - TOS: 0 - data stack: [0, 4, 76, 0] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 75 - mPC: 0
+  DEBUG: (75: if -> jif 80) - TICK: 414 - TOS: 0 - data stack: [0, 4, 76, 0] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 75 - mPC: 72
+  DEBUG: (76: drop -> drop ) - TICK: 415 - TOS: 0 - data stack: [0, 4, 76, 0] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 76 - mPC: 0
+  DEBUG: (76: drop -> drop ) - TICK: 416 - TOS: 0 - data stack: [0, 4, 76, 0] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 76 - mPC: 3
+  DEBUG: (76: drop -> drop ) - TICK: 417 - TOS: 0 - data stack: [0, 4, 76, 0] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 76 - mPC: 4
+  DEBUG: (76: drop -> drop ) - TICK: 418 - TOS: 0 - data stack: [0, 4, 76] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 76 - mPC: 5
+  DEBUG: (77: drop -> drop ) - TICK: 419 - TOS: 0 - data stack: [0, 4, 76] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 77 - mPC: 0
+  DEBUG: (77: drop -> drop ) - TICK: 420 - TOS: 0 - data stack: [0, 4, 76] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 77 - mPC: 3
+  DEBUG: (77: drop -> drop ) - TICK: 421 - TOS: 76 - data stack: [0, 4, 76] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 77 - mPC: 4
+  DEBUG: (77: drop -> drop ) - TICK: 422 - TOS: 76 - data stack: [0, 4] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 77 - mPC: 5
+  DEBUG: (78: emit -> store 1) - TICK: 423 - TOS: 76 - data stack: [0, 4] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 78 - mPC: 0
+  DEBUG: (78: emit -> store 1) - TICK: 424 - TOS: 76 - data stack: [0, 4] - alu out: 0 - memory out: 76 - address reg: 4 - PC: 78 - mPC: 23
+  DEBUG: (78: emit -> store 1) - TICK: 425 - TOS: 76 - data stack: [0, 4] - alu out: 0 - memory out: 76 - address reg: 1 - PC: 78 - mPC: 24
   INFO: add char 'L' to output buffer
-  DEBUG: (78: emit -> store 1) - TICK: 406 - TOS: 76 - data stack: [0, 4] - alu out: 0 - memory out: 76 - address reg: 1 - PC: 78 - mPC: 22
-  DEBUG: (79: else -> jmp 81) - TICK: 407 - TOS: 76 - data stack: [0, 4] - alu out: 0 - memory out: 76 - address reg: 1 - PC: 79 - mPC: 0
-  DEBUG: (79: else -> jmp 81) - TICK: 408 - TOS: 76 - data stack: [0, 4] - alu out: 0 - memory out: 76 - address reg: 1 - PC: 79 - mPC: 68
-  DEBUG: (81: 0 -> push 0) - TICK: 409 - TOS: 76 - data stack: [0, 4] - alu out: 0 - memory out: 76 - address reg: 1 - PC: 81 - mPC: 0
-  DEBUG: (81: 0 -> push 0) - TICK: 410 - TOS: 76 - data stack: [0, 4] - alu out: 0 - memory out: 76 - address reg: 1 - PC: 81 - mPC: 6
-  DEBUG: (81: 0 -> push 0) - TICK: 411 - TOS: 0 - data stack: [0, 4, 76] - alu out: 0 - memory out: 76 - address reg: 1 - PC: 81 - mPC: 7
-  DEBUG: (82: != -> n_equal ) - TICK: 412 - TOS: 0 - data stack: [0, 4, 76] - alu out: 0 - memory out: 76 - address reg: 1 - PC: 82 - mPC: 0
-  DEBUG: (82: != -> n_equal ) - TICK: 413 - TOS: 0 - data stack: [0, 4, 76] - alu out: 0 - memory out: 76 - address reg: 1 - PC: 82 - mPC: 60
-  DEBUG: (82: != -> n_equal ) - TICK: 414 - TOS: 0 - data stack: [0, 4, 76] - alu out: 1 - memory out: 76 - address reg: 1 - PC: 82 - mPC: 61
-  DEBUG: (82: != -> n_equal ) - TICK: 415 - TOS: 0 - data stack: [0, 4, 76, 0] - alu out: 1 - memory out: 76 - address reg: 1 - PC: 82 - mPC: 62
-  DEBUG: (82: != -> n_equal ) - TICK: 416 - TOS: 1 - data stack: [0, 4, 76, 0] - alu out: 1 - memory out: 76 - address reg: 1 - PC: 82 - mPC: 63
-  DEBUG: (83: until -> jif 69) - TICK: 417 - TOS: 1 - data stack: [0, 4, 76, 0] - alu out: 1 - memory out: 76 - address reg: 1 - PC: 83 - mPC: 0
-  DEBUG: (83: until -> jif 69) - TICK: 418 - TOS: 1 - data stack: [0, 4, 76, 0] - alu out: 1 - memory out: 76 - address reg: 1 - PC: 83 - mPC: 69
-  DEBUG: (69: @ -> load 2) - TICK: 419 - TOS: 1 - data stack: [0, 4, 76, 0] - alu out: 1 - memory out: 76 - address reg: 1 - PC: 69 - mPC: 0
-  DEBUG: (69: @ -> load 2) - TICK: 420 - TOS: 1 - data stack: [0, 4, 76, 0] - alu out: 1 - memory out: 76 - address reg: 1 - PC: 69 - mPC: 12
-  DEBUG: (69: @ -> load 2) - TICK: 421 - TOS: 1 - data stack: [0, 4, 76, 0] - alu out: 1 - memory out: 76 - address reg: 2 - PC: 69 - mPC: 13
-  DEBUG: (69: @ -> load 2) - TICK: 422 - TOS: 4 - data stack: [0, 4, 76, 0, 1] - alu out: 1 - memory out: 4 - address reg: 2 - PC: 69 - mPC: 14
-  DEBUG: (70: ++ -> inc ) - TICK: 423 - TOS: 4 - data stack: [0, 4, 76, 0, 1] - alu out: 1 - memory out: 4 - address reg: 2 - PC: 70 - mPC: 0
-  DEBUG: (70: ++ -> inc ) - TICK: 424 - TOS: 4 - data stack: [0, 4, 76, 0, 1] - alu out: 1 - memory out: 4 - address reg: 2 - PC: 70 - mPC: 64
-  DEBUG: (70: ++ -> inc ) - TICK: 425 - TOS: 5 - data stack: [0, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 2 - PC: 70 - mPC: 65
-  DEBUG: (71: ! -> store 2) - TICK: 426 - TOS: 5 - data stack: [0, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 2 - PC: 71 - mPC: 0
-  DEBUG: (71: ! -> store 2) - TICK: 427 - TOS: 5 - data stack: [0, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 2 - PC: 71 - mPC: 20
-  DEBUG: (71: ! -> store 2) - TICK: 428 - TOS: 5 - data stack: [0, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 2 - PC: 71 - mPC: 21
-  DEBUG: (71: ! -> store 2) - TICK: 429 - TOS: 5 - data stack: [0, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 2 - PC: 71 - mPC: 22
-  DEBUG: (72: @* -> ind_load 2) - TICK: 430 - TOS: 5 - data stack: [0, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 2 - PC: 72 - mPC: 0
-  DEBUG: (72: @* -> ind_load 2) - TICK: 431 - TOS: 5 - data stack: [0, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 2 - PC: 72 - mPC: 15
-  DEBUG: (72: @* -> ind_load 2) - TICK: 432 - TOS: 5 - data stack: [0, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 2 - PC: 72 - mPC: 16
-  DEBUG: (72: @* -> ind_load 2) - TICK: 433 - TOS: 5 - data stack: [0, 4, 76, 0, 1] - alu out: 5 - memory out: 5 - address reg: 2 - PC: 72 - mPC: 17
-  DEBUG: (72: @* -> ind_load 2) - TICK: 434 - TOS: 5 - data stack: [0, 4, 76, 0, 1] - alu out: 5 - memory out: 5 - address reg: 5 - PC: 72 - mPC: 18
-  DEBUG: (72: @* -> ind_load 2) - TICK: 435 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 105 - address reg: 5 - PC: 72 - mPC: 19
-  DEBUG: (73: 0 -> push 0) - TICK: 436 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 105 - address reg: 5 - PC: 73 - mPC: 0
-  DEBUG: (73: 0 -> push 0) - TICK: 437 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 105 - address reg: 5 - PC: 73 - mPC: 6
-  DEBUG: (73: 0 -> push 0) - TICK: 438 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 5 - memory out: 105 - address reg: 5 - PC: 73 - mPC: 7
-  DEBUG: (74: != -> equal ) - TICK: 439 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 5 - memory out: 105 - address reg: 5 - PC: 74 - mPC: 0
-  DEBUG: (74: != -> equal ) - TICK: 440 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 5 - memory out: 105 - address reg: 5 - PC: 74 - mPC: 56
-  DEBUG: (74: != -> equal ) - TICK: 441 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 74 - mPC: 57
-  DEBUG: (74: != -> equal ) - TICK: 442 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 74 - mPC: 58
-  DEBUG: (74: != -> equal ) - TICK: 443 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 74 - mPC: 59
-  DEBUG: (75: if -> jif 80) - TICK: 444 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 75 - mPC: 0
-  DEBUG: (75: if -> jif 80) - TICK: 445 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 75 - mPC: 69
-  DEBUG: (76: drop -> drop ) - TICK: 446 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 76 - mPC: 0
-  DEBUG: (76: drop -> drop ) - TICK: 447 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 76 - mPC: 3
-  DEBUG: (76: drop -> drop ) - TICK: 448 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 76 - mPC: 4
-  DEBUG: (76: drop -> drop ) - TICK: 449 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 76 - mPC: 5
-  DEBUG: (77: drop -> drop ) - TICK: 450 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 77 - mPC: 0
-  DEBUG: (77: drop -> drop ) - TICK: 451 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 77 - mPC: 3
-  DEBUG: (77: drop -> drop ) - TICK: 452 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 77 - mPC: 4
-  DEBUG: (77: drop -> drop ) - TICK: 453 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 77 - mPC: 5
-  DEBUG: (78: emit -> store 1) - TICK: 454 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 78 - mPC: 0
-  DEBUG: (78: emit -> store 1) - TICK: 455 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 78 - mPC: 20
-  DEBUG: (78: emit -> store 1) - TICK: 456 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 0 - memory out: 105 - address reg: 1 - PC: 78 - mPC: 21
+  DEBUG: (78: emit -> store 1) - TICK: 426 - TOS: 76 - data stack: [0, 4] - alu out: 0 - memory out: 76 - address reg: 1 - PC: 78 - mPC: 25
+  DEBUG: (79: else -> jmp 81) - TICK: 427 - TOS: 76 - data stack: [0, 4] - alu out: 0 - memory out: 76 - address reg: 1 - PC: 79 - mPC: 0
+  DEBUG: (79: else -> jmp 81) - TICK: 428 - TOS: 76 - data stack: [0, 4] - alu out: 0 - memory out: 76 - address reg: 1 - PC: 79 - mPC: 71
+  DEBUG: (81: 0 -> push 0) - TICK: 429 - TOS: 76 - data stack: [0, 4] - alu out: 0 - memory out: 76 - address reg: 1 - PC: 81 - mPC: 0
+  DEBUG: (81: 0 -> push 0) - TICK: 430 - TOS: 76 - data stack: [0, 4] - alu out: 0 - memory out: 76 - address reg: 1 - PC: 81 - mPC: 6
+  DEBUG: (81: 0 -> push 0) - TICK: 431 - TOS: 76 - data stack: [0, 4, 76] - alu out: 0 - memory out: 76 - address reg: 1 - PC: 81 - mPC: 7
+  DEBUG: (81: 0 -> push 0) - TICK: 432 - TOS: 0 - data stack: [0, 4, 76] - alu out: 0 - memory out: 76 - address reg: 1 - PC: 81 - mPC: 8
+  DEBUG: (82: != -> n_equal ) - TICK: 433 - TOS: 0 - data stack: [0, 4, 76] - alu out: 0 - memory out: 76 - address reg: 1 - PC: 82 - mPC: 0
+  DEBUG: (82: != -> n_equal ) - TICK: 434 - TOS: 0 - data stack: [0, 4, 76] - alu out: 0 - memory out: 76 - address reg: 1 - PC: 82 - mPC: 63
+  DEBUG: (82: != -> n_equal ) - TICK: 435 - TOS: 0 - data stack: [0, 4, 76] - alu out: 1 - memory out: 76 - address reg: 1 - PC: 82 - mPC: 64
+  DEBUG: (82: != -> n_equal ) - TICK: 436 - TOS: 0 - data stack: [0, 4, 76, 0] - alu out: 1 - memory out: 76 - address reg: 1 - PC: 82 - mPC: 65
+  DEBUG: (82: != -> n_equal ) - TICK: 437 - TOS: 1 - data stack: [0, 4, 76, 0] - alu out: 1 - memory out: 76 - address reg: 1 - PC: 82 - mPC: 66
+  DEBUG: (83: until -> jif 69) - TICK: 438 - TOS: 1 - data stack: [0, 4, 76, 0] - alu out: 1 - memory out: 76 - address reg: 1 - PC: 83 - mPC: 0
+  DEBUG: (83: until -> jif 69) - TICK: 439 - TOS: 1 - data stack: [0, 4, 76, 0] - alu out: 1 - memory out: 76 - address reg: 1 - PC: 83 - mPC: 72
+  DEBUG: (69: @ -> load 2) - TICK: 440 - TOS: 1 - data stack: [0, 4, 76, 0] - alu out: 1 - memory out: 76 - address reg: 1 - PC: 69 - mPC: 0
+  DEBUG: (69: @ -> load 2) - TICK: 441 - TOS: 1 - data stack: [0, 4, 76, 0] - alu out: 1 - memory out: 76 - address reg: 1 - PC: 69 - mPC: 13
+  DEBUG: (69: @ -> load 2) - TICK: 442 - TOS: 1 - data stack: [0, 4, 76, 0] - alu out: 1 - memory out: 76 - address reg: 2 - PC: 69 - mPC: 14
+  DEBUG: (69: @ -> load 2) - TICK: 443 - TOS: 1 - data stack: [0, 4, 76, 0, 1] - alu out: 1 - memory out: 4 - address reg: 2 - PC: 69 - mPC: 15
+  DEBUG: (69: @ -> load 2) - TICK: 444 - TOS: 4 - data stack: [0, 4, 76, 0, 1] - alu out: 1 - memory out: 4 - address reg: 2 - PC: 69 - mPC: 16
+  DEBUG: (70: ++ -> inc ) - TICK: 445 - TOS: 4 - data stack: [0, 4, 76, 0, 1] - alu out: 1 - memory out: 4 - address reg: 2 - PC: 70 - mPC: 0
+  DEBUG: (70: ++ -> inc ) - TICK: 446 - TOS: 4 - data stack: [0, 4, 76, 0, 1] - alu out: 1 - memory out: 4 - address reg: 2 - PC: 70 - mPC: 67
+  DEBUG: (70: ++ -> inc ) - TICK: 447 - TOS: 5 - data stack: [0, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 2 - PC: 70 - mPC: 68
+  DEBUG: (71: ! -> store 2) - TICK: 448 - TOS: 5 - data stack: [0, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 2 - PC: 71 - mPC: 0
+  DEBUG: (71: ! -> store 2) - TICK: 449 - TOS: 5 - data stack: [0, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 2 - PC: 71 - mPC: 23
+  DEBUG: (71: ! -> store 2) - TICK: 450 - TOS: 5 - data stack: [0, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 2 - PC: 71 - mPC: 24
+  DEBUG: (71: ! -> store 2) - TICK: 451 - TOS: 5 - data stack: [0, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 2 - PC: 71 - mPC: 25
+  DEBUG: (72: @* -> ind_load 2) - TICK: 452 - TOS: 5 - data stack: [0, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 2 - PC: 72 - mPC: 0
+  DEBUG: (72: @* -> ind_load 2) - TICK: 453 - TOS: 5 - data stack: [0, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 2 - PC: 72 - mPC: 17
+  DEBUG: (72: @* -> ind_load 2) - TICK: 454 - TOS: 5 - data stack: [0, 4, 76, 0, 1] - alu out: 5 - memory out: 4 - address reg: 2 - PC: 72 - mPC: 18
+  DEBUG: (72: @* -> ind_load 2) - TICK: 455 - TOS: 5 - data stack: [0, 4, 76, 0, 1] - alu out: 5 - memory out: 5 - address reg: 2 - PC: 72 - mPC: 19
+  DEBUG: (72: @* -> ind_load 2) - TICK: 456 - TOS: 5 - data stack: [0, 4, 76, 0, 1] - alu out: 5 - memory out: 5 - address reg: 5 - PC: 72 - mPC: 20
+  DEBUG: (72: @* -> ind_load 2) - TICK: 457 - TOS: 5 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 105 - address reg: 5 - PC: 72 - mPC: 21
+  DEBUG: (72: @* -> ind_load 2) - TICK: 458 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 105 - address reg: 5 - PC: 72 - mPC: 22
+  DEBUG: (73: 0 -> push 0) - TICK: 459 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 105 - address reg: 5 - PC: 73 - mPC: 0
+  DEBUG: (73: 0 -> push 0) - TICK: 460 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 5 - memory out: 105 - address reg: 5 - PC: 73 - mPC: 6
+  DEBUG: (73: 0 -> push 0) - TICK: 461 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 5 - memory out: 105 - address reg: 5 - PC: 73 - mPC: 7
+  DEBUG: (73: 0 -> push 0) - TICK: 462 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 5 - memory out: 105 - address reg: 5 - PC: 73 - mPC: 8
+  DEBUG: (74: != -> equal ) - TICK: 463 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 5 - memory out: 105 - address reg: 5 - PC: 74 - mPC: 0
+  DEBUG: (74: != -> equal ) - TICK: 464 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 5 - memory out: 105 - address reg: 5 - PC: 74 - mPC: 59
+  DEBUG: (74: != -> equal ) - TICK: 465 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 74 - mPC: 60
+  DEBUG: (74: != -> equal ) - TICK: 466 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 74 - mPC: 61
+  DEBUG: (74: != -> equal ) - TICK: 467 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 74 - mPC: 62
+  DEBUG: (75: if -> jif 80) - TICK: 468 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 75 - mPC: 0
+  DEBUG: (75: if -> jif 80) - TICK: 469 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 75 - mPC: 72
+  DEBUG: (76: drop -> drop ) - TICK: 470 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 76 - mPC: 0
+  DEBUG: (76: drop -> drop ) - TICK: 471 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 76 - mPC: 3
+  DEBUG: (76: drop -> drop ) - TICK: 472 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 76 - mPC: 4
+  DEBUG: (76: drop -> drop ) - TICK: 473 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 76 - mPC: 5
+  DEBUG: (77: drop -> drop ) - TICK: 474 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 77 - mPC: 0
+  DEBUG: (77: drop -> drop ) - TICK: 475 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 77 - mPC: 3
+  DEBUG: (77: drop -> drop ) - TICK: 476 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 77 - mPC: 4
+  DEBUG: (77: drop -> drop ) - TICK: 477 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 77 - mPC: 5
+  DEBUG: (78: emit -> store 1) - TICK: 478 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 78 - mPC: 0
+  DEBUG: (78: emit -> store 1) - TICK: 479 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 0 - memory out: 105 - address reg: 5 - PC: 78 - mPC: 23
+  DEBUG: (78: emit -> store 1) - TICK: 480 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 0 - memory out: 105 - address reg: 1 - PC: 78 - mPC: 24
   INFO: add char 'i' to output buffer
-  DEBUG: (78: emit -> store 1) - TICK: 457 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 0 - memory out: 105 - address reg: 1 - PC: 78 - mPC: 22
-  DEBUG: (79: else -> jmp 81) - TICK: 458 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 0 - memory out: 105 - address reg: 1 - PC: 79 - mPC: 0
-  DEBUG: (79: else -> jmp 81) - TICK: 459 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 0 - memory out: 105 - address reg: 1 - PC: 79 - mPC: 68
-  DEBUG: (81: 0 -> push 0) - TICK: 460 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 0 - memory out: 105 - address reg: 1 - PC: 81 - mPC: 0
-  DEBUG: (81: 0 -> push 0) - TICK: 461 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 0 - memory out: 105 - address reg: 1 - PC: 81 - mPC: 6
-  DEBUG: (81: 0 -> push 0) - TICK: 462 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 0 - memory out: 105 - address reg: 1 - PC: 81 - mPC: 7
-  DEBUG: (82: != -> n_equal ) - TICK: 463 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 0 - memory out: 105 - address reg: 1 - PC: 82 - mPC: 0
-  DEBUG: (82: != -> n_equal ) - TICK: 464 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 0 - memory out: 105 - address reg: 1 - PC: 82 - mPC: 60
-  DEBUG: (82: != -> n_equal ) - TICK: 465 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 1 - memory out: 105 - address reg: 1 - PC: 82 - mPC: 61
-  DEBUG: (82: != -> n_equal ) - TICK: 466 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 105 - address reg: 1 - PC: 82 - mPC: 62
-  DEBUG: (82: != -> n_equal ) - TICK: 467 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 105 - address reg: 1 - PC: 82 - mPC: 63
-  DEBUG: (83: until -> jif 69) - TICK: 468 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 105 - address reg: 1 - PC: 83 - mPC: 0
-  DEBUG: (83: until -> jif 69) - TICK: 469 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 105 - address reg: 1 - PC: 83 - mPC: 69
-  DEBUG: (69: @ -> load 2) - TICK: 470 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 105 - address reg: 1 - PC: 69 - mPC: 0
-  DEBUG: (69: @ -> load 2) - TICK: 471 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 105 - address reg: 1 - PC: 69 - mPC: 12
-  DEBUG: (69: @ -> load 2) - TICK: 472 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 105 - address reg: 2 - PC: 69 - mPC: 13
-  DEBUG: (69: @ -> load 2) - TICK: 473 - TOS: 5 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 1 - memory out: 5 - address reg: 2 - PC: 69 - mPC: 14
-  DEBUG: (70: ++ -> inc ) - TICK: 474 - TOS: 5 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 1 - memory out: 5 - address reg: 2 - PC: 70 - mPC: 0
-  DEBUG: (70: ++ -> inc ) - TICK: 475 - TOS: 5 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 1 - memory out: 5 - address reg: 2 - PC: 70 - mPC: 64
-  DEBUG: (70: ++ -> inc ) - TICK: 476 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 2 - PC: 70 - mPC: 65
-  DEBUG: (71: ! -> store 2) - TICK: 477 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 2 - PC: 71 - mPC: 0
-  DEBUG: (71: ! -> store 2) - TICK: 478 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 2 - PC: 71 - mPC: 20
-  DEBUG: (71: ! -> store 2) - TICK: 479 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 2 - PC: 71 - mPC: 21
-  DEBUG: (71: ! -> store 2) - TICK: 480 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 2 - PC: 71 - mPC: 22
-  DEBUG: (72: @* -> ind_load 2) - TICK: 481 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 2 - PC: 72 - mPC: 0
-  DEBUG: (72: @* -> ind_load 2) - TICK: 482 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 2 - PC: 72 - mPC: 15
-  DEBUG: (72: @* -> ind_load 2) - TICK: 483 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 2 - PC: 72 - mPC: 16
-  DEBUG: (72: @* -> ind_load 2) - TICK: 484 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 6 - address reg: 2 - PC: 72 - mPC: 17
-  DEBUG: (72: @* -> ind_load 2) - TICK: 485 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 6 - address reg: 6 - PC: 72 - mPC: 18
-  DEBUG: (72: @* -> ind_load 2) - TICK: 486 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 122 - address reg: 6 - PC: 72 - mPC: 19
-  DEBUG: (73: 0 -> push 0) - TICK: 487 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 122 - address reg: 6 - PC: 73 - mPC: 0
-  DEBUG: (73: 0 -> push 0) - TICK: 488 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 122 - address reg: 6 - PC: 73 - mPC: 6
-  DEBUG: (73: 0 -> push 0) - TICK: 489 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 6 - memory out: 122 - address reg: 6 - PC: 73 - mPC: 7
-  DEBUG: (74: != -> equal ) - TICK: 490 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 6 - memory out: 122 - address reg: 6 - PC: 74 - mPC: 0
-  DEBUG: (74: != -> equal ) - TICK: 491 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 6 - memory out: 122 - address reg: 6 - PC: 74 - mPC: 56
-  DEBUG: (74: != -> equal ) - TICK: 492 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 74 - mPC: 57
-  DEBUG: (74: != -> equal ) - TICK: 493 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 74 - mPC: 58
-  DEBUG: (74: != -> equal ) - TICK: 494 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 74 - mPC: 59
-  DEBUG: (75: if -> jif 80) - TICK: 495 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 75 - mPC: 0
-  DEBUG: (75: if -> jif 80) - TICK: 496 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 75 - mPC: 69
-  DEBUG: (76: drop -> drop ) - TICK: 497 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 76 - mPC: 0
-  DEBUG: (76: drop -> drop ) - TICK: 498 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 76 - mPC: 3
-  DEBUG: (76: drop -> drop ) - TICK: 499 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 76 - mPC: 4
-  DEBUG: (76: drop -> drop ) - TICK: 500 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 76 - mPC: 5
-  DEBUG: (77: drop -> drop ) - TICK: 501 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 77 - mPC: 0
-  DEBUG: (77: drop -> drop ) - TICK: 502 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 77 - mPC: 3
-  DEBUG: (77: drop -> drop ) - TICK: 503 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 77 - mPC: 4
-  DEBUG: (77: drop -> drop ) - TICK: 504 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 77 - mPC: 5
-  DEBUG: (78: emit -> store 1) - TICK: 505 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 78 - mPC: 0
-  DEBUG: (78: emit -> store 1) - TICK: 506 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 78 - mPC: 20
-  DEBUG: (78: emit -> store 1) - TICK: 507 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 0 - memory out: 122 - address reg: 1 - PC: 78 - mPC: 21
+  DEBUG: (78: emit -> store 1) - TICK: 481 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 0 - memory out: 105 - address reg: 1 - PC: 78 - mPC: 25
+  DEBUG: (79: else -> jmp 81) - TICK: 482 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 0 - memory out: 105 - address reg: 1 - PC: 79 - mPC: 0
+  DEBUG: (79: else -> jmp 81) - TICK: 483 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 0 - memory out: 105 - address reg: 1 - PC: 79 - mPC: 71
+  DEBUG: (81: 0 -> push 0) - TICK: 484 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 0 - memory out: 105 - address reg: 1 - PC: 81 - mPC: 0
+  DEBUG: (81: 0 -> push 0) - TICK: 485 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5] - alu out: 0 - memory out: 105 - address reg: 1 - PC: 81 - mPC: 6
+  DEBUG: (81: 0 -> push 0) - TICK: 486 - TOS: 105 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 0 - memory out: 105 - address reg: 1 - PC: 81 - mPC: 7
+  DEBUG: (81: 0 -> push 0) - TICK: 487 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 0 - memory out: 105 - address reg: 1 - PC: 81 - mPC: 8
+  DEBUG: (82: != -> n_equal ) - TICK: 488 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 0 - memory out: 105 - address reg: 1 - PC: 82 - mPC: 0
+  DEBUG: (82: != -> n_equal ) - TICK: 489 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 0 - memory out: 105 - address reg: 1 - PC: 82 - mPC: 63
+  DEBUG: (82: != -> n_equal ) - TICK: 490 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105] - alu out: 1 - memory out: 105 - address reg: 1 - PC: 82 - mPC: 64
+  DEBUG: (82: != -> n_equal ) - TICK: 491 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 105 - address reg: 1 - PC: 82 - mPC: 65
+  DEBUG: (82: != -> n_equal ) - TICK: 492 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 105 - address reg: 1 - PC: 82 - mPC: 66
+  DEBUG: (83: until -> jif 69) - TICK: 493 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 105 - address reg: 1 - PC: 83 - mPC: 0
+  DEBUG: (83: until -> jif 69) - TICK: 494 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 105 - address reg: 1 - PC: 83 - mPC: 72
+  DEBUG: (69: @ -> load 2) - TICK: 495 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 105 - address reg: 1 - PC: 69 - mPC: 0
+  DEBUG: (69: @ -> load 2) - TICK: 496 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 105 - address reg: 1 - PC: 69 - mPC: 13
+  DEBUG: (69: @ -> load 2) - TICK: 497 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0] - alu out: 1 - memory out: 105 - address reg: 2 - PC: 69 - mPC: 14
+  DEBUG: (69: @ -> load 2) - TICK: 498 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 1 - memory out: 5 - address reg: 2 - PC: 69 - mPC: 15
+  DEBUG: (69: @ -> load 2) - TICK: 499 - TOS: 5 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 1 - memory out: 5 - address reg: 2 - PC: 69 - mPC: 16
+  DEBUG: (70: ++ -> inc ) - TICK: 500 - TOS: 5 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 1 - memory out: 5 - address reg: 2 - PC: 70 - mPC: 0
+  DEBUG: (70: ++ -> inc ) - TICK: 501 - TOS: 5 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 1 - memory out: 5 - address reg: 2 - PC: 70 - mPC: 67
+  DEBUG: (70: ++ -> inc ) - TICK: 502 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 2 - PC: 70 - mPC: 68
+  DEBUG: (71: ! -> store 2) - TICK: 503 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 2 - PC: 71 - mPC: 0
+  DEBUG: (71: ! -> store 2) - TICK: 504 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 2 - PC: 71 - mPC: 23
+  DEBUG: (71: ! -> store 2) - TICK: 505 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 2 - PC: 71 - mPC: 24
+  DEBUG: (71: ! -> store 2) - TICK: 506 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 2 - PC: 71 - mPC: 25
+  DEBUG: (72: @* -> ind_load 2) - TICK: 507 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 2 - PC: 72 - mPC: 0
+  DEBUG: (72: @* -> ind_load 2) - TICK: 508 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 2 - PC: 72 - mPC: 17
+  DEBUG: (72: @* -> ind_load 2) - TICK: 509 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 5 - address reg: 2 - PC: 72 - mPC: 18
+  DEBUG: (72: @* -> ind_load 2) - TICK: 510 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 6 - address reg: 2 - PC: 72 - mPC: 19
+  DEBUG: (72: @* -> ind_load 2) - TICK: 511 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1] - alu out: 6 - memory out: 6 - address reg: 6 - PC: 72 - mPC: 20
+  DEBUG: (72: @* -> ind_load 2) - TICK: 512 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 122 - address reg: 6 - PC: 72 - mPC: 21
+  DEBUG: (72: @* -> ind_load 2) - TICK: 513 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 122 - address reg: 6 - PC: 72 - mPC: 22
+  DEBUG: (73: 0 -> push 0) - TICK: 514 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 122 - address reg: 6 - PC: 73 - mPC: 0
+  DEBUG: (73: 0 -> push 0) - TICK: 515 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 6 - memory out: 122 - address reg: 6 - PC: 73 - mPC: 6
+  DEBUG: (73: 0 -> push 0) - TICK: 516 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 6 - memory out: 122 - address reg: 6 - PC: 73 - mPC: 7
+  DEBUG: (73: 0 -> push 0) - TICK: 517 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 6 - memory out: 122 - address reg: 6 - PC: 73 - mPC: 8
+  DEBUG: (74: != -> equal ) - TICK: 518 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 6 - memory out: 122 - address reg: 6 - PC: 74 - mPC: 0
+  DEBUG: (74: != -> equal ) - TICK: 519 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 6 - memory out: 122 - address reg: 6 - PC: 74 - mPC: 59
+  DEBUG: (74: != -> equal ) - TICK: 520 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 74 - mPC: 60
+  DEBUG: (74: != -> equal ) - TICK: 521 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 74 - mPC: 61
+  DEBUG: (74: != -> equal ) - TICK: 522 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 74 - mPC: 62
+  DEBUG: (75: if -> jif 80) - TICK: 523 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 75 - mPC: 0
+  DEBUG: (75: if -> jif 80) - TICK: 524 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 75 - mPC: 72
+  DEBUG: (76: drop -> drop ) - TICK: 525 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 76 - mPC: 0
+  DEBUG: (76: drop -> drop ) - TICK: 526 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 76 - mPC: 3
+  DEBUG: (76: drop -> drop ) - TICK: 527 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 76 - mPC: 4
+  DEBUG: (76: drop -> drop ) - TICK: 528 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 76 - mPC: 5
+  DEBUG: (77: drop -> drop ) - TICK: 529 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 77 - mPC: 0
+  DEBUG: (77: drop -> drop ) - TICK: 530 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 77 - mPC: 3
+  DEBUG: (77: drop -> drop ) - TICK: 531 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 77 - mPC: 4
+  DEBUG: (77: drop -> drop ) - TICK: 532 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 77 - mPC: 5
+  DEBUG: (78: emit -> store 1) - TICK: 533 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 78 - mPC: 0
+  DEBUG: (78: emit -> store 1) - TICK: 534 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 0 - memory out: 122 - address reg: 6 - PC: 78 - mPC: 23
+  DEBUG: (78: emit -> store 1) - TICK: 535 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 0 - memory out: 122 - address reg: 1 - PC: 78 - mPC: 24
   INFO: add char 'z' to output buffer
-  DEBUG: (78: emit -> store 1) - TICK: 508 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 0 - memory out: 122 - address reg: 1 - PC: 78 - mPC: 22
-  DEBUG: (79: else -> jmp 81) - TICK: 509 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 0 - memory out: 122 - address reg: 1 - PC: 79 - mPC: 0
-  DEBUG: (79: else -> jmp 81) - TICK: 510 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 0 - memory out: 122 - address reg: 1 - PC: 79 - mPC: 68
-  DEBUG: (81: 0 -> push 0) - TICK: 511 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 0 - memory out: 122 - address reg: 1 - PC: 81 - mPC: 0
-  DEBUG: (81: 0 -> push 0) - TICK: 512 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 0 - memory out: 122 - address reg: 1 - PC: 81 - mPC: 6
-  DEBUG: (81: 0 -> push 0) - TICK: 513 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 0 - memory out: 122 - address reg: 1 - PC: 81 - mPC: 7
-  DEBUG: (82: != -> n_equal ) - TICK: 514 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 0 - memory out: 122 - address reg: 1 - PC: 82 - mPC: 0
-  DEBUG: (82: != -> n_equal ) - TICK: 515 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 0 - memory out: 122 - address reg: 1 - PC: 82 - mPC: 60
-  DEBUG: (82: != -> n_equal ) - TICK: 516 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 1 - memory out: 122 - address reg: 1 - PC: 82 - mPC: 61
-  DEBUG: (82: != -> n_equal ) - TICK: 517 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 122 - address reg: 1 - PC: 82 - mPC: 62
-  DEBUG: (82: != -> n_equal ) - TICK: 518 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 122 - address reg: 1 - PC: 82 - mPC: 63
-  DEBUG: (83: until -> jif 69) - TICK: 519 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 122 - address reg: 1 - PC: 83 - mPC: 0
-  DEBUG: (83: until -> jif 69) - TICK: 520 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 122 - address reg: 1 - PC: 83 - mPC: 69
-  DEBUG: (69: @ -> load 2) - TICK: 521 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 122 - address reg: 1 - PC: 69 - mPC: 0
-  DEBUG: (69: @ -> load 2) - TICK: 522 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 122 - address reg: 1 - PC: 69 - mPC: 12
-  DEBUG: (69: @ -> load 2) - TICK: 523 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 122 - address reg: 2 - PC: 69 - mPC: 13
-  DEBUG: (69: @ -> load 2) - TICK: 524 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 1 - memory out: 6 - address reg: 2 - PC: 69 - mPC: 14
-  DEBUG: (70: ++ -> inc ) - TICK: 525 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 1 - memory out: 6 - address reg: 2 - PC: 70 - mPC: 0
-  DEBUG: (70: ++ -> inc ) - TICK: 526 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 1 - memory out: 6 - address reg: 2 - PC: 70 - mPC: 64
-  DEBUG: (70: ++ -> inc ) - TICK: 527 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 2 - PC: 70 - mPC: 65
-  DEBUG: (71: ! -> store 2) - TICK: 528 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 2 - PC: 71 - mPC: 0
-  DEBUG: (71: ! -> store 2) - TICK: 529 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 2 - PC: 71 - mPC: 20
-  DEBUG: (71: ! -> store 2) - TICK: 530 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 2 - PC: 71 - mPC: 21
-  DEBUG: (71: ! -> store 2) - TICK: 531 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 2 - PC: 71 - mPC: 22
-  DEBUG: (72: @* -> ind_load 2) - TICK: 532 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 2 - PC: 72 - mPC: 0
-  DEBUG: (72: @* -> ind_load 2) - TICK: 533 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 2 - PC: 72 - mPC: 15
-  DEBUG: (72: @* -> ind_load 2) - TICK: 534 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 2 - PC: 72 - mPC: 16
-  DEBUG: (72: @* -> ind_load 2) - TICK: 535 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 7 - address reg: 2 - PC: 72 - mPC: 17
-  DEBUG: (72: @* -> ind_load 2) - TICK: 536 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 7 - address reg: 7 - PC: 72 - mPC: 18
-  DEBUG: (72: @* -> ind_load 2) - TICK: 537 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 97 - address reg: 7 - PC: 72 - mPC: 19
-  DEBUG: (73: 0 -> push 0) - TICK: 538 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 97 - address reg: 7 - PC: 73 - mPC: 0
-  DEBUG: (73: 0 -> push 0) - TICK: 539 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 97 - address reg: 7 - PC: 73 - mPC: 6
-  DEBUG: (73: 0 -> push 0) - TICK: 540 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 7 - memory out: 97 - address reg: 7 - PC: 73 - mPC: 7
-  DEBUG: (74: != -> equal ) - TICK: 541 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 7 - memory out: 97 - address reg: 7 - PC: 74 - mPC: 0
-  DEBUG: (74: != -> equal ) - TICK: 542 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 7 - memory out: 97 - address reg: 7 - PC: 74 - mPC: 56
-  DEBUG: (74: != -> equal ) - TICK: 543 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 74 - mPC: 57
-  DEBUG: (74: != -> equal ) - TICK: 544 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 74 - mPC: 58
-  DEBUG: (74: != -> equal ) - TICK: 545 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 74 - mPC: 59
-  DEBUG: (75: if -> jif 80) - TICK: 546 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 75 - mPC: 0
-  DEBUG: (75: if -> jif 80) - TICK: 547 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 75 - mPC: 69
-  DEBUG: (76: drop -> drop ) - TICK: 548 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 76 - mPC: 0
-  DEBUG: (76: drop -> drop ) - TICK: 549 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 76 - mPC: 3
-  DEBUG: (76: drop -> drop ) - TICK: 550 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 76 - mPC: 4
-  DEBUG: (76: drop -> drop ) - TICK: 551 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 76 - mPC: 5
-  DEBUG: (77: drop -> drop ) - TICK: 552 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 77 - mPC: 0
-  DEBUG: (77: drop -> drop ) - TICK: 553 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 77 - mPC: 3
-  DEBUG: (77: drop -> drop ) - TICK: 554 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 77 - mPC: 4
-  DEBUG: (77: drop -> drop ) - TICK: 555 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 77 - mPC: 5
-  DEBUG: (78: emit -> store 1) - TICK: 556 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 78 - mPC: 0
-  DEBUG: (78: emit -> store 1) - TICK: 557 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 78 - mPC: 20
-  DEBUG: (78: emit -> store 1) - TICK: 558 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 78 - mPC: 21
+  DEBUG: (78: emit -> store 1) - TICK: 536 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 0 - memory out: 122 - address reg: 1 - PC: 78 - mPC: 25
+  DEBUG: (79: else -> jmp 81) - TICK: 537 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 0 - memory out: 122 - address reg: 1 - PC: 79 - mPC: 0
+  DEBUG: (79: else -> jmp 81) - TICK: 538 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 0 - memory out: 122 - address reg: 1 - PC: 79 - mPC: 71
+  DEBUG: (81: 0 -> push 0) - TICK: 539 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 0 - memory out: 122 - address reg: 1 - PC: 81 - mPC: 0
+  DEBUG: (81: 0 -> push 0) - TICK: 540 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6] - alu out: 0 - memory out: 122 - address reg: 1 - PC: 81 - mPC: 6
+  DEBUG: (81: 0 -> push 0) - TICK: 541 - TOS: 122 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 0 - memory out: 122 - address reg: 1 - PC: 81 - mPC: 7
+  DEBUG: (81: 0 -> push 0) - TICK: 542 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 0 - memory out: 122 - address reg: 1 - PC: 81 - mPC: 8
+  DEBUG: (82: != -> n_equal ) - TICK: 543 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 0 - memory out: 122 - address reg: 1 - PC: 82 - mPC: 0
+  DEBUG: (82: != -> n_equal ) - TICK: 544 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 0 - memory out: 122 - address reg: 1 - PC: 82 - mPC: 63
+  DEBUG: (82: != -> n_equal ) - TICK: 545 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122] - alu out: 1 - memory out: 122 - address reg: 1 - PC: 82 - mPC: 64
+  DEBUG: (82: != -> n_equal ) - TICK: 546 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 122 - address reg: 1 - PC: 82 - mPC: 65
+  DEBUG: (82: != -> n_equal ) - TICK: 547 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 122 - address reg: 1 - PC: 82 - mPC: 66
+  DEBUG: (83: until -> jif 69) - TICK: 548 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 122 - address reg: 1 - PC: 83 - mPC: 0
+  DEBUG: (83: until -> jif 69) - TICK: 549 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 122 - address reg: 1 - PC: 83 - mPC: 72
+  DEBUG: (69: @ -> load 2) - TICK: 550 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 122 - address reg: 1 - PC: 69 - mPC: 0
+  DEBUG: (69: @ -> load 2) - TICK: 551 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 122 - address reg: 1 - PC: 69 - mPC: 13
+  DEBUG: (69: @ -> load 2) - TICK: 552 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0] - alu out: 1 - memory out: 122 - address reg: 2 - PC: 69 - mPC: 14
+  DEBUG: (69: @ -> load 2) - TICK: 553 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 1 - memory out: 6 - address reg: 2 - PC: 69 - mPC: 15
+  DEBUG: (69: @ -> load 2) - TICK: 554 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 1 - memory out: 6 - address reg: 2 - PC: 69 - mPC: 16
+  DEBUG: (70: ++ -> inc ) - TICK: 555 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 1 - memory out: 6 - address reg: 2 - PC: 70 - mPC: 0
+  DEBUG: (70: ++ -> inc ) - TICK: 556 - TOS: 6 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 1 - memory out: 6 - address reg: 2 - PC: 70 - mPC: 67
+  DEBUG: (70: ++ -> inc ) - TICK: 557 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 2 - PC: 70 - mPC: 68
+  DEBUG: (71: ! -> store 2) - TICK: 558 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 2 - PC: 71 - mPC: 0
+  DEBUG: (71: ! -> store 2) - TICK: 559 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 2 - PC: 71 - mPC: 23
+  DEBUG: (71: ! -> store 2) - TICK: 560 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 2 - PC: 71 - mPC: 24
+  DEBUG: (71: ! -> store 2) - TICK: 561 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 2 - PC: 71 - mPC: 25
+  DEBUG: (72: @* -> ind_load 2) - TICK: 562 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 2 - PC: 72 - mPC: 0
+  DEBUG: (72: @* -> ind_load 2) - TICK: 563 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 2 - PC: 72 - mPC: 17
+  DEBUG: (72: @* -> ind_load 2) - TICK: 564 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 6 - address reg: 2 - PC: 72 - mPC: 18
+  DEBUG: (72: @* -> ind_load 2) - TICK: 565 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 7 - address reg: 2 - PC: 72 - mPC: 19
+  DEBUG: (72: @* -> ind_load 2) - TICK: 566 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1] - alu out: 7 - memory out: 7 - address reg: 7 - PC: 72 - mPC: 20
+  DEBUG: (72: @* -> ind_load 2) - TICK: 567 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 97 - address reg: 7 - PC: 72 - mPC: 21
+  DEBUG: (72: @* -> ind_load 2) - TICK: 568 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 97 - address reg: 7 - PC: 72 - mPC: 22
+  DEBUG: (73: 0 -> push 0) - TICK: 569 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 97 - address reg: 7 - PC: 73 - mPC: 0
+  DEBUG: (73: 0 -> push 0) - TICK: 570 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 7 - memory out: 97 - address reg: 7 - PC: 73 - mPC: 6
+  DEBUG: (73: 0 -> push 0) - TICK: 571 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 7 - memory out: 97 - address reg: 7 - PC: 73 - mPC: 7
+  DEBUG: (73: 0 -> push 0) - TICK: 572 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 7 - memory out: 97 - address reg: 7 - PC: 73 - mPC: 8
+  DEBUG: (74: != -> equal ) - TICK: 573 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 7 - memory out: 97 - address reg: 7 - PC: 74 - mPC: 0
+  DEBUG: (74: != -> equal ) - TICK: 574 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 7 - memory out: 97 - address reg: 7 - PC: 74 - mPC: 59
+  DEBUG: (74: != -> equal ) - TICK: 575 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 74 - mPC: 60
+  DEBUG: (74: != -> equal ) - TICK: 576 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 74 - mPC: 61
+  DEBUG: (74: != -> equal ) - TICK: 577 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 74 - mPC: 62
+  DEBUG: (75: if -> jif 80) - TICK: 578 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 75 - mPC: 0
+  DEBUG: (75: if -> jif 80) - TICK: 579 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 75 - mPC: 72
+  DEBUG: (76: drop -> drop ) - TICK: 580 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 76 - mPC: 0
+  DEBUG: (76: drop -> drop ) - TICK: 581 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 76 - mPC: 3
+  DEBUG: (76: drop -> drop ) - TICK: 582 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 76 - mPC: 4
+  DEBUG: (76: drop -> drop ) - TICK: 583 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 76 - mPC: 5
+  DEBUG: (77: drop -> drop ) - TICK: 584 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 77 - mPC: 0
+  DEBUG: (77: drop -> drop ) - TICK: 585 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 77 - mPC: 3
+  DEBUG: (77: drop -> drop ) - TICK: 586 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 77 - mPC: 4
+  DEBUG: (77: drop -> drop ) - TICK: 587 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 77 - mPC: 5
+  DEBUG: (78: emit -> store 1) - TICK: 588 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 78 - mPC: 0
+  DEBUG: (78: emit -> store 1) - TICK: 589 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 0 - memory out: 97 - address reg: 7 - PC: 78 - mPC: 23
+  DEBUG: (78: emit -> store 1) - TICK: 590 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 78 - mPC: 24
   INFO: add char 'a' to output buffer
-  DEBUG: (78: emit -> store 1) - TICK: 559 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 78 - mPC: 22
-  DEBUG: (79: else -> jmp 81) - TICK: 560 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 79 - mPC: 0
-  DEBUG: (79: else -> jmp 81) - TICK: 561 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 79 - mPC: 68
-  DEBUG: (81: 0 -> push 0) - TICK: 562 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 81 - mPC: 0
-  DEBUG: (81: 0 -> push 0) - TICK: 563 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 81 - mPC: 6
-  DEBUG: (81: 0 -> push 0) - TICK: 564 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 81 - mPC: 7
-  DEBUG: (82: != -> n_equal ) - TICK: 565 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 82 - mPC: 0
-  DEBUG: (82: != -> n_equal ) - TICK: 566 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 82 - mPC: 60
-  DEBUG: (82: != -> n_equal ) - TICK: 567 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 82 - mPC: 61
-  DEBUG: (82: != -> n_equal ) - TICK: 568 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 82 - mPC: 62
-  DEBUG: (82: != -> n_equal ) - TICK: 569 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 82 - mPC: 63
-  DEBUG: (83: until -> jif 69) - TICK: 570 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 83 - mPC: 0
-  DEBUG: (83: until -> jif 69) - TICK: 571 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 83 - mPC: 69
-  DEBUG: (69: @ -> load 2) - TICK: 572 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 69 - mPC: 0
-  DEBUG: (69: @ -> load 2) - TICK: 573 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 69 - mPC: 12
-  DEBUG: (69: @ -> load 2) - TICK: 574 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 97 - address reg: 2 - PC: 69 - mPC: 13
-  DEBUG: (69: @ -> load 2) - TICK: 575 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 1 - memory out: 7 - address reg: 2 - PC: 69 - mPC: 14
-  DEBUG: (70: ++ -> inc ) - TICK: 576 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 1 - memory out: 7 - address reg: 2 - PC: 70 - mPC: 0
-  DEBUG: (70: ++ -> inc ) - TICK: 577 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 1 - memory out: 7 - address reg: 2 - PC: 70 - mPC: 64
-  DEBUG: (70: ++ -> inc ) - TICK: 578 - TOS: 8 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 2 - PC: 70 - mPC: 65
-  DEBUG: (71: ! -> store 2) - TICK: 579 - TOS: 8 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 2 - PC: 71 - mPC: 0
-  DEBUG: (71: ! -> store 2) - TICK: 580 - TOS: 8 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 2 - PC: 71 - mPC: 20
-  DEBUG: (71: ! -> store 2) - TICK: 581 - TOS: 8 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 2 - PC: 71 - mPC: 21
-  DEBUG: (71: ! -> store 2) - TICK: 582 - TOS: 8 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 2 - PC: 71 - mPC: 22
-  DEBUG: (72: @* -> ind_load 2) - TICK: 583 - TOS: 8 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 2 - PC: 72 - mPC: 0
-  DEBUG: (72: @* -> ind_load 2) - TICK: 584 - TOS: 8 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 2 - PC: 72 - mPC: 15
-  DEBUG: (72: @* -> ind_load 2) - TICK: 585 - TOS: 8 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 2 - PC: 72 - mPC: 16
-  DEBUG: (72: @* -> ind_load 2) - TICK: 586 - TOS: 8 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 8 - address reg: 2 - PC: 72 - mPC: 17
-  DEBUG: (72: @* -> ind_load 2) - TICK: 587 - TOS: 8 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 8 - address reg: 8 - PC: 72 - mPC: 18
-  DEBUG: (72: @* -> ind_load 2) - TICK: 588 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 0 - address reg: 8 - PC: 72 - mPC: 19
-  DEBUG: (73: 0 -> push 0) - TICK: 589 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 0 - address reg: 8 - PC: 73 - mPC: 0
-  DEBUG: (73: 0 -> push 0) - TICK: 590 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 0 - address reg: 8 - PC: 73 - mPC: 6
-  DEBUG: (73: 0 -> push 0) - TICK: 591 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 8 - memory out: 0 - address reg: 8 - PC: 73 - mPC: 7
-  DEBUG: (74: != -> equal ) - TICK: 592 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 8 - memory out: 0 - address reg: 8 - PC: 74 - mPC: 0
-  DEBUG: (74: != -> equal ) - TICK: 593 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 8 - memory out: 0 - address reg: 8 - PC: 74 - mPC: 56
-  DEBUG: (74: != -> equal ) - TICK: 594 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 74 - mPC: 57
-  DEBUG: (74: != -> equal ) - TICK: 595 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 74 - mPC: 58
-  DEBUG: (74: != -> equal ) - TICK: 596 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 74 - mPC: 59
-  DEBUG: (75: if -> jif 80) - TICK: 597 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 75 - mPC: 0
-  DEBUG: (75: if -> jif 80) - TICK: 598 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 75 - mPC: 69
-  DEBUG: (80: drop -> drop ) - TICK: 599 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 80 - mPC: 0
-  DEBUG: (80: drop -> drop ) - TICK: 600 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 80 - mPC: 3
-  DEBUG: (80: drop -> drop ) - TICK: 601 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 80 - mPC: 4
-  DEBUG: (80: drop -> drop ) - TICK: 602 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 80 - mPC: 5
-  DEBUG: (81: 0 -> push 0) - TICK: 603 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 81 - mPC: 0
-  DEBUG: (81: 0 -> push 0) - TICK: 604 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 81 - mPC: 6
-  DEBUG: (81: 0 -> push 0) - TICK: 605 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 81 - mPC: 7
-  DEBUG: (82: != -> n_equal ) - TICK: 606 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 82 - mPC: 0
-  DEBUG: (82: != -> n_equal ) - TICK: 607 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 82 - mPC: 60
-  DEBUG: (82: != -> n_equal ) - TICK: 608 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 82 - mPC: 61
-  DEBUG: (82: != -> n_equal ) - TICK: 609 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 82 - mPC: 62
-  DEBUG: (82: != -> n_equal ) - TICK: 610 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 82 - mPC: 63
-  DEBUG: (83: until -> jif 69) - TICK: 611 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 83 - mPC: 0
-  DEBUG: (83: until -> jif 69) - TICK: 612 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 83 - mPC: 69
-  DEBUG: (84: clear -> clear ) - TICK: 613 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 84 - mPC: 0
-  DEBUG: (84: clear -> clear ) - TICK: 614 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 84 - mPC: 10
-  DEBUG: (84: clear -> clear ) - TICK: 615 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 84 - mPC: 11
-  DEBUG: (85: . -> dup ) - TICK: 616 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 85 - mPC: 0
-  DEBUG: (85: . -> dup ) - TICK: 617 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 85 - mPC: 1
-  DEBUG: (85: . -> dup ) - TICK: 618 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 85 - mPC: 2
-  DEBUG: (86: ! -> top 33) - TICK: 619 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 86 - mPC: 0
-  DEBUG: (86: ! -> top 33) - TICK: 620 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 86 - mPC: 8
-  DEBUG: (86: ! -> top 33) - TICK: 621 - TOS: 33 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 86 - mPC: 9
-  DEBUG: (87: ! -> store 1) - TICK: 622 - TOS: 33 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 87 - mPC: 0
-  DEBUG: (87: ! -> store 1) - TICK: 623 - TOS: 33 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 87 - mPC: 20
-  DEBUG: (87: ! -> store 1) - TICK: 624 - TOS: 33 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 87 - mPC: 21
+  DEBUG: (78: emit -> store 1) - TICK: 591 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 78 - mPC: 25
+  DEBUG: (79: else -> jmp 81) - TICK: 592 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 79 - mPC: 0
+  DEBUG: (79: else -> jmp 81) - TICK: 593 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 79 - mPC: 71
+  DEBUG: (81: 0 -> push 0) - TICK: 594 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 81 - mPC: 0
+  DEBUG: (81: 0 -> push 0) - TICK: 595 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 81 - mPC: 6
+  DEBUG: (81: 0 -> push 0) - TICK: 596 - TOS: 97 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 81 - mPC: 7
+  DEBUG: (81: 0 -> push 0) - TICK: 597 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 81 - mPC: 8
+  DEBUG: (82: != -> n_equal ) - TICK: 598 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 82 - mPC: 0
+  DEBUG: (82: != -> n_equal ) - TICK: 599 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 0 - memory out: 97 - address reg: 1 - PC: 82 - mPC: 63
+  DEBUG: (82: != -> n_equal ) - TICK: 600 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 82 - mPC: 64
+  DEBUG: (82: != -> n_equal ) - TICK: 601 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 82 - mPC: 65
+  DEBUG: (82: != -> n_equal ) - TICK: 602 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 82 - mPC: 66
+  DEBUG: (83: until -> jif 69) - TICK: 603 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 83 - mPC: 0
+  DEBUG: (83: until -> jif 69) - TICK: 604 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 83 - mPC: 72
+  DEBUG: (69: @ -> load 2) - TICK: 605 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 69 - mPC: 0
+  DEBUG: (69: @ -> load 2) - TICK: 606 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 97 - address reg: 1 - PC: 69 - mPC: 13
+  DEBUG: (69: @ -> load 2) - TICK: 607 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0] - alu out: 1 - memory out: 97 - address reg: 2 - PC: 69 - mPC: 14
+  DEBUG: (69: @ -> load 2) - TICK: 608 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 1 - memory out: 7 - address reg: 2 - PC: 69 - mPC: 15
+  DEBUG: (69: @ -> load 2) - TICK: 609 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 1 - memory out: 7 - address reg: 2 - PC: 69 - mPC: 16
+  DEBUG: (70: ++ -> inc ) - TICK: 610 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 1 - memory out: 7 - address reg: 2 - PC: 70 - mPC: 0
+  DEBUG: (70: ++ -> inc ) - TICK: 611 - TOS: 7 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 1 - memory out: 7 - address reg: 2 - PC: 70 - mPC: 67
+  DEBUG: (70: ++ -> inc ) - TICK: 612 - TOS: 8 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 2 - PC: 70 - mPC: 68
+  DEBUG: (71: ! -> store 2) - TICK: 613 - TOS: 8 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 2 - PC: 71 - mPC: 0
+  DEBUG: (71: ! -> store 2) - TICK: 614 - TOS: 8 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 2 - PC: 71 - mPC: 23
+  DEBUG: (71: ! -> store 2) - TICK: 615 - TOS: 8 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 2 - PC: 71 - mPC: 24
+  DEBUG: (71: ! -> store 2) - TICK: 616 - TOS: 8 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 2 - PC: 71 - mPC: 25
+  DEBUG: (72: @* -> ind_load 2) - TICK: 617 - TOS: 8 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 2 - PC: 72 - mPC: 0
+  DEBUG: (72: @* -> ind_load 2) - TICK: 618 - TOS: 8 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 2 - PC: 72 - mPC: 17
+  DEBUG: (72: @* -> ind_load 2) - TICK: 619 - TOS: 8 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 7 - address reg: 2 - PC: 72 - mPC: 18
+  DEBUG: (72: @* -> ind_load 2) - TICK: 620 - TOS: 8 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 8 - address reg: 2 - PC: 72 - mPC: 19
+  DEBUG: (72: @* -> ind_load 2) - TICK: 621 - TOS: 8 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1] - alu out: 8 - memory out: 8 - address reg: 8 - PC: 72 - mPC: 20
+  DEBUG: (72: @* -> ind_load 2) - TICK: 622 - TOS: 8 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 0 - address reg: 8 - PC: 72 - mPC: 21
+  DEBUG: (72: @* -> ind_load 2) - TICK: 623 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 0 - address reg: 8 - PC: 72 - mPC: 22
+  DEBUG: (73: 0 -> push 0) - TICK: 624 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 0 - address reg: 8 - PC: 73 - mPC: 0
+  DEBUG: (73: 0 -> push 0) - TICK: 625 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8] - alu out: 8 - memory out: 0 - address reg: 8 - PC: 73 - mPC: 6
+  DEBUG: (73: 0 -> push 0) - TICK: 626 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 8 - memory out: 0 - address reg: 8 - PC: 73 - mPC: 7
+  DEBUG: (73: 0 -> push 0) - TICK: 627 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 8 - memory out: 0 - address reg: 8 - PC: 73 - mPC: 8
+  DEBUG: (74: != -> equal ) - TICK: 628 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 8 - memory out: 0 - address reg: 8 - PC: 74 - mPC: 0
+  DEBUG: (74: != -> equal ) - TICK: 629 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 8 - memory out: 0 - address reg: 8 - PC: 74 - mPC: 59
+  DEBUG: (74: != -> equal ) - TICK: 630 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 74 - mPC: 60
+  DEBUG: (74: != -> equal ) - TICK: 631 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 74 - mPC: 61
+  DEBUG: (74: != -> equal ) - TICK: 632 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 74 - mPC: 62
+  DEBUG: (75: if -> jif 80) - TICK: 633 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 75 - mPC: 0
+  DEBUG: (75: if -> jif 80) - TICK: 634 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 75 - mPC: 72
+  DEBUG: (80: drop -> drop ) - TICK: 635 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 80 - mPC: 0
+  DEBUG: (80: drop -> drop ) - TICK: 636 - TOS: 1 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 80 - mPC: 3
+  DEBUG: (80: drop -> drop ) - TICK: 637 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 80 - mPC: 4
+  DEBUG: (80: drop -> drop ) - TICK: 638 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 80 - mPC: 5
+  DEBUG: (81: 0 -> push 0) - TICK: 639 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 81 - mPC: 0
+  DEBUG: (81: 0 -> push 0) - TICK: 640 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 81 - mPC: 6
+  DEBUG: (81: 0 -> push 0) - TICK: 641 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 81 - mPC: 7
+  DEBUG: (81: 0 -> push 0) - TICK: 642 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 81 - mPC: 8
+  DEBUG: (82: != -> n_equal ) - TICK: 643 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 82 - mPC: 0
+  DEBUG: (82: != -> n_equal ) - TICK: 644 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 1 - memory out: 0 - address reg: 8 - PC: 82 - mPC: 63
+  DEBUG: (82: != -> n_equal ) - TICK: 645 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 82 - mPC: 64
+  DEBUG: (82: != -> n_equal ) - TICK: 646 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 82 - mPC: 65
+  DEBUG: (82: != -> n_equal ) - TICK: 647 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 82 - mPC: 66
+  DEBUG: (83: until -> jif 69) - TICK: 648 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 83 - mPC: 0
+  DEBUG: (83: until -> jif 69) - TICK: 649 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 83 - mPC: 72
+  DEBUG: (84: clear -> clear ) - TICK: 650 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 84 - mPC: 0
+  DEBUG: (84: clear -> clear ) - TICK: 651 - TOS: 0 - data stack: [0, 4, 76, 0, 1, 5, 105, 0, 1, 6, 122, 0, 1, 7, 97, 0, 1, 8, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 84 - mPC: 11
+  DEBUG: (84: clear -> clear ) - TICK: 652 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 84 - mPC: 12
+  DEBUG: (85: . -> dup ) - TICK: 653 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 85 - mPC: 0
+  DEBUG: (85: . -> dup ) - TICK: 654 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 85 - mPC: 1
+  DEBUG: (85: . -> dup ) - TICK: 655 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 85 - mPC: 2
+  DEBUG: (86: ! -> top 33) - TICK: 656 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 86 - mPC: 0
+  DEBUG: (86: ! -> top 33) - TICK: 657 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 86 - mPC: 9
+  DEBUG: (86: ! -> top 33) - TICK: 658 - TOS: 33 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 86 - mPC: 10
+  DEBUG: (87: ! -> store 1) - TICK: 659 - TOS: 33 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 87 - mPC: 0
+  DEBUG: (87: ! -> store 1) - TICK: 660 - TOS: 33 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 8 - PC: 87 - mPC: 23
+  DEBUG: (87: ! -> store 1) - TICK: 661 - TOS: 33 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 87 - mPC: 24
   INFO: add char '!' to output buffer
-  DEBUG: (87: ! -> store 1) - TICK: 625 - TOS: 33 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 87 - mPC: 22
-  DEBUG: (88: None -> drop ) - TICK: 626 - TOS: 33 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 88 - mPC: 0
-  DEBUG: (88: None -> drop ) - TICK: 627 - TOS: 33 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 88 - mPC: 3
-  DEBUG: (88: None -> drop ) - TICK: 628 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 88 - mPC: 4
-  DEBUG: (88: None -> drop ) - TICK: 629 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 88 - mPC: 5
-  DEBUG: (89: None -> stop ) - TICK: 630 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 89 - mPC: 0
-  DEBUG: (89: None -> stop ) - TICK: 631 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 89 - mPC: 70
-  DEBUG: (89: None -> stop ) - TICK: 632 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 89 - mPC: 70
+  DEBUG: (87: ! -> store 1) - TICK: 662 - TOS: 33 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 87 - mPC: 25
+  DEBUG: (88: None -> drop ) - TICK: 663 - TOS: 33 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 88 - mPC: 0
+  DEBUG: (88: None -> drop ) - TICK: 664 - TOS: 33 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 88 - mPC: 3
+  DEBUG: (88: None -> drop ) - TICK: 665 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 88 - mPC: 4
+  DEBUG: (88: None -> drop ) - TICK: 666 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 88 - mPC: 5
+  DEBUG: (89: None -> stop ) - TICK: 667 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 89 - mPC: 0
+  DEBUG: (89: None -> stop ) - TICK: 668 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 89 - mPC: 73
+  DEBUG: (89: None -> stop ) - TICK: 669 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 89 - mPC: 73

@@ -16,8 +16,8 @@ class DataPath:
         self.data_memory = [0] * size
         self.data_memory_out = 0
         self.alu_out = 0
-        self.number_tos = 0
-        self.number_address = 0
+        self.arg_tos = 0
+        self.arg_address = 0
 
         self.input_tokens = input_tokens
         self.output_buffer = []
@@ -26,7 +26,7 @@ class DataPath:
 
     def signal_latch_tos(self, signal):
         buses = {
-            Signals.LATCH_TOS_NUMBER: self.number_tos,
+            Signals.LATCH_TOS_ARG: self.arg_tos,
             Signals.LATCH_TOS_MEM_OUT: self.data_memory_out,
             Signals.LATCH_TOS_FROM_ALU: self.alu_out,
             Signals.LATCH_TOS_FROM_STACK: self.data_stack[-1] if self.data_stack != [] else 0
@@ -34,7 +34,7 @@ class DataPath:
         self.tos = buses[signal]
 
     def signal_latch_address(self, signal):
-        self.address_reg = self.number_address if signal == Signals.LATCH_ADDR_NUMBER else self.data_memory_out
+        self.address_reg = self.arg_address if signal == Signals.LATCH_ADDR_ARG else self.data_memory_out
 
     def signal_stack_push(self):
         self.data_stack.append(self.tos)
@@ -100,13 +100,11 @@ class ControlUnit:
         self.microcode = Microcode(self, dp)
 
     def tick(self):
-        if self._tick < 700 or self._tick == 4591:
+        if self._tick < 700:
             logging.debug(self)
             if self._tick == 699:
                 logging.info("Cut log due to its size")
         self._tick += 1
-        self.dp.number_tos = 0
-        self.dp.number_address = 0
 
     def translate_opcode_to_mc_address(self):
         self.mPC_address = Microcode.addresses[self.instr["opcode"]]
@@ -115,10 +113,10 @@ class ControlUnit:
         self.stop = True
 
     def set_arg_in_tos(self):
-        self.dp.number_tos = self.instr["arg"]
+        self.dp.arg_tos = self.instr["arg"]
 
     def set_arg_in_address(self):
-        self.dp.number_address = self.instr["arg"]
+        self.dp.arg_address = self.instr["arg"]
 
     def signal_latch_mPC(self, signal):
         signals = {
@@ -139,6 +137,8 @@ class ControlUnit:
 
     def start(self):
         while not self.stop:
+            if self._tick == 147:
+                pass
             cur_mc = self.microcode.mc_memory[self.mPC]
             for signal in cur_mc:
                 if isinstance(signal, tuple):
