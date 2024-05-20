@@ -137,8 +137,6 @@ class ControlUnit:
 
     def start(self):
         while not self.stop:
-            if self._tick == 147:
-                pass
             cur_mc = self.microcode.mc_memory[self.mPC]
             for signal in cur_mc:
                 if isinstance(signal, tuple):

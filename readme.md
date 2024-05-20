@@ -356,6 +356,94 @@ Hardwired (реализовано полностью на Python).
 
 Тесты запускаются командой `pytest`. Линтер запускается командой `ruff check`.
 
+Результат golden_test:
+
+```
+DEBUG    root:machine.py:104 (0: clear -> clear ) - TICK: 0 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 0 - mPC: 11
+DEBUG    root:machine.py:104 (0: clear -> clear ) - TICK: 1 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 0 - mPC: 12
+DEBUG    root:machine.py:104 (1: key -> load 0) - TICK: 2 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 1 - mPC: 0
+DEBUG    root:machine.py:104 (1: key -> load 0) - TICK: 3 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 1 - mPC: 13
+DEBUG    root:machine.py:104 (1: key -> load 0) - TICK: 4 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 1 - mPC: 14
+INFO     root:machine.py:52 add char 'c' from input buffer
+DEBUG    root:machine.py:104 (1: key -> load 0) - TICK: 5 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 1 - mPC: 15
+DEBUG    root:machine.py:104 (1: key -> load 0) - TICK: 6 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 1 - mPC: 16
+DEBUG    root:machine.py:104 (2: 0 -> push 0) - TICK: 7 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 2 - mPC: 0
+DEBUG    root:machine.py:104 (2: 0 -> push 0) - TICK: 8 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 2 - mPC: 6
+DEBUG    root:machine.py:104 (2: 0 -> push 0) - TICK: 9 - TOS: 99 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 2 - mPC: 7
+DEBUG    root:machine.py:104 (2: 0 -> push 0) - TICK: 10 - TOS: 0 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 2 - mPC: 8
+DEBUG    root:machine.py:104 (3: != -> equal ) - TICK: 11 - TOS: 0 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 3 - mPC: 0
+DEBUG    root:machine.py:104 (3: != -> equal ) - TICK: 12 - TOS: 0 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 3 - mPC: 59
+DEBUG    root:machine.py:104 (3: != -> equal ) - TICK: 13 - TOS: 0 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 3 - mPC: 60
+DEBUG    root:machine.py:104 (3: != -> equal ) - TICK: 14 - TOS: 0 - data stack: [0, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 3 - mPC: 61
+DEBUG    root:machine.py:104 (3: != -> equal ) - TICK: 15 - TOS: 0 - data stack: [0, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 3 - mPC: 62
+DEBUG    root:machine.py:104 (4: if -> jif 9) - TICK: 16 - TOS: 0 - data stack: [0, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 4 - mPC: 0
+DEBUG    root:machine.py:104 (4: if -> jif 9) - TICK: 17 - TOS: 0 - data stack: [0, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 4 - mPC: 72
+DEBUG    root:machine.py:104 (5: drop -> drop ) - TICK: 18 - TOS: 0 - data stack: [0, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 5 - mPC: 0
+DEBUG    root:machine.py:104 (5: drop -> drop ) - TICK: 19 - TOS: 0 - data stack: [0, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 5 - mPC: 3
+DEBUG    root:machine.py:104 (5: drop -> drop ) - TICK: 20 - TOS: 0 - data stack: [0, 99, 0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 5 - mPC: 4
+DEBUG    root:machine.py:104 (5: drop -> drop ) - TICK: 21 - TOS: 0 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 5 - mPC: 5
+DEBUG    root:machine.py:104 (6: drop -> drop ) - TICK: 22 - TOS: 0 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 6 - mPC: 0
+DEBUG    root:machine.py:104 (6: drop -> drop ) - TICK: 23 - TOS: 0 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 6 - mPC: 3
+DEBUG    root:machine.py:104 (6: drop -> drop ) - TICK: 24 - TOS: 99 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 6 - mPC: 4
+DEBUG    root:machine.py:104 (6: drop -> drop ) - TICK: 25 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 6 - mPC: 5
+DEBUG    root:machine.py:104 (7: emit -> store 1) - TICK: 26 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 7 - mPC: 0
+DEBUG    root:machine.py:104 (7: emit -> store 1) - TICK: 27 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 0 - PC: 7 - mPC: 23
+DEBUG    root:machine.py:104 (7: emit -> store 1) - TICK: 28 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 7 - mPC: 24
+INFO     root:machine.py:64 add char 'c' to output buffer
+DEBUG    root:machine.py:104 (7: emit -> store 1) - TICK: 29 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 7 - mPC: 25
+DEBUG    root:machine.py:104 (8: else -> jmp 10) - TICK: 30 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 8 - mPC: 0
+DEBUG    root:machine.py:104 (8: else -> jmp 10) - TICK: 31 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 8 - mPC: 71
+DEBUG    root:machine.py:104 (10: 0 -> push 0) - TICK: 32 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 10 - mPC: 0
+DEBUG    root:machine.py:104 (10: 0 -> push 0) - TICK: 33 - TOS: 99 - data stack: [0] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 10 - mPC: 6
+DEBUG    root:machine.py:104 (10: 0 -> push 0) - TICK: 34 - TOS: 99 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 10 - mPC: 7
+DEBUG    root:machine.py:104 (10: 0 -> push 0) - TICK: 35 - TOS: 0 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 10 - mPC: 8
+DEBUG    root:machine.py:104 (11: != -> n_equal ) - TICK: 36 - TOS: 0 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 11 - mPC: 0
+DEBUG    root:machine.py:104 (11: != -> n_equal ) - TICK: 37 - TOS: 0 - data stack: [0, 99] - alu out: 0 - memory out: 99 - address reg: 1 - PC: 11 - mPC: 63
+DEBUG    root:machine.py:104 (11: != -> n_equal ) - TICK: 38 - TOS: 0 - data stack: [0, 99] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 11 - mPC: 64
+DEBUG    root:machine.py:104 (11: != -> n_equal ) - TICK: 39 - TOS: 0 - data stack: [0, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 11 - mPC: 65
+DEBUG    root:machine.py:104 (11: != -> n_equal ) - TICK: 40 - TOS: 1 - data stack: [0, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 11 - mPC: 66
+DEBUG    root:machine.py:104 (12: until -> jif 0) - TICK: 41 - TOS: 1 - data stack: [0, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 12 - mPC: 0
+DEBUG    root:machine.py:104 (12: until -> jif 0) - TICK: 42 - TOS: 1 - data stack: [0, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 12 - mPC: 72
+DEBUG    root:machine.py:104 (0: clear -> clear ) - TICK: 43 - TOS: 1 - data stack: [0, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 0 - mPC: 0
+DEBUG    root:machine.py:104 (0: clear -> clear ) - TICK: 44 - TOS: 1 - data stack: [0, 99, 0] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 0 - mPC: 11
+DEBUG    root:machine.py:104 (0: clear -> clear ) - TICK: 45 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 0 - mPC: 12
+DEBUG    root:machine.py:104 (1: key -> load 0) - TICK: 46 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 1 - mPC: 0
+DEBUG    root:machine.py:104 (1: key -> load 0) - TICK: 47 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 99 - address reg: 1 - PC: 1 - mPC: 13
+DEBUG    root:machine.py:104 (1: key -> load 0) - TICK: 48 - TOS: 1 - data stack: [] - alu out: 1 - memory out: 99 - address reg: 0 - PC: 1 - mPC: 14
+INFO     root:machine.py:52 add char 'a' from input buffer
+DEBUG    root:machine.py:104 (1: key -> load 0) - TICK: 49 - TOS: 1 - data stack: [1] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 1 - mPC: 15
+DEBUG    root:machine.py:104 (1: key -> load 0) - TICK: 50 - TOS: 97 - data stack: [1] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 1 - mPC: 16
+DEBUG    root:machine.py:104 (2: 0 -> push 0) - TICK: 51 - TOS: 97 - data stack: [1] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 2 - mPC: 0
+DEBUG    root:machine.py:104 (2: 0 -> push 0) - TICK: 52 - TOS: 97 - data stack: [1] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 2 - mPC: 6
+DEBUG    root:machine.py:104 (2: 0 -> push 0) - TICK: 53 - TOS: 97 - data stack: [1, 97] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 2 - mPC: 7
+DEBUG    root:machine.py:104 (2: 0 -> push 0) - TICK: 54 - TOS: 0 - data stack: [1, 97] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 2 - mPC: 8
+DEBUG    root:machine.py:104 (3: != -> equal ) - TICK: 55 - TOS: 0 - data stack: [1, 97] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 3 - mPC: 0
+DEBUG    root:machine.py:104 (3: != -> equal ) - TICK: 56 - TOS: 0 - data stack: [1, 97] - alu out: 1 - memory out: 97 - address reg: 0 - PC: 3 - mPC: 59
+DEBUG    root:machine.py:104 (3: != -> equal ) - TICK: 57 - TOS: 0 - data stack: [1, 97] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 3 - mPC: 60
+DEBUG    root:machine.py:104 (3: != -> equal ) - TICK: 58 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 3 - mPC: 61
+DEBUG    root:machine.py:104 (3: != -> equal ) - TICK: 59 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 3 - mPC: 62
+DEBUG    root:machine.py:104 (4: if -> jif 9) - TICK: 60 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 4 - mPC: 0
+DEBUG    root:machine.py:104 (4: if -> jif 9) - TICK: 61 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 4 - mPC: 72
+DEBUG    root:machine.py:104 (5: drop -> drop ) - TICK: 62 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 5 - mPC: 0
+DEBUG    root:machine.py:104 (5: drop -> drop ) - TICK: 63 - TOS: 0 - data stack: [1, 97, 0] - alu out: 0 - memory out: 97 - address reg: 0 - PC: 5 - mPC: 3
+.......................................................................................................................................................................................
+
+DEBUG    root:machine.py:104 (7: mod -> mod ) - TICK: 648 - TOS: 3 - data stack: [1, 9, 3] - alu out: 0 - memory out: 8 - address reg: 3 - PC: 7 - mPC: 49
+DEBUG    root:machine.py:104 (7: mod -> mod ) - TICK: 649 - TOS: 0 - data stack: [1, 9, 3] - alu out: 0 - memory out: 8 - address reg: 3 - PC: 7 - mPC: 50
+DEBUG    root:machine.py:104 (8: 0 -> push 0) - TICK: 650 - TOS: 0 - data stack: [1, 9, 3] - alu out: 0 - memory out: 8 - address reg: 3 - PC: 8 - mPC: 0
+DEBUG    root:machine.py:104 (8: 0 -> push 0) - TICK: 651 - TOS: 0 - data stack: [1, 9, 3] - alu out: 0 - memory out: 8 - address reg: 3 - PC: 8 - mPC: 6
+DEBUG    root:machine.py:104 (8: 0 -> push 0) - TICK: 652 - TOS: 0 - data stack: [1, 9, 3, 0] - alu out: 0 - memory out: 8 - address reg: 3 - PC: 8 - mPC: 7
+DEBUG    root:machine.py:104 (8: 0 -> push 0) - TICK: 653 - TOS: 0 - data stack: [1, 9, 3, 0] - alu out: 0 - memory out: 8 - address reg: 3 - PC: 8 - mPC: 8
+DEBUG    root:machine.py:104 (9: = -> n_equal ) - TICK: 654 - TOS: 0 - data stack: [1, 9, 3, 0] - alu out: 0 - memory out: 8 - address reg: 3 - PC: 9 - mPC: 0
+DEBUG    root:machine.py:104 (9: = -> n_equal ) - TICK: 655 - TOS: 0 - data stack: [1, 9, 3, 0] - alu out: 0 - memory out: 8 - address reg: 3 - PC: 9 - mPC: 63
+DEBUG    root:machine.py:104 (9: = -> n_equal ) - TICK: 656 - TOS: 0 - data stack: [1, 9, 3, 0] - alu out: 0 - memory out: 8 - address reg: 3 - PC: 9 - mPC: 64
+DEBUG    root:machine.py:104 (9: = -> n_equal ) - TICK: 657 - TOS: 0 - data stack: [1, 9, 3, 0, 0] - alu out: 0 - memory out: 8 - address reg: 3 - PC: 9 - mPC: 65
+DEBUG    root:machine.py:104 (9: = -> n_equal ) - TICK: 658 - TOS: 0 - data stack: [1, 9, 3, 0, 0] - alu out: 0 - memory out: 8 - address reg: 3 - PC: 9 - mPC: 66
+DEBUG    root:machine.py:104 (10: if -> jif 16) - TICK: 659 - TOS: 0 - data stack: [1, 9, 3, 0, 0] - alu out: 0 - memory out: 8 - address reg: 3 - PC: 10 - mPC: 0
+DEBUG    root:machine.py:104 (10: if -> jif 16) - TICK: 660 - TOS: 0 - data stack: [1, 9, 3, 0, 0] - alu out: 0 - memory out: 8 - address reg: 3 - PC: 10 - mPC: 72
+================================================================================== 4 passed in 0.85s ================================================================================== 
+```
+
 ## Аналитика алгоритмов <a id='alg'></a>
 
 ```

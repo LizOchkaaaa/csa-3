@@ -1,4 +1,4 @@
-sum ! current !     /vsvsvs l,lkm edked/
+sum ! current !
 : add sum @ current @ + sum ! :
 
 begin
