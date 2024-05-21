@@ -16,7 +16,7 @@
 
 ## Язык программирования - Forth <a id='lang'></a>
 ```
-program ::= { word }
+program ::= { string }
 
 string ::= { <any of [ term ]> } "\n"
        | { <any of [ term ] [ comment ]> } "\n"
@@ -157,6 +157,14 @@ TOS
 | 01  : instruction            |
 |             ...              |
 | n   : instruction (end)      |
++------------------------------+
+
+ Instruction mc_memory
++------------------------------+
+| 00  : mc_instruction         |
+| 01  : mc_instruction         |
+|             ...              |
+| n   : mc_instruction         |
 +------------------------------+
 
   Data memory
@@ -304,6 +312,16 @@ Hardwired (реализовано полностью на Python).
 4. вывод процессора
 5. журнал работы процессора
 
+Результат golden_test:
+
+```
+golden_test.py::test_golden[tests/cat_golden.yml] PASSED                                                                                                                         [ 25%]
+golden_test.py::test_golden[tests/hello_golden.yml] PASSED                                                                                                                       [ 50%]
+golden_test.py::test_golden[tests/hello_user_name_golden.yml] PASSED                                                                                                             [ 75%]
+golden_test.py::test_golden[tests/prob1_golden.yml] PASSED  
+       
+```
+
 Пример алгоритма [cat.fr](https://github.com/LizOchkaaaa/csa-3/blob/master/resources/forth/cat.fr)
 - Ввод: `cat cat cat`
 
@@ -356,15 +374,6 @@ Hardwired (реализовано полностью на Python).
 
 Тесты запускаются командой `pytest`. Линтер запускается командой `ruff check`.
 
-Результат golden_test:
-
-```
-golden_test.py::test_golden[tests/cat_golden.yml] PASSED                                                                                                                         [ 25%]
-golden_test.py::test_golden[tests/hello_golden.yml] PASSED                                                                                                                       [ 50%]
-golden_test.py::test_golden[tests/hello_user_name_golden.yml] PASSED                                                                                                             [ 75%]
-golden_test.py::test_golden[tests/prob1_golden.yml] PASSED  
-       
-```
 
 ## Аналитика алгоритмов <a id='alg'></a>
 
