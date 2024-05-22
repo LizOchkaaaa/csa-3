@@ -210,7 +210,7 @@ ind_load 5. Загрузит в TOS значение из ячейки памя�
 
 Интерфейс командной строки: translator.py <input_file> <target_file>
 
-Файл: [translator.py](https://github.com/LizOchkaaaa/csa-3/blob/master/translator.py)
+Файл: [translator.py](https://github.com/LizOchkaaaa/csa-3/blob/master/translator.png)
 
 Алгоритм трансляции:
 1. Разбиваю код на лексемы по пробелам и по переносам строк.
@@ -241,7 +241,7 @@ drop, clear, число и тд.
 
 ### ControlUnit
 
-![control_unit](https://github.com/LizOchkaaaa/csa-3/blob/master/readme/schemes/control_unit.py)
+![control_unit](https://github.com/LizOchkaaaa/csa-3/blob/master/readme/schemes/control_unit.png)
 
 Реализован в классе `ControlUnit` в [machine.py](https://github.com/LizOchkaaaa/csa-3/blob/master/processor/machine.py).
 
