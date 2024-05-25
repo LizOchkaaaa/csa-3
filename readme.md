@@ -280,7 +280,7 @@ Hardwired (реализовано полностью на Python).
 
 ### DataPath
 
-![DataPath](https://github.com/LizOchkaaaa/csa-3/blob/master/readme/schemes/data_path.py)
+![DataPath](https://github.com/LizOchkaaaa/csa-3/blob/master/readme/schemes/data_path.png)
 
 Реализован в классе `DataPath` в [machine.py](https://github.com/LizOchkaaaa/csa-3/blob/master/processor/machine.py).
 
