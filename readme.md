@@ -241,7 +241,7 @@ drop, clear, число и тд.
 
 ### ControlUnit
 
-![control_unit](./readme/schemes/control_unit.png)
+![control_unit](https://github.com/LizOchkaaaa/csa-3/blob/master/readme/schemes/control_%20unit.png)
 
 Реализован в классе `ControlUnit` в [machine.py](https://github.com/LizOchkaaaa/csa-3/blob/master/processor/machine.py).
 
