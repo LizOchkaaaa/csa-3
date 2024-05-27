@@ -74,8 +74,8 @@ def insert_procedure(instructions, procedures, index):
 
 def cr_machine(index, instructions):
     instructions.extend((create_instruction(index, Term.CR, Opcode.PUSH, 10),
-                        create_instruction(index + 1, Term.CR, Opcode.STORE, OUTPUT_ADDRESS),
-                        create_instruction(index + 2, Term.CR, Opcode.DROP)))
+                         create_instruction(index + 1, Term.CR, Opcode.STORE, OUTPUT_ADDRESS),
+                         create_instruction(index + 2, Term.CR, Opcode.DROP)))
     return index + 2
 
 
@@ -88,7 +88,7 @@ def check_variable(row, variables, variable_pointer):
 
 def next(i, code):
     try:
-        return code[i+1]
+        return code[i + 1]
     except IndexError:
         return ""
 
@@ -101,82 +101,97 @@ def skip_comments(i, code):
 
 def translator(code):
     instructions = []
-    index, i = 0, 0
+    index = 1
     jump_buf = []
 
     procedures = {}
-    cur_procedure, proc_declare_start = None, None
+    in_procedure, parse_procedures = False, True
 
     variables = {}
     variable_pointer = 2
 
-    while i < len(code):
-        if "/" in code[i]:
-            i = skip_comments(i + 1, code)
-            if i >= len(code):
-                break
-        row = code[i]
-        if Term.STRING in row:
-            i, index = parse_string(instructions, code, index, i)
-        elif row == Term.END_IF:
-            instructions[jump_buf.pop()]["arg"] = index
-        elif row == Term.BEGIN:
-            jump_buf.append(index)
-        elif row == Term.PROCEDURE:
-            if cur_procedure is None:
-                cur_procedure = code[i + 1]
-                procedures[code[i + 1]] = []
-                i += 1
-                proc_declare_start = index
-            else:
-                procedures[cur_procedure] = instructions[proc_declare_start:]
-                instructions = instructions[:proc_declare_start]
-                index = proc_declare_start
-                cur_procedure = None
-        elif row in procedures:
-            index = insert_procedure(instructions, procedures[row], index)
-
-        else:
-            if row == Term.IF:
-                jump_buf.append(index)
-                instructions[index - 1]["opcode"] = inverse_condition(instructions[index - 1]["opcode"])
-                instructions.append(create_instruction(index, Term.IF, Opcode.JIF))
-            elif row == Term.ELSE:
-                label = jump_buf.pop()
-                jump_buf.append(index)
-                instructions.append(create_instruction(index, Term.ELSE, Opcode.JMP))
-                instructions[label]["arg"] = index + 1
-            elif row == Term.UNTIL:
-                instructions.append(create_instruction(index, Term.UNTIL, Opcode.JIF, jump_buf.pop()))
-
-            elif re.search("^-?[0-9]*$", row):
-                instructions.append(create_instruction(index, row, Opcode.PUSH, int(row)))
-            elif parse_math(row) is not None:
-                instructions.append(create_instruction(index, row, parse_math(row)))
-            elif re.search("^(!|@)\\*?$", next(i, code)):
-                variable_pointer = check_variable(row, variables, variable_pointer)
-                if re.search(".\\*", next(i, code)):
-                    opcode = Opcode.IND_STORE if next(i, code) == Term.IND_STORE else Opcode.IND_LOAD
+    instructions.append(create_instruction(0, "start", Opcode.JMP))
+    for j in range(2):
+        i = 0
+        while i < len(code):
+            if "/" in code[i]:
+                i = skip_comments(i + 1, code)
+                if i >= len(code):
+                    break
+            row = code[i]
+            if row == Term.PROCEDURE:
+                if not in_procedure:
+                    in_procedure = True
+                    if parse_procedures:
+                        procedures[code[i + 1]] = index
+                    i += 2
                 else:
-                    opcode = Opcode.STORE if next(i, code) == Term.STORE else Opcode.LOAD
-                instructions.append(create_instruction(index, next(i, code), opcode, variables[row]))
-                i += 1
+                    if parse_procedures:
+                        instructions.append(create_instruction(index, Opcode.RET, Opcode.RET))
+                        index += 1
+                    in_procedure = False
+                    i += 1
+                continue
 
-            elif row == Term.KEY:
-                instructions.append(create_instruction(index, Term.KEY, Opcode.LOAD, INPUT_ADDRESS))
-            elif row in [Term.EMIT, Term.DOT]:
-                instructions.append(create_instruction(index, row, Opcode.STORE, OUTPUT_ADDRESS))
-            elif row == Term.CR:
-                index = cr_machine(index, instructions)
-            elif row in [Opcode.DUP, Opcode.DROP, Opcode.CLEAR]:
-                instructions.append(create_instruction(index, row, row))
-            else:
+            if not in_procedure and parse_procedures or not parse_procedures and in_procedure:
                 i += 1
                 continue
 
-            index += 1
-        i += 1
-    instructions.append(create_instruction(index, None, Opcode.STOP))
+            if Term.STRING in row:
+                i, index = parse_string(instructions, code, index, i)
+            elif row == Term.END_IF:
+                instructions[jump_buf.pop()]["arg"] = index
+            elif row == Term.BEGIN:
+                jump_buf.append(index)
+
+            else:
+                if row == Term.IF:
+                    jump_buf.append(index)
+                    instructions[index - 1]["opcode"] = inverse_condition(instructions[index - 1]["opcode"])
+                    instructions.append(create_instruction(index, Term.IF, Opcode.JIF))
+                elif row == Term.ELSE:
+                    label = jump_buf.pop()
+                    jump_buf.append(index)
+                    instructions.append(create_instruction(index, Term.ELSE, Opcode.JMP))
+                    instructions[label]["arg"] = index + 1
+                elif row == Term.UNTIL:
+                    instructions.append(create_instruction(index, Term.UNTIL, Opcode.JIF, jump_buf.pop()))
+
+                elif re.search("^-?[0-9]+$", row):
+                    instructions.append(create_instruction(index, row, Opcode.PUSH, int(row)))
+                elif parse_math(row) is not None:
+                    instructions.append(create_instruction(index, row, parse_math(row)))
+
+                elif row == Term.KEY:
+                    instructions.append(create_instruction(index, Term.KEY, Opcode.LOAD, INPUT_ADDRESS))
+                elif row in [Term.EMIT, Term.DOT]:
+                    instructions.append(create_instruction(index, row, Opcode.STORE, OUTPUT_ADDRESS))
+                elif row == Term.CR:
+                    index = cr_machine(index, instructions)
+                elif row in [Opcode.DUP, Opcode.DROP, Opcode.CLEAR]:
+                    instructions.append(create_instruction(index, row, row))
+                else:
+                    if re.search("^(!|@)\\*?$", next(i, code)):
+                        variable_pointer = check_variable(row, variables, variable_pointer)
+                        if re.search(".\\*", next(i, code)):
+                            opcode = Opcode.IND_STORE if next(i, code) == Term.IND_STORE else Opcode.IND_LOAD
+                        else:
+                            opcode = Opcode.STORE if next(i, code) == Term.STORE else Opcode.LOAD
+                        instructions.append(create_instruction(index, next(i, code), opcode, variables[row]))
+                        i += 1
+                    else:
+                        instructions.append(create_instruction(index, row, Opcode.CALL, procedures[row]))
+
+                if instructions[0]["term"] == "start" and "arg" not in instructions[0] and not parse_procedures:
+                    instructions[0]["arg"] = index
+                index += 1
+            i += 1
+        if len(procedures) == 0 and parse_procedures:
+            instructions.pop()
+            index -= 1
+        parse_procedures = False
+
+    instructions.append(create_instruction(index, "stop", Opcode.STOP))
     return instructions
 
 

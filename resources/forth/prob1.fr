@@ -1,5 +1,6 @@
 sum ! current !
-: add sum @ current @ + sum ! :
+: add sum @ current @ + sum !
+  drop drop drop :
 
 begin
     clear

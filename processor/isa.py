@@ -26,6 +26,9 @@ class Opcode:
     JMP = "jmp"
     JIF = "jif"
 
+    CALL = "call"
+    RET = "ret"
+
     STOP = "stop"
 
 

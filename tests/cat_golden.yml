@@ -22,7 +22,7 @@ machine: |-
    {"index": 10, "term": "0", "opcode": "push", "arg": 0},
    {"index": 11, "term": "!=", "opcode": "n_equal"},
    {"index": 12, "term": "until", "opcode": "jif", "arg": 0},
-   {"index": 13, "term": null, "opcode": "stop"}]
+   {"index": 13, "term": "stop", "opcode": "stop"}]
 
 output: |
   cat cat cat 
@@ -571,6 +571,6 @@ out_log: |
   DEBUG: (11: != -> n_equal ) - TICK: 514 - TOS: 0 - data stack: [1, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 11 - mPC: 66
   DEBUG: (12: until -> jif 0) - TICK: 515 - TOS: 0 - data stack: [1, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 12 - mPC: 0
   DEBUG: (12: until -> jif 0) - TICK: 516 - TOS: 0 - data stack: [1, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 12 - mPC: 72
-  DEBUG: (13: None -> stop ) - TICK: 517 - TOS: 0 - data stack: [1, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 13 - mPC: 0
-  DEBUG: (13: None -> stop ) - TICK: 518 - TOS: 0 - data stack: [1, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 13 - mPC: 73
-  DEBUG: (13: None -> stop ) - TICK: 519 - TOS: 0 - data stack: [1, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 13 - mPC: 73
+  DEBUG: (13: stop -> stop ) - TICK: 517 - TOS: 0 - data stack: [1, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 13 - mPC: 0
+  DEBUG: (13: stop -> stop ) - TICK: 518 - TOS: 0 - data stack: [1, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 13 - mPC: 80
+  DEBUG: (13: stop -> stop ) - TICK: 519 - TOS: 0 - data stack: [1, 0, 0, 0] - alu out: 0 - memory out: 0 - address reg: 0 - PC: 13 - mPC: 80

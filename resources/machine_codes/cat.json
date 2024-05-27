@@ -11,4 +11,4 @@
  {"index": 10, "term": "0", "opcode": "push", "arg": 0},
  {"index": 11, "term": "!=", "opcode": "n_equal"},
  {"index": 12, "term": "until", "opcode": "jif", "arg": 0},
- {"index": 13, "term": null, "opcode": "stop"}]
+ {"index": 13, "term": "stop", "opcode": "stop"}]

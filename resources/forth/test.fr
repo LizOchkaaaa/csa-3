@@ -1,0 +1,10 @@
+: fac
+    i @ 1 > if
+        drop drop --
+        i ! fac *
+    else
+        drop drop drop
+    ; :
+
+3 i !
+fac

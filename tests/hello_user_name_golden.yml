@@ -115,7 +115,7 @@ machine: |-
    {"index": 86, "term": "!", "opcode": "top", "arg": 33},
    {"index": 87, "term": "!", "opcode": "store", "arg": 1},
    {"index": 88, "term": null, "opcode": "drop"},
-   {"index": 89, "term": null, "opcode": "stop"}]
+   {"index": 89, "term": "stop", "opcode": "stop"}]
 
 output: |
   What is your name?
@@ -829,6 +829,6 @@ out_log: |
   DEBUG: (88: None -> drop ) - TICK: 664 - TOS: 33 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 88 - mPC: 3
   DEBUG: (88: None -> drop ) - TICK: 665 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 88 - mPC: 4
   DEBUG: (88: None -> drop ) - TICK: 666 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 88 - mPC: 5
-  DEBUG: (89: None -> stop ) - TICK: 667 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 89 - mPC: 0
-  DEBUG: (89: None -> stop ) - TICK: 668 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 89 - mPC: 73
-  DEBUG: (89: None -> stop ) - TICK: 669 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 89 - mPC: 73
+  DEBUG: (89: stop -> stop ) - TICK: 667 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 89 - mPC: 0
+  DEBUG: (89: stop -> stop ) - TICK: 668 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 89 - mPC: 80
+  DEBUG: (89: stop -> stop ) - TICK: 669 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 89 - mPC: 80

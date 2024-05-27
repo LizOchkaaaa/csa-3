@@ -18,6 +18,7 @@ class DataPath:
         self.alu_out = 0
         self.arg_tos = 0
         self.arg_address = 0
+        self.pc = 0
 
         self.input_tokens = input_tokens
         self.output_buffer = []
@@ -29,7 +30,8 @@ class DataPath:
             Signals.LATCH_TOS_ARG: self.arg_tos,
             Signals.LATCH_TOS_MEM_OUT: self.data_memory_out,
             Signals.LATCH_TOS_FROM_ALU: self.alu_out,
-            Signals.LATCH_TOS_FROM_STACK: self.data_stack[-1] if self.data_stack != [] else 0
+            Signals.LATCH_TOS_FROM_STACK: self.data_stack[-1] if self.data_stack != [] else 0,
+            Signals.LATCH_TOS_FROM_PC: self.pc
         }
         self.tos = buses[signal]
 
@@ -100,9 +102,9 @@ class ControlUnit:
         self.microcode = Microcode(self, dp)
 
     def tick(self):
-        if self._tick < 700:
+        if self._tick < 1000:
             logging.debug(self)
-            if self._tick == 699:
+            if self._tick == 999:
                 logging.info("Cut log due to its size")
         self._tick += 1
 
@@ -111,12 +113,6 @@ class ControlUnit:
 
     def set_stop(self):
         self.stop = True
-
-    def set_arg_in_tos(self):
-        self.dp.arg_tos = self.instr["arg"]
-
-    def set_arg_in_address(self):
-        self.dp.arg_address = self.instr["arg"]
 
     def signal_latch_mPC(self, signal):
         signals = {
@@ -129,15 +125,24 @@ class ControlUnit:
     def signal_latch_PC(self, sel_pc):
         if sel_pc == Signals.PC_NEXT:
             self.PC += 1
+        elif sel_pc == Signals.PC_TOS:
+            self.PC = self.dp.tos
         else:
             self.PC = self.instr["arg"] if self.dp.tos != 0 or sel_pc == Signals.PC_JUMP else self.PC + 1
         self.instr = self.instructions[self.PC]
+
         self.dp.term = self.instr["term"]
+        self.dp.pc = self.PC
+        self.dp.arg_tos = self.instr["arg"] if "arg" in self.instr else 0
+        self.dp.arg_address = self.instr["arg"] if "arg" in self.instr else 0
         self.instr_count += 1
 
     def start(self):
         while not self.stop:
             cur_mc = self.microcode.mc_memory[self.mPC]
+            if self.instr["term"] == ".":
+                pass
+            pass
             for signal in cur_mc:
                 if isinstance(signal, tuple):
                     signal[0](*signal[1:])

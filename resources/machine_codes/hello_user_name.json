@@ -87,4 +87,4 @@
  {"index": 86, "term": "!", "opcode": "top", "arg": 33},
  {"index": 87, "term": "!", "opcode": "store", "arg": 1},
  {"index": 88, "term": null, "opcode": "drop"},
- {"index": 89, "term": null, "opcode": "stop"}]
+ {"index": 89, "term": "stop", "opcode": "stop"}]

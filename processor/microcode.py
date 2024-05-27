@@ -29,7 +29,11 @@ class Microcode:
 
         Opcode.JMP: 71,
         Opcode.JIF: 72,
-        Opcode.STOP: 73
+
+        Opcode.CALL: 73,
+        Opcode.RET: 77,
+
+        Opcode.STOP: 80
     }
 
     def math_operation(self, opcode, mPC_next, instr_end):
@@ -43,7 +47,7 @@ class Microcode:
                 instr_end)
 
     def indirect(self, mPC_next):
-        return ([self.cu.set_arg_in_address, (self.dp.signal_latch_address, Signals.LATCH_ADDR_ARG), mPC_next],
+        return ([(self.dp.signal_latch_address, Signals.LATCH_ADDR_ARG), mPC_next],
                 [self.dp.memory_read, mPC_next],
                 [(self.dp.signal_latch_address, Signals.LATCH_ADDR_FROM_MEM), mPC_next])
 
@@ -68,12 +72,12 @@ class Microcode:
             instr_end,
 
             # push
-            [dp.signal_stack_push, cu.set_arg_in_tos, mPC_next],
+            [dp.signal_stack_push, mPC_next],
             [(dp.signal_latch_tos, Signals.LATCH_TOS_ARG), mPC_next],
             instr_end,
 
             # top
-            [cu.set_arg_in_tos, (dp.signal_latch_tos, Signals.LATCH_TOS_ARG), mPC_next],
+            [(dp.signal_latch_tos, Signals.LATCH_TOS_ARG), mPC_next],
             instr_end,
 
             # clear
@@ -81,7 +85,7 @@ class Microcode:
             instr_end,
 
             # load
-            [cu.set_arg_in_address, (dp.signal_latch_address, Signals.LATCH_ADDR_ARG), mPC_next],
+            [(dp.signal_latch_address, Signals.LATCH_ADDR_ARG), mPC_next],
             [dp.memory_read, dp.signal_stack_push, mPC_next],
             [(dp.signal_latch_tos, Signals.LATCH_TOS_MEM_OUT), mPC_next],
             instr_end,
@@ -93,7 +97,7 @@ class Microcode:
             instr_end,
 
             # store
-            [cu.set_arg_in_address, (dp.signal_latch_address, Signals.LATCH_ADDR_ARG), mPC_next],
+            [(dp.signal_latch_address, Signals.LATCH_ADDR_ARG), mPC_next],
             [dp.memory_write, mPC_next],
             instr_end,
 
@@ -121,6 +125,17 @@ class Microcode:
             [(cu.signal_latch_PC, Signals.PC_JUMP), (cu.signal_latch_mPC, Signals.mPC_ZERO)],
             # jif
             [(cu.signal_latch_PC, Signals.PC_JUMP_IF), (cu.signal_latch_mPC, Signals.mPC_ZERO)],
+
+            # call
+            [dp.signal_stack_push, mPC_next],
+            [(dp.signal_latch_tos, Signals.LATCH_TOS_FROM_PC), mPC_next],
+            [(dp.alu, Opcode.INC), (dp.signal_latch_tos, Signals.LATCH_TOS_FROM_ALU), mPC_next],
+            [(cu.signal_latch_PC, Signals.PC_JUMP), (cu.signal_latch_mPC, Signals.mPC_ZERO)],
+
+            # ret
+            [(cu.signal_latch_PC, Signals.PC_TOS), mPC_next],
+            [(dp.signal_latch_tos, Signals.LATCH_TOS_FROM_STACK), mPC_next],
+            [dp.signal_stack_pop, (cu.signal_latch_mPC, Signals.mPC_ZERO)],
 
             # stop
             [cu.set_stop]

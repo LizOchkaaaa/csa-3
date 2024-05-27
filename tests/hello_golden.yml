@@ -30,7 +30,7 @@ machine: |-
    {"index": 23, "term": "!", "opcode": "top", "arg": 33},
    {"index": 24, "term": "!", "opcode": "store", "arg": 1},
    {"index": 25, "term": null, "opcode": "drop"},
-   {"index": 26, "term": null, "opcode": "stop"}]
+   {"index": 26, "term": "stop", "opcode": "stop"}]
   
 output: |
   Hello World! 
@@ -141,6 +141,6 @@ out_log: |
   DEBUG: (25: None -> drop ) - TICK: 87 - TOS: 33 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 25 - mPC: 3
   DEBUG: (25: None -> drop ) - TICK: 88 - TOS: 0 - data stack: [0] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 25 - mPC: 4
   DEBUG: (25: None -> drop ) - TICK: 89 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 25 - mPC: 5
-  DEBUG: (26: None -> stop ) - TICK: 90 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 26 - mPC: 0
-  DEBUG: (26: None -> stop ) - TICK: 91 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 26 - mPC: 73
-  DEBUG: (26: None -> stop ) - TICK: 92 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 26 - mPC: 73
+  DEBUG: (26: stop -> stop ) - TICK: 90 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 26 - mPC: 0
+  DEBUG: (26: stop -> stop ) - TICK: 91 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 26 - mPC: 80
+  DEBUG: (26: stop -> stop ) - TICK: 92 - TOS: 0 - data stack: [] - alu out: 0 - memory out: 0 - address reg: 1 - PC: 26 - mPC: 80

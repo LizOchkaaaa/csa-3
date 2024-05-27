@@ -24,4 +24,4 @@
  {"index": 23, "term": "!", "opcode": "top", "arg": 33},
  {"index": 24, "term": "!", "opcode": "store", "arg": 1},
  {"index": 25, "term": null, "opcode": "drop"},
- {"index": 26, "term": null, "opcode": "stop"}]
+ {"index": 26, "term": "stop", "opcode": "stop"}]
