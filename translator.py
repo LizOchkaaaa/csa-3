@@ -64,14 +64,6 @@ def parse_string(instructions, code, index, start):
     return stop, index + 1
 
 
-def insert_procedure(instructions, procedures, index):
-    for i, instr in enumerate(procedures):
-        new_instr = instr.copy()
-        new_instr["index"] = index + i
-        instructions.append(new_instr)
-    return instructions[-1]["index"] + 1
-
-
 def cr_machine(index, instructions):
     instructions.extend((create_instruction(index, Term.CR, Opcode.PUSH, 10),
                          create_instruction(index + 1, Term.CR, Opcode.STORE, OUTPUT_ADDRESS),

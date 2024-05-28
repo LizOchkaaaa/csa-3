@@ -140,9 +140,6 @@ class ControlUnit:
     def start(self):
         while not self.stop:
             cur_mc = self.microcode.mc_memory[self.mPC]
-            if self.instr["term"] == ".":
-                pass
-            pass
             for signal in cur_mc:
                 if isinstance(signal, tuple):
                     signal[0](*signal[1:])
